@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = 'Alexandre Vicenzi'
+AUTHOR = 'Jose Luis Blanco'
 SITEURL = 'http://localhost/~jlblanco/pelican'
-SITENAME = "Alexandre Vicenzi's Blog"
+SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
-SITESUBTITLE = 'Sotfware Engineer - Maker'
+SITESUBTITLE = 'Associate Professor at <a href="//www.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = '//s.gravatar.com/avatar/5dc5ba59a94eeab2106ad9d397361b2c?s=120'
+SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
 #FAVICON = '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'monokai'
 
 ROBOTS = 'index, follow'
 
-THEME = '/home/jlblanco/pelican-themes/Flex'
+THEME = 'themes/Flex'
 PATH = 'content'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
@@ -34,13 +34,11 @@ AUTHOR_FEED_RSS = None
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
 
-LINKS = (('Portfolio', 'http://alexandrevicenzi.com'),)
+LINKS = ((u'Tutorías/Docencia', 'docencia.html'),)
 
-SOCIAL = (('linkedin', 'https://br.linkedin.com/in/alexandrevicenzi/en'),
-          ('github', 'https://github.com/alexandrevicenzi'),
-          ('google', 'https://google.com/+AlexandreVicenzi'),
-          ('twitter', 'https://twitter.com/alxvicenzi'),
-          ('rss', '//blog.alexandrevicenzi.com/feeds/all.atom.xml'))
+SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
+          ('github', 'https://github.com/jlblancoc'),
+          ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
@@ -74,20 +72,13 @@ SITEMAP = {
 }
 
 DISQUS_SITENAME = "alexandrevicenziblog"
-ADD_THIS_ID = 'ra-55adbb025d4f7e55'
+#ADD_THIS_ID = 'ra-55adbb025d4f7e55'
 
-STATUSCAKE = {
-    'trackid': 'SL0UAgrsYP',
-    'days': 7,
-    'rumid': 6852,
-    'design': 6,
-}
+STATIC_PATHS = ['imgs']  # ignored??
 
-STATIC_PATHS = ['images', 'extra']
-
-EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'},
-}
+#EXTRA_PATH_METADATA = {
+#    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
+#}
 
 CUSTOM_CSS = 'static/custom.css'
 
