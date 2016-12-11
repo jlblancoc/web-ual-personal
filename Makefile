@@ -62,7 +62,10 @@ help:
 	@echo '                                                                          '
 
 html:
+	mkdir $(OUTPUTDIR) || echo ""
+	chmod a+rwx $(OUTPUTDIR) -R
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	chmod a+rx $(OUTPUTDIR) -R
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)

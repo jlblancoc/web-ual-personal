@@ -74,7 +74,7 @@ SITEMAP = {
 DISQUS_SITENAME = "alexandrevicenziblog"
 #ADD_THIS_ID = 'ra-55adbb025d4f7e55'
 
-STATIC_PATHS = ['imgs']  # ignored??
+STATIC_PATHS = [ 'imgs' ]
 
 #EXTRA_PATH_METADATA = {
 #    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
