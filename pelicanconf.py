@@ -34,15 +34,21 @@ AUTHOR_FEED_RSS = None
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
 
-LINKS = ((u'Tutorías/Docencia', 'docencia.html'),)
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+
+#LINKS = ((u'News', 'archives.html'),)
+
 
 SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
           ('github', 'https://github.com/jlblancoc'),
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
+#MENUITEMS = (('Archives', '/archives.html'),
+#             ('Categories', '/categories.html'),
+#             ('Tags', '/tags.html'),)
 
 CC_LICENSE = {
     'name': 'Creative Commons Attribution-ShareAlike',
