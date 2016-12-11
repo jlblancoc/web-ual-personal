@@ -62,6 +62,7 @@ DEFAULT_PAGINATION = 10
 
 #PLUGIN_PATHS = ['./pelican-plugins']
 #PLUGINS = ['sitemap', 'post_stats']
+PLUGINS = ['pelican_youtube']
 
 SITEMAP = {
     'format': 'xml',

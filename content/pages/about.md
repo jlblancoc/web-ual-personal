@@ -38,3 +38,12 @@ Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/ind
 </td>
 </tr>
 </table>
+
+
+<div style="text-align:center; margin-top: 20px;clear:both;">
+	<a href="http://xkcd.com/303/" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/compiling.png" alt="compiling" /></a>
+	&nbsp; &nbsp;
+	<a href="http://www.phdcomics.com/comics/archive.php?comicid=1354" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/phd_thesis_procastinate.png" alt="phd comics" /></a>
+	&nbsp; &nbsp;
+	<a href="http://www.youtube.com/watch?v=2OBZHB5I89A" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/enjuto-mojamuto.jpg" alt="Enjuto" title="¿Qui&eacute;n te env&iacute;a?" /></a>
+</div>
