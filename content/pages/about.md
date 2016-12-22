@@ -12,13 +12,10 @@ Associate Editor of the [IEEE Robotics and Automation Letters](http://www.ieee-r
 
 #### R&D
 
-I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
-and
-[LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
-
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
 Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu).
-
+I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
+and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
 
 #### Robotics software development

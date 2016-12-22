@@ -65,6 +65,7 @@ html:
 	mkdir $(OUTPUTDIR) || echo ""
 	chmod a+rwx $(OUTPUTDIR) -R
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	cp $(INPUTDIR)/../redirects/*.html $(OUTPUTDIR)
 	chmod a+rx $(OUTPUTDIR) -R
 
 
