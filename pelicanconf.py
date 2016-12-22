@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Jose Luis Blanco'
-#SITEURL = 'http://localhost/~jlblanco/pelican'
-SITEURL = 'http://www.ual.es/~jlblanco'
+SITEURL = 'http://localhost/~jlblanco/pelican'
+#SITEURL = 'http://www.ual.es/~jlblanco'
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
 SITESUBTITLE = 'Associate Professor at <a href="//www.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
@@ -66,7 +66,7 @@ COPYRIGHT_YEAR = 2016
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['pelican_youtube', 'embed_http' ] #,'pin_to_top']
+PLUGINS = [ 'embed_http' ] #,'pin_to_top']
 
 SITEMAP = {
     'format': 'xml',

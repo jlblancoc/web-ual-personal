@@ -28,4 +28,4 @@ __status__ = "Stable"
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2016'
 
-from embed_http.embed_http import register
+from .embed_http import register

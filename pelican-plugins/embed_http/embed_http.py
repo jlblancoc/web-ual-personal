@@ -23,6 +23,7 @@ from __future__ import unicode_literals
 
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
+from pelican import signals
 
 
 class EmbedHttp(Directive):
@@ -35,7 +36,7 @@ class EmbedHttp(Directive):
     and align could be left / center / right.
 
     Usage:
-    .. youtube:: VIDEO_ID
+    .. embed_http:: URL
         :width: 640
         :height: 480
         :align: center
@@ -57,6 +58,7 @@ class EmbedHttp(Directive):
     has_content = False
 
     def run(self):
+        print("=========")
         videoID = self.arguments[0].strip()
         width = 420
         height = 315
@@ -83,4 +85,4 @@ class EmbedHttp(Directive):
 
 
 def register():
-    directives.register_directive('embed_http', EmbedHttp)
+    directives.register_directive('embedhttp', EmbedHttp)
