@@ -40,7 +40,11 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-LINKS = ((u'News', '%s/archives.html' % SITEURL),)
+LINKS = (
+	(u'News', '%s/archives.html' % SITEURL),
+	(u'Engineering Dept.', 'http://ingmec.ual.es/'),
+	(u'ARM group','http://arm.ual.es/')
+)
 
 
 SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
