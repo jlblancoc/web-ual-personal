@@ -1,6 +1,7 @@
 Title: PhD theses
 Date: 2016-12-12 01:00
 Modified:2016-12-12 01:00
+myorder: 5
 
 ## Past advised PhD theses
   * <a href="http://www.isa.uma.es/C15/C4/fmoreno/" target="_blank">Francisco &Aacute;ngel Moreno Due&ntilde;as</a>: <i>"Stereo visual SLAM for mobile robots navigation"</i> (Apr, 2015).
