@@ -2,14 +2,14 @@ Title: About
 Date: 2016-12-12 01:00
 Modified: 2016-12-12 01:00
 URL:
-#save_as: index.html
+save_as: index.html
 myorder: 1
-pin: true
 
 At present an Associate Professor (<i>Prof. Contratado Doctor</i>) at the University of Almería,
 until 2012 I taught as a Lecturer at the University of Málaga (Spain)
 where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](http://mapir.isa.uma.es/mapirwebsite/).
 
+#### R&D
 
 I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
 and
@@ -17,6 +17,11 @@ and
 
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
 Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu).
+
+#### Robotics software development
+
+Lead developer of [MRPT](http://www.mrpt.org/) (300+ cites in Google Scholar, 40k+ downloads) since 2005.
+See the complete list of software projects [here]({filename}software.md).
 
 #### Contact
 

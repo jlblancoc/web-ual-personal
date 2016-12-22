@@ -39,16 +39,16 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-#LINKS = ((u'News', 'archives.html'),)
+LINKS = ((u'News', '%s/archives.html' % SITEURL),)
 
 
 SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
           ('github', 'https://github.com/jlblancoc'),
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
-#MENUITEMS = (('Archives', '/archives.html'),
-#             ('Categories', '/categories.html'),
-#             ('Tags', '/tags.html'),)
+MENUITEMS = (('Archives', '%s/archives.html' % SITEURL),
+#             ('Tags', '%s/tags.html' % SITEURL),
+			 )
 
 CC_LICENSE = {
     'name': 'Creative Commons Attribution-ShareAlike',
@@ -61,7 +61,7 @@ COPYRIGHT_YEAR = 2016
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['pelican_youtube','pin_to_top']
+PLUGINS = ['pelican_youtube' ] #,'pin_to_top']
 
 SITEMAP = {
     'format': 'xml',
@@ -77,7 +77,7 @@ SITEMAP = {
     }
 }
 
-DISQUS_SITENAME = "alexandrevicenziblog"
+#DISQUS_SITENAME = "alexandrevicenziblog"
 #ADD_THIS_ID = 'ra-55adbb025d4f7e55'
 
 STATIC_PATHS = [ 'imgs' ]
