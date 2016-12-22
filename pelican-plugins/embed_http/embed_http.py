@@ -58,30 +58,15 @@ class EmbedHttp(Directive):
     has_content = False
 
     def run(self):
-        print("=========")
-        videoID = self.arguments[0].strip()
-        width = 420
-        height = 315
-        align = 'left'
-
-        if 'width' in self.options:
-            width = self.options['width']
-
-        if 'height' in self.options:
-            height = self.options['height']
-
-        if 'align' in self.options:
-            align = self.options['align']
-
-        url = 'https://www.youtube.com/embed/{}'.format(videoID)
-        div_block = '<div class="youtube" align="{}">'.format(align)
-        embed_block = '<iframe width="{}" height="{}" src="{}" '\
-                      'frameborder="0"></iframe>'.format(width, height, url)
+        url = self.arguments[0].strip()
+#        width = 420
+#        if 'width' in self.options:
+#            width = self.options['width']
+        print("========= URL: %s" % url)
+        output_html = ''
 
         return [
-            nodes.raw('', div_block, format='html'),
-            nodes.raw('', embed_block, format='html'),
-            nodes.raw('', '</div>', format='html')]
+            nodes.raw('', output_html, format='html')]
 
 
 def register():
