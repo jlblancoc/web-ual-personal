@@ -61,7 +61,7 @@ COPYRIGHT_YEAR = 2016
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['pelican_youtube' ] #,'pin_to_top']
+PLUGINS = ['pelican_youtube'] #,'pin_to_top']
 
 SITEMAP = {
     'format': 'xml',
