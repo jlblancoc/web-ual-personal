@@ -24,6 +24,7 @@ from __future__ import unicode_literals
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
 from pelican import signals
+import urllib2
 
 
 class EmbedHttp(Directive):
@@ -63,7 +64,9 @@ class EmbedHttp(Directive):
 #        if 'width' in self.options:
 #            width = self.options['width']
         print("========= URL: %s" % url)
-        output_html = ''
+
+        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())
+        output_html = opener.open(url).read()
 
         return [
             nodes.raw('', output_html, format='html')]
