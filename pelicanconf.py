@@ -46,7 +46,7 @@ SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511
           ('github', 'https://github.com/jlblancoc'),
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
-MENUITEMS = (('Archives', '%s/archives.html' % SITEURL),
+MENUITEMS = (('News/Noticias', '%s/archives.html' % SITEURL),
 #             ('Tags', '%s/tags.html' % SITEURL),
 			 )
 
@@ -61,7 +61,7 @@ COPYRIGHT_YEAR = 2016
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['pelican_youtube'] #,'pin_to_top']
+PLUGINS = ['pelican_youtube' ] #,'pin_to_top']
 
 SITEMAP = {
     'format': 'xml',

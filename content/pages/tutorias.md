@@ -1,7 +1,7 @@
 Title: Tutorías (Teaching)
 Date: 2016-12-12 01:00
 Modified:2016-12-12 01:00
-Slug: tutorias
+Slug: docencia
 myorder: 2
 
 Puede consultar la docencia asignada en [esta página oficial](http://cms.ual.es/UAL/personas/persona.htm?id=505450515450554868) de la Universidad de Almería.
