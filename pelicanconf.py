@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+import os
 
 AUTHOR = 'Jose Luis Blanco'
-SITEURL = 'http://localhost/~jlblanco/pelican'
-#SITEURL = 'http://www.ual.es/~jlblanco'
+
+if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
+	SITEURL = 'http://www.ual.es/~jlblanco'
+else:
+	SITEURL = 'http://localhost/~jlblanco/pelican'
+
+print 'SITEURL: ' + SITEURL
+
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
 SITESUBTITLE = 'Associate Professor at <a href="//www.ual.es/">UAL</a> - Mechanical Engineering & Robotics'

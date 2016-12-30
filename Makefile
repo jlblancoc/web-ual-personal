@@ -8,9 +8,9 @@ OUTPUTDIR=/home/jlblanco/public_html/pelican/
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-FTP_HOST=localhost
-FTP_USER=anonymous
-FTP_TARGET_DIR=/
+FTP_HOST=www.ual.es
+FTP_USER=jlblanco
+FTP_TARGET_DIR=/home/jlblanco/WWW/
 
 SSH_HOST=localhost
 SSH_PORT=22
@@ -101,8 +101,9 @@ stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+publish: html
+	@echo 'done publish!'
+	#$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -113,8 +114,10 @@ rsync_upload: publish
 dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
 
-ftp_upload: publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+ftp_upload:
+	make clean
+	PELICAN_BUILD_FOR_WEB=1 make html
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "set ssl:verify-certificate false; mirror -v -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
