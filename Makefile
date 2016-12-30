@@ -10,7 +10,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 FTP_HOST=www.ual.es
 FTP_USER=jlblanco
-FTP_TARGET_DIR=/home/jlblanco/WWW/
+FTP_TARGET_DIR=/WWW
 
 SSH_HOST=localhost
 SSH_PORT=22
