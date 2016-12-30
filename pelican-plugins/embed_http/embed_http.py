@@ -67,6 +67,7 @@ class EmbedHttp(Directive):
 
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())
         output_html = opener.open(url).read()
+        output_html = unicode(output_html,'utf-8')
 
         return [
             nodes.raw('', output_html, format='html')]
