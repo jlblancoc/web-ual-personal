@@ -59,8 +59,7 @@ SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
 MENUITEMS = (('News/Noticias', '%s/archives.html' % SITEURL),
-#             ('Tags', '%s/tags.html' % SITEURL),
-			 )
+	)
 
 CC_LICENSE = {
     'name': 'Creative Commons Attribution-ShareAlike',
@@ -90,7 +89,6 @@ SITEMAP = {
 }
 
 #DISQUS_SITENAME = "alexandrevicenziblog"
-#ADD_THIS_ID = 'ra-55adbb025d4f7e55'
 
 STATIC_PATHS = [ 'imgs', 'publications.html' ]
 
@@ -98,6 +96,8 @@ STATIC_PATHS = [ 'imgs', 'publications.html' ]
 #    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
 #}
 
-CUSTOM_CSS = 'static/custom.css'
+#CUSTOM_CSS = 'static/custom.css'
 
-USE_LESS = True
+#USE_LESS = True
+
+
