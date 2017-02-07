@@ -8,20 +8,24 @@ myorder: 1
 At present an Associate Professor (<i>Prof. Contratado Doctor</i>) at the University of Almería,
 until 2012 I taught as a Lecturer at the University of Málaga (Spain)
 where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](http://mapir.isa.uma.es/mapirwebsite/).
-Associate Editor of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
 
-#### R&D
+**R&D**
 
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
 Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu).
 I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
 and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
-
-#### Robotics software development
+**Robotics software development**
 
 Lead developer of [MRPT](http://www.mrpt.org/) (300+ cites in Google Scholar, 40k+ downloads) since 2005.
-See the complete list of software projects [here]({filename}software.md).
+See the [complete list]({filename}software.md) of software projects.
+
+**Editorial activity**
+
+  * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal or Robotics Research](http://journals.sagepub.com/home/ijr) (IJRR) since 2017.
+  * AE of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
+  * Conference Editorial Boards: ICRA 2014-2015, ICARSC 2015-2016, IROS 2017.
 
 #### Contact
 
