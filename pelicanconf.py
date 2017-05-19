@@ -4,16 +4,16 @@ import os
 
 AUTHOR = 'Jose Luis Blanco'
 
-if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
-	SITEURL = 'http://www.ual.es/~jlblanco'
-else:
-	SITEURL = 'http://localhost/~jlblanco/pelican'
+#if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
+SITEURL = '//w3.ual.es/~jlblanco'
+#else:
+#SITEURL = 'http://localhost/~jlblanco/pelican'
 
 print 'SITEURL: ' + SITEURL
 
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
-SITESUBTITLE = 'Associate Professor at <a href="//www.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
+SITESUBTITLE = 'Associate Professor at <a href="//w3.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
 #FAVICON = '/images/favicon.ico'
@@ -99,5 +99,3 @@ STATIC_PATHS = [ 'imgs', 'publications.html' ]
 #CUSTOM_CSS = 'static/custom.css'
 
 #USE_LESS = True
-
-

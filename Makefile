@@ -8,7 +8,7 @@ OUTPUTDIR=/home/jlblanco/public_html/pelican/
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-FTP_HOST=www.ual.es
+FTP_HOST=w3.ual.es
 FTP_USER=jlblanco
 FTP_TARGET_DIR=/WWW
 
