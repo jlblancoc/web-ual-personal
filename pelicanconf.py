@@ -5,7 +5,7 @@ import os
 AUTHOR = 'Jose Luis Blanco'
 
 #if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
-SITEURL = '//w3.ual.es/~jlblanco'
+SITEURL = 'https://w3.ual.es/~jlblanco'
 #else:
 #SITEURL = 'http://localhost/~jlblanco/pelican'
 
