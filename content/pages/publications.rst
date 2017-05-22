@@ -9,5 +9,5 @@ Publications
 * See also: `Google Scholar profile <http://scholar.google.es/citations?user=bhDtzKgAAAAJ>`_.
 
 
-.. embedhttp:: http://ingmec.ual.es/aigaion2/index.php/export/byauthor/5/1/aigaion_pubs_for_joomlawrapper_images.css/none/mapir_formatted_image_list/type/none
+.. embedhttp:: https://ingmec.ual.es/aigaion2/index.php/export/byauthor/5/1/aigaion_pubs_for_joomlawrapper_images.css/none/mapir_formatted_image_list/type/none
     :width: 640
