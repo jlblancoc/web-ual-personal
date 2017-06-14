@@ -18,7 +18,7 @@ and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
 **Robotics software development**
 
-Lead developer of [MRPT](http://www.mrpt.org/) (300+ cites in Google Scholar, 40k+ downloads) since 2005.
+Lead developer of [MRPT](http://www.mrpt.org/) (400+ cites in Google Scholar, 89k+ downloads) since 2005.
 See the [complete list]({filename}software.md) of software projects.
 
 **Editorial activity**
