@@ -33,6 +33,7 @@ myorder: 4
 <div style="width:600px"><br>
 <ul><li><b>ROS packages:</b> <ul>
   <li><a href="http://wiki.ros.org/mrpt_navigation"><code>mrpt_navigation</code></a></li>
+  <li><a href="http://wiki.ros.org/mrpt_slam"><code>mrpt_slam</code></a></li>
   <li><a href="https://github.com/ual-arm-ros-pkg"><code>ual-arm-ros-pkg</code></a></li>
  </ul>
 </li></ul>
