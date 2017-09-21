@@ -67,7 +67,7 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 
-COPYRIGHT_YEAR = 2016
+COPYRIGHT_YEAR = 2017
 
 DEFAULT_PAGINATION = 10
 
@@ -90,7 +90,7 @@ SITEMAP = {
 
 #DISQUS_SITENAME = "alexandrevicenziblog"
 
-STATIC_PATHS = [ 'imgs', 'publications.html' ]
+STATIC_PATHS = [ 'imgs', 'publications.html', 'docs' ]
 
 #EXTRA_PATH_METADATA = {
 #    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},

@@ -16,6 +16,8 @@ Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/ind
 I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
 and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
+Complete CV [here](https://w3.ual.es/~jlblanco/docs/jlblanco-cv-english.pdf).
+
 **Robotics software development**
 
 Lead developer of [MRPT](http://www.mrpt.org/) (400+ cites in Google Scholar, 89k+ downloads) since 2005.
@@ -48,7 +50,7 @@ See the [complete list]({filename}software.md) of software projects.
 	</ul>
 </td>
 </tr>
-</table>
+</table> 
 
 
 <div style="text-align:center; margin-top: 20px;clear:both;">
