@@ -27,7 +27,7 @@ See the [complete list]({filename}software.md) of software projects.
 
   * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](http://journals.sagepub.com/home/ijr) (IJRR) since 2017.
   * AE of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
-  * Conference Editorial Boards: ICRA 2014-2015, ICARSC 2015-2017, IROS 2017, ECMR 2017.
+  * Conference Editorial Boards: ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, ECMR 2017.
 
 #### Contact
 
