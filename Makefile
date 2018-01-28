@@ -117,7 +117,7 @@ dropbox_upload: publish
 ftp_upload:
 	make clean
 	PELICAN_BUILD_FOR_WEB=1 make html
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "set ssl:verify-certificate false; mirror -v -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "set ssl:verify-certificate false; mirror -v --recursion=always -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
