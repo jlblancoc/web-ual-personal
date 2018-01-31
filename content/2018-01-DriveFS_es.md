@@ -1,6 +1,5 @@
 Title: Google Drive File Stream: Dónde se guardan los ficheros offline y cómo cambiarlo
 Date: 2018-01-27 17:00
-#Category: Review
 
 Como [ya sabrán](https://www.trecebits.com/2017/10/04/google-drive-morira-marzo-asi-sera-sustituto/) los usuarios _G Suite_ (empresas) de _Google Drive_, Google
 cerrará la aplicación _Google Drive Desktop_ en marzo de 2018, por lo que deben
@@ -19,8 +18,8 @@ donde reside el sistema operativo, es que **por defecto** Drive File Stream
 almacena todos estos ficheros "offline" en una carpeta dentro del disco "C:",
 pudiendo llegar a ocasionar un problema de falta de espacio libre.
 
-A día de hoy, Google File Stream **no dispone** de ninguna opción para elegir
-dónde guardar estos ficheros offline, pero si sigues los siguientes pasos
+A día de hoy, Google File Stream no dispone de ninguna opción para elegir
+**dónde guardar estos ficheros offline**, pero si sigues los siguientes pasos
 podremos **mover todos esos ficheros disponibles sin conexión** a la unidad y
 subdirectorio que mejor os parezca.
 
@@ -28,6 +27,8 @@ Estos son los pasos:
 
 ## Cómo cambiar el lugar de almacenamiento de ficheros offline de Google File Stream
 
+Antes de nada, si tu equipo usa alguna aplicación de "congelado", asegúrate de
+descongelarlo antes de las siguientes operaciones.
 
 ### Paso 1: Cerrar la aplicación Google File Stream.
 

@@ -18,7 +18,7 @@ SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
 #FAVICON = '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
-PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE = 'manni'
 
 ROBOTS = 'index, follow'
 
