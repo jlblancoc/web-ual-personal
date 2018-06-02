@@ -14,4 +14,10 @@ myorder: 9
 
 ### Teaching
 
+Curso: Resistencia de Materiales
+
+<iframe src="//www.youtube.com/embed/?listType=playlist&list=PLOJ3GF0x2_eW_PwVCEGThj1TvzX_cO5j5" width="600" height="500"></iframe>                   
+
+Other teaching videos:
+
 <iframe src="//www.youtube.com/embed/?listType=playlist&list=PLOJ3GF0x2_eWYSL_oatsNfaUMP0gwP-DB" width="600" height="500"></iframe>                   
