@@ -9,7 +9,7 @@ At present an Associate Professor (<i>Prof. Contratado Doctor</i>) at the Univer
 until 2012 I taught as a Lecturer at the University of Málaga (Spain)
 where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](http://mapir.isa.uma.es/mapirwebsite/).
 
-**R&D**
+**<i class="fas fa-flask"></i>  R&D**
 
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
 Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu).
@@ -18,12 +18,12 @@ and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
 Complete CV [here](https://w3.ual.es/~jlblanco/docs/jlblanco-cv-english.pdf).
 
-**Robotics software development**
+**<i class="fas fa-robot"></i>  Robotics software development**
 
 Lead developer of [MRPT](http://www.mrpt.org/) (400+ cites in Google Scholar, 89k+ downloads) since 2005.
 See the [complete list]({filename}software.md) of software projects.
 
-**Editorial activity**
+**<i class="fas fa-pencil-alt"></i>  Editorial activity**
 
   * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](http://journals.sagepub.com/home/ijr) (IJRR) since 2017.
   * AE of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
@@ -34,29 +34,23 @@ See the [complete list]({filename}software.md) of software projects.
 <table style="border:none;">
 <tr>
 <td style="vertical-align:text-top;">
-	<ul style="margin:0px;">
-	<li style="list-style-image: url('imgs/icon_office.png');">Despacho 1.05, Edificio CITE IV </li>
-	<li style="list-style-image: url('imgs/icon_postal.jpg');">
+	<p><i class="fas fa-building"></i> Despacho 1.05, Edificio CITE IV </p>
+	<p><i class="fas fa-envelope"></i>
 		Ctra. Sacramento, s/n <br/>
 		Universidad de Almer&iacute;a - Edificio CITE II-A <br/>
 		04120 La Ca&ntilde;ada, Almer&iacute;a (Spain)
-		</li>
-	</ul>
+		</p>
 </td>
 <td style="vertical-align:text-top;">
-	<ul style="margin:0px;">
-	<li style="list-style-image: url('imgs/icon_email.gif');"><a href="mailto:jlblanco@ual.es">jlblanco@ual.es</a></li>
-	<li style="list-style-image: url('imgs/icon_phone.png');">(+34) 950 21 42 33  (Internal ext: 8<b>4233</b>) </li>
-	</ul>
+	<p><i class="fas fa-at"></i> <a href="mailto:jlblanco@ual.es">jlblanco@ual.es</a></p>
+	<p><i class="fas fa-phone"></i> (+34) 950 21 42 33  (Internal ext: 8<b>4233</b>) </p>
 </td>
 </tr>
-</table> 
+</table>
 
 
 <div style="text-align:center; margin-top: 20px;clear:both;">
 	<a href="http://xkcd.com/303/" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/compiling.png" alt="compiling" /></a>
 	&nbsp; &nbsp;
-	<a href="http://www.phdcomics.com/comics/archive.php?comicid=1354" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/phd_thesis_procastinate.png" alt="phd comics" /></a>
 	&nbsp; &nbsp;
-	<a href="http://www.youtube.com/watch?v=2OBZHB5I89A" target="_blank" rel="nofollow"><img style="border:none;" src="imgs/enjuto-mojamuto.jpg" alt="Enjuto" title="¿Qui&eacute;n te env&iacute;a?" /></a>
 </div>
