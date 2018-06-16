@@ -8,7 +8,6 @@ myorder: 4
 <table border="0" cellpadding="5">
 <tr>
   <td align="center"> <a href="https://github.com/jlblancoc" target="_blank"><img alt="Github" src="../imgs/github-icon.png" title="See GitHub profile"><br/> GitHub </a></td>
-  <td align="center"><a href="https://code.google.com/u/joseluisblancoc@gmail.com/" target="_blank"><img alt="Google code" src="../imgs/google-code-icon.png" title="See Google Code profile"><br/> Google Code </a></td>
   <td align="center"><a href="https://qa.debian.org/developer.php?login=joseluisblancoc%40gmail.com" target="_blank"><img alt="Debian/Ubuntu" src="../imgs/debian-ubuntu-logo.png" title="See Debian packages"><br/> Debian/Ubuntu packages </a></td>
 </tr>
 </table>
@@ -32,8 +31,12 @@ myorder: 4
 <div style="display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px"><img alt="ROS" border="0" src="../imgs/ros-300x70.png" width="200px"></div>
 <div style="width:600px"><br>
 <ul><li><b>ROS packages:</b> <ul>
-  <li><a href="http://wiki.ros.org/mrpt_navigation"><code>mrpt_navigation</code></a></li>
-  <li><a href="http://wiki.ros.org/mrpt_slam"><code>mrpt_slam</code></a></li>
+  <li>See <a href="https://github.com/mrpt-ros-pkg">all MRPT ROS packages</a>. Some examples:
+  <ul>
+	  <li><a href="http://wiki.ros.org/mrpt_navigation"><code>mrpt_navigation</code></a></li>
+	  <li><a href="http://wiki.ros.org/mrpt_slam"><code>mrpt_slam</code></a></li>
+  </ul>
+  </li>
   <li><a href="https://github.com/ual-arm-ros-pkg"><code>ual-arm-ros-pkg</code></a></li>
  </ul>
 </li></ul>
