@@ -88,7 +88,7 @@ SITEMAP = {
     }
 }
 
-#DISQUS_SITENAME = "alexandrevicenziblog"
+DISQUS_SITENAME = "jlblanco-personal-web"
 
 STATIC_PATHS = [ 'imgs', 'publications.html', 'docs' ]
 
