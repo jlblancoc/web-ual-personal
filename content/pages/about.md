@@ -5,7 +5,7 @@ URL:
 save_as: index.html
 myorder: 1
 
-At present an Associate Professor (<i>Prof. Contratado Doctor</i>) at the University of Almería,
+At present an Associate Professor (<i>Prof. Titular de Universidad</i>) at the University of Almería,
 until 2012 I taught as a Lecturer at the University of Málaga (Spain)
 where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](http://mapir.isa.uma.es/mapirwebsite/).
 
