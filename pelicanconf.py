@@ -56,6 +56,7 @@ LINKS = (
 
 SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
           ('github', 'https://github.com/jlblancoc'),
+	  ('youtube', 'https://www.youtube.com/user/jlblanco2006'),
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
 MENUITEMS = (('News/Noticias', '%s/archives.html' % SITEURL),
