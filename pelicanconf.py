@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 import os
+from datetime import datetime
 
 AUTHOR = 'Jose Luis Blanco'
 
@@ -68,7 +69,7 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 
-COPYRIGHT_YEAR = 2017
+COPYRIGHT_YEAR = datetime.now().year
 
 DEFAULT_PAGINATION = 10
 
