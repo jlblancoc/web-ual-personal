@@ -92,7 +92,7 @@ SITEMAP = {
 
 DISQUS_SITENAME = "jlblanco-personal-web"
 
-STATIC_PATHS = [ 'imgs', 'publications.html', 'docs' ]
+STATIC_PATHS = [ 'imgs', 'docs' ]
 
 #EXTRA_PATH_METADATA = {
 #    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
