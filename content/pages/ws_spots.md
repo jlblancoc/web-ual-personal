@@ -4,6 +4,9 @@ Modified: 2021-07-15 15:00
 myorder: 9
 
 Local windsurfing spots:
+
+<div>
+<h4>Costacabana</h4>
 <script id="wg_fwdg_48813_100_1626363998320">
 (function (window, document) {
   var loader = function () {
@@ -16,7 +19,10 @@ Local windsurfing spots:
   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
 })(window, document);
 </script>
+</div>
 
+<div>
+<h4>Aguadulce/Roquetas</h4>
 <script id="wg_fwdg_48810_100_1626363821950">
 (function (window, document) {
   var loader = function () {
@@ -30,6 +36,10 @@ Local windsurfing spots:
 })(window, document);
 </script>
 
+</div>
+
+<div>
+<h4>Zapillo</h4>
 <script id="wg_fwdg_48811_100_1626363911454">
 (function (window, document) {
   var loader = function () {
@@ -42,3 +52,4 @@ Local windsurfing spots:
   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
 })(window, document);
 </script>
+</div>
