@@ -12,7 +12,8 @@ where I also received the European PhD and the M.Sc. Electrical Engineering in 2
 **<i class="fas fa-flask"></i>  R&D**
 
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
-Check out some [past research projects](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu).
+Check out some [past](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu)
+and [current](http://brujula.ual.es/authors/98.html) research projects.
 I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
 and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
@@ -27,7 +28,7 @@ See the [complete list]({filename}software.md) of software projects.
 
   * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](http://journals.sagepub.com/home/ijr) (IJRR) since 2017.
   * AE of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
-  * Conference Editorial Boards: RSS 2011, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, ECMR 2017, TPC of ETFA 2019, ECMR 2019.
+  * Conference Editorial Boards: RSS 2011, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, TPC of ETFA 2019, ECMR 2017,2019,2021.
 
 #### Contact
 
