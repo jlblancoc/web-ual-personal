@@ -50,8 +50,8 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (
 	('News', '%s/archives.html' % SITEURL),
-	('Engineering Dept.', 'http://ingmec.ual.es/'),
-	('ARM group','http://arm.ual.es/')
+	('Engineering Dept.', 'https://ingmec.ual.es/area/'),
+	('ARM group','https://arm.ual.es/')
 )
 
 

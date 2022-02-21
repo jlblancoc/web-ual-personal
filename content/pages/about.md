@@ -5,29 +5,30 @@ URL:
 save_as: index.html
 myorder: 1
 
-At present an Associate Professor (<i>Prof. Titular de Universidad</i>) at the University of Almería,
-until 2012 I taught as a Lecturer at the University of Málaga (Spain)
-where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](http://mapir.isa.uma.es/mapirwebsite/).
+At present an Associate Professor (<i>Prof. Titular de Universidad</i>) at the University of Almería
+as a member of the [ARM TEP197](https://arm.ual.es/) group.
+Until 2012 I taught as a Lecturer at the University of Málaga (Spain)
+where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](https://mapir.isa.uma.es/mapirwebsite/).
 
 **<i class="fas fa-flask"></i>  R&D**
 
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
-Check out some [past](http://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu)
-and [current](http://brujula.ual.es/authors/98.html) research projects.
+Check out some [past](https://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu)
+and [current](https://brujula.ual.es/authors/98.html) research projects.
 I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
-and [LIM lab](http://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
+and [LIM lab](https://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
 Complete CV [here](https://w3.ual.es/~jlblanco/docs/jlblanco-cv-english.pdf).
 
 **<i class="fas fa-robot"></i>  Robotics software development**
 
-Lead developer of [MRPT](http://www.mrpt.org/) (580+ cites in Google Scholar, 89k+ downloads) since 2005.
+Lead developer of [MRPT](https://www.mrpt.org/) (580+ cites in Google Scholar, 89k+ downloads) since 2005.
 See the [complete list]({filename}software.md) of software projects.
 
 **<i class="fas fa-pencil-alt"></i>  Editorial activity**
 
-  * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](http://journals.sagepub.com/home/ijr) (IJRR) since 2017.
-  * AE of the [IEEE Robotics and Automation Letters](http://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
+  * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR) since 2017.
+  * AE of the [IEEE Robotics and Automation Letters](https://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
   * Conference Editorial Boards: RSS 2011, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, TPC of ETFA 2019, ECMR 2017,2019,2021, ROBOT2022.
 
 #### Contact
