@@ -10,7 +10,7 @@ SITEURL = 'https://w3.ual.es/~jlblanco'
 #else:
 #SITEURL = 'http://localhost/~jlblanco/pelican'
 
-print 'SITEURL: ' + SITEURL
+print('SITEURL: ' + SITEURL)
 
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
