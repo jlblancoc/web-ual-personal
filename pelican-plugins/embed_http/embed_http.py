@@ -19,12 +19,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from __future__ import unicode_literals
+
 
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
 from pelican import signals
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 
 class EmbedHttp(Directive):
@@ -63,11 +63,11 @@ class EmbedHttp(Directive):
 #        width = 420
 #        if 'width' in self.options:
 #            width = self.options['width']
-        print("========= URL: %s" % url)
+        print(("========= URL: %s" % url))
 
-        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())
+        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
         output_html = opener.open(url).read()
-        output_html = unicode(output_html,'utf-8')
+        output_html = str(output_html,'utf-8')
 
         return [
             nodes.raw('', output_html, format='html')]

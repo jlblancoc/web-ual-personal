@@ -10,7 +10,7 @@ SITEURL = 'https://w3.ual.es/~jlblanco'
 #else:
 #SITEURL = 'http://localhost/~jlblanco/pelican'
 
-print('SITEURL: ' + SITEURL)
+print(('SITEURL: ' + SITEURL))
 
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
@@ -49,9 +49,9 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (
-	(u'News', '%s/archives.html' % SITEURL),
-	(u'Engineering Dept.', 'http://ingmec.ual.es/'),
-	(u'ARM group','http://arm.ual.es/')
+	('News', '%s/archives.html' % SITEURL),
+	('Engineering Dept.', 'http://ingmec.ual.es/'),
+	('ARM group','http://arm.ual.es/')
 )
 
 
