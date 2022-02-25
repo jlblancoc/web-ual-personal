@@ -26,7 +26,7 @@ descongelarlo antes de las siguientes operaciones.
 Para eso pulsamos este botón del menú de la aplicación, entrando por el icono del
 espacio de notificaciones:
 
-![Quit Drive FS]({filename}/imgs/2018-01/1_gsuite_quit.png)
+![Quit Drive FS]({static}/imgs/2018-01/1_gsuite_quit.png)
 
 ### Paso 2: Abrir el editor del registro
 
@@ -52,7 +52,7 @@ el de la letra que se desea, por ejemplo, yo uso `Y:`.
 
 Deberías ver algo parecido a:
 
-![DriveFS regedit]({filename}/imgs/2018-06/gdrive_regedit.png)
+![DriveFS regedit]({static}/imgs/2018-06/gdrive_regedit.png)
 
 ### Paso 4: todo listo, ¡a probarlo!
 

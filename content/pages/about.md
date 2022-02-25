@@ -22,8 +22,8 @@ Complete CV [here](https://w3.ual.es/~jlblanco/docs/jlblanco-cv-english.pdf).
 
 **<i class="fas fa-robot"></i>  Robotics software development**
 
-Lead developer of [MRPT](https://www.mrpt.org/) (580+ cites in Google Scholar, 89k+ downloads) since 2005.
-See the [complete list]({filename}software.md) of software projects.
+Lead developer of [MRPT](https://www.mrpt.org/) (350+ references in Google Scholar, 89k+ downloads) since 2005.
+See the [complete list]({static}software.md) of software projects.
 
 **<i class="fas fa-pencil-alt"></i>  Editorial activity**
 

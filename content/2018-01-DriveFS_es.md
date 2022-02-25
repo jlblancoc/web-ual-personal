@@ -35,7 +35,7 @@ descongelarlo antes de las siguientes operaciones.
 Para eso pulsamos este botón del menú de la aplicación, entrando por el icono del
 espacio de notificaciones:
 
-![Quit Drive FS]({filename}/imgs/2018-01/1_gsuite_quit.png)
+![Quit Drive FS]({static}/imgs/2018-01/1_gsuite_quit.png)
 
 ### Paso 2: Abrir consola en modo administrador
 
@@ -43,7 +43,7 @@ Pulsar tecla de Windows para abrir menú inicio; escribir `cmd`, y sobre
 la aplicación "Línea de comandos", hacer click con botón derecho y
 pulsar "Ejecutar como administrador".
 
-![Admin cmd]({filename}/imgs/2018-01/2_admin_cmd.png)
+![Admin cmd]({static}/imgs/2018-01/2_admin_cmd.png)
 
 ### Paso 3: Ir al actual directorio de DriveFS
 
@@ -54,7 +54,7 @@ Ejecutar los comandos:
 
 Deberías ver algo parecido a:
 
-![DriveFS directory]({filename}/imgs/2018-01/3_drivefs_dir.png)
+![DriveFS directory]({static}/imgs/2018-01/3_drivefs_dir.png)
 
 ### Paso 4: Mover el directorio DriveFS a tu lugar favorito
 
@@ -79,7 +79,7 @@ Para ello, usaremos el comando:
 
 Tras el `dir`, deberías ver el nuevo enlace simbólico:
 
-![DriveFS directory]({filename}/imgs/2018-01/5_afer_symlink.png)
+![DriveFS directory]({static}/imgs/2018-01/5_afer_symlink.png)
 
 
 ### Paso 6: todo listo, ¡a probarlo!

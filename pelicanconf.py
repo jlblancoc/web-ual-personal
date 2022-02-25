@@ -27,15 +27,15 @@ THEME = 'themes/Flex'
 PATH = 'content'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
-OG_LOCALE = 'en_US'
-LOCALE = 'en_US'
+OG_LOCALE = 'en_US.UTF-8'
+LOCALE = 'en_US.UTF-8'
 
 DATE_FORMATS = {
     'en': '%d %B %Y',
 }
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
