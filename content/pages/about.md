@@ -5,10 +5,12 @@ URL:
 save_as: index.html
 myorder: 1
 
-At present an Associate Professor (<i>Prof. Titular de Universidad</i>) at the University of Almería
-as a member of the [ARM TEP197](https://arm.ual.es/) group.
-Until 2012 I taught as a Lecturer at the University of Málaga (Spain)
-where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively, as a member of [MAPIR lab](https://mapir.isa.uma.es/mapirwebsite/).
+I work as Full Professor (<i>Prof. Catedrático de Universidad</i>) at the University of Almería
+and as a mobile robotics consultant for the industry.
+Member of the [ARM TEP197](https://arm.ual.es/) group,
+formerly (<2012) member of
+[MAPIR lab](https://mapir.isa.uma.es/mapirwebsite/)
+at the University of Málaga (Spain), where I also received the European PhD and the M.Sc. Electrical Engineering in 2009 and 2005, respectively.
 
 **<i class="fas fa-flask"></i>  R&D**
 

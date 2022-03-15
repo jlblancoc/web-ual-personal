@@ -14,7 +14,7 @@ print(('SITEURL: ' + SITEURL))
 
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
-SITESUBTITLE = 'Associate Professor at <a href="//w3.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
+SITESUBTITLE = 'Professor at <a href="//w3.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
 #FAVICON = '/images/favicon.ico'
