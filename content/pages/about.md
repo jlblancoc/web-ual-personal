@@ -29,8 +29,9 @@ See the [complete list]({static}software.md) of software projects.
 
 **<i class="fas fa-pencil-alt"></i>  Editorial activity**
 
-  * Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR) since 2017.
-  * AE of the [IEEE Robotics and Automation Letters](https://www.ieee-ras.org/publications/ra-l) (RA-L) since 2015.
+  * 2023-: Senior Editor (SE) for the area of Localization and Mapping in the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR).
+  * 2017-2022: Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR).
+  * 2015-: AE of the [IEEE Robotics and Automation Letters](https://www.ieee-ras.org/publications/ra-l) (RA-L).
   * Conference Editorial Boards: RSS 2011, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, TPC of ETFA 2019, ECMR 2017,2019,2021, ROBOT2022.
 
 #### Contact
