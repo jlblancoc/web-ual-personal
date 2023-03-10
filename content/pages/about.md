@@ -17,7 +17,7 @@ at the University of Málaga (Spain), where I also received the European PhD and
 My research interests include robotics, computational dynamics, estimation theory and computer vision.
 Check out some [past](https://mapir.isa.uma.es/mapirwebsite/index.php/projects-top-menu)
 and [current](https://brujula.ual.es/authors/98.html) research projects.
-I also had the pleasure of visiting [MRG lab](http://mrg.robots.ox.ac.uk/) (Oxford, 2008)
+I also had the pleasure of visiting [MRG lab](https://ori.ox.ac.uk/labs/mobile-robotics-group/) (Oxford, 2008)
 and [LIM lab](https://lim.ii.udc.es/people.en.html) (La Coruña, 2013).</p>
 
 Complete CV [here](https://w3.ual.es/~jlblanco/docs/jlblanco-cv-english.pdf).
