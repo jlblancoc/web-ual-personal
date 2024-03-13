@@ -32,7 +32,7 @@ See the [complete list](https://w3.ual.es/~jlblanco/software/) of software proje
   * 2023-: Senior Editor (SE) for the area of Localization and Mapping in the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR).
   * 2017-2022: Associate Editor (AE) and Multimedia Editor (MM) of the [International Journal of Robotics Research](https://journals.sagepub.com/home/ijr) (IJRR).
   * 2015-2022: AE of the [IEEE Robotics and Automation Letters](https://www.ieee-ras.org/publications/ra-l) (RA-L).
-  * Conference Editorial Boards: RSS 2011, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, 2023, TPC of ETFA 2019, ROBOT2022, ECMR 2017,2019,2021,2023.
+  * Conference Editorial Boards: RSS 2011,2024, ICRA 2014-2015, ICARSC 2015-2018, IROS 2017, 2023, TPC of ETFA 2019, ROBOT2022, ECMR 2017,2019,2021,2023.
 
 #### Contact
 
