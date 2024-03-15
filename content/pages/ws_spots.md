@@ -7,10 +7,10 @@ Local windsurfing spots:
 
 <div>
 <h4>Costacabana</h4>
-<script id="wg_fwdg_48813_100_1626363998320">
+<script id="wg_fwdg_48813_64_1710547045795">
 (function (window, document) {
   var loader = function () {
-    var arg = ["s=48813" ,"m=100","mw=46","uid=wg_fwdg_48813_100_1626363998320" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,HTSGW,PERPW,DIRPW,TMP,CDC,APCP1s,RATING"];
+    var arg = ["s=48813" ,"m=64","uid=wg_fwdg_48813_64_1710547045795" ,"wj=knots" ,"tj=c" ,"waj=m" ,"tij=cm" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,CDC,APCP1s,RATING"];
     var script = document.createElement("script");
     var tag = document.getElementsByTagName("script")[0];
     script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
@@ -23,10 +23,10 @@ Local windsurfing spots:
 
 <div>
 <h4>Aguadulce/Roquetas</h4>
-<script id="wg_fwdg_48810_100_1626363821950">
+<script id="wg_fwdg_48810_64_1710547167716">
 (function (window, document) {
   var loader = function () {
-    var arg = ["s=48810" ,"m=100","mw=46","uid=wg_fwdg_48810_100_1626363821950" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,HTSGW,PERPW,DIRPW,TMP,CDC,APCP1s,RATING"];
+    var arg = ["s=48810" ,"m=64","uid=wg_fwdg_48810_64_1710547167716" ,"wj=knots" ,"tj=c" ,"waj=m" ,"tij=cm" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,CDC,APCP1s,RATING"];
     var script = document.createElement("script");
     var tag = document.getElementsByTagName("script")[0];
     script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
@@ -35,15 +35,14 @@ Local windsurfing spots:
   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
 })(window, document);
 </script>
-
 </div>
 
 <div>
 <h4>Zapillo</h4>
-<script id="wg_fwdg_48811_100_1626363911454">
+<script id="wg_fwdg_48811_64_1710547109102">
 (function (window, document) {
   var loader = function () {
-    var arg = ["s=48811" ,"m=100","mw=46","uid=wg_fwdg_48811_100_1626363911454" ,"wj=knots" ,"tj=c" ,"waj=m" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"idbs=1" ,"p=WINDSPD,GUST,SMER,HTSGW,PERPW,DIRPW,TMP,CDC,APCP1s,RATING"];
+    var arg = ["s=48811" ,"m=64","uid=wg_fwdg_48811_64_1710547109102" ,"wj=knots" ,"tj=c" ,"waj=m" ,"tij=cm" ,"odh=0" ,"doh=24" ,"fhours=240" ,"hrsm=2" ,"vt=forecasts" ,"lng=en" ,"p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,CDC,APCP1s,RATING"];
     var script = document.createElement("script");
     var tag = document.getElementsByTagName("script")[0];
     script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
