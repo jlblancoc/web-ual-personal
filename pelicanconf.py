@@ -5,10 +5,10 @@ from datetime import datetime
 
 AUTHOR = 'Jose Luis Blanco'
 
-#if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
+# if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
 SITEURL = 'https://w3.ual.es/~jlblanco'
-#else:
-#SITEURL = 'http://localhost/~jlblanco/pelican'
+# else:
+# SITEURL = 'http://localhost/~jlblanco/pelican'
 
 print(('SITEURL: ' + SITEURL))
 
@@ -17,7 +17,7 @@ SITETITLE = AUTHOR
 SITESUBTITLE = 'Professor at <a href="//w3.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
-#FAVICON = '/images/favicon.ico'
+# FAVICON = '/images/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'manni'
 
@@ -49,19 +49,20 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (
-	('News', '%s/archives.html' % SITEURL),
-	('Engineering Dept.', 'https://ingmec.ual.es/area/'),
-	('ARM group','https://arm.ual.es/')
+        ('Engineering Dept.', 'https://ingmec.ual.es/area/'),
+        ('ARM group', 'https://arm.ual.es/')
 )
 
 
 SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
           ('github', 'https://github.com/jlblancoc'),
-	  ('youtube', 'https://www.youtube.com/user/jlblanco2006'),
+          ('youtube', 'https://www.youtube.com/user/jlblanco2006'),
           ('rss', '%s/feeds/all.atom.xml' % SITEURL))
 
-MENUITEMS = (('News/Noticias', '%s/archives.html' % SITEURL),
-	)
+# ('News/Noticias', '%s/archives.html' % SITEURL),
+
+MENUITEMS = (
+)
 
 CC_LICENSE = {
     'name': 'Creative Commons Attribution-ShareAlike',
@@ -74,7 +75,7 @@ COPYRIGHT_YEAR = datetime.now().year
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = [ 'embed_http' ] #,'pin_to_top']
+PLUGINS = ['embed_http']  # ,'pin_to_top']
 
 SITEMAP = {
     'format': 'xml',
@@ -92,12 +93,12 @@ SITEMAP = {
 
 DISQUS_SITENAME = "jlblanco-personal-web"
 
-STATIC_PATHS = [ 'imgs', 'docs' ]
+STATIC_PATHS = ['imgs', 'docs']
 
-#EXTRA_PATH_METADATA = {
+# EXTRA_PATH_METADATA = {
 #    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
-#}
+# }
 
-#CUSTOM_CSS = 'static/custom.css'
+# CUSTOM_CSS = 'static/custom.css'
 
-#USE_LESS = True
+# USE_LESS = True
