@@ -24,6 +24,7 @@
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
 import logging
+import re
 import urllib.error
 import urllib.request
 
@@ -67,8 +68,23 @@ class EmbedHttp(Directive):
             output_html = ('<p>Could not load this content. '
                            '<a href="%s">Open it directly</a>.</p>' % url)
 
+        output_html = strip_document_wrapper(output_html)
         return [nodes.raw('', '<div class="embedhttp">%s</div>' % output_html,
                           format='html')]
+
+
+def strip_document_wrapper(html):
+    """If html is a full document, keep only the head styles/scripts and
+    the body contents, so it can be nested inside another page."""
+    body = re.search(r'<body[^>]*>(.*)</body>', html, re.S | re.I)
+    if not body:
+        return html
+    head = re.search(r'<head[^>]*>(.*?)</head>', html, re.S | re.I)
+    head_html = head.group(1) if head else ''
+    keep = re.findall(
+        r'<link[^>]*rel=["\']?stylesheet[^>]*>|<style.*?</style>|<script.*?</script>',
+        head_html, re.S | re.I)
+    return '\n'.join(keep) + body.group(1)
 
 
 def register():

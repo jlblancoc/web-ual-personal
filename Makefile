@@ -35,8 +35,12 @@ help:
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) --autoreload --listen --port $(PORT)
+# Uses a plain static server (like the production one) instead of
+# "pelican --listen", which prefers "foo.html" over "foo/index.html".
+serve: html
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) --autoreload & \
+	trap "kill $$!" EXIT INT TERM; \
+	python3 -m http.server $(PORT) --bind 127.0.0.1 --directory $(OUTPUTDIR)
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
