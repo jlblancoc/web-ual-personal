@@ -49,7 +49,17 @@ publish:
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
+# Short timeouts and bounded retries, so a stalled transfer is retried
+# instead of hanging forever (lftp defaults: 300 s timeout, infinite retries).
+LFTP_SETTINGS=set ssl:verify-certificate false; \
+	set ftp:passive-mode on; \
+	set net:timeout 20; \
+	set net:max-retries 5; \
+	set net:reconnect-interval-base 5; \
+	set net:reconnect-interval-max 30; \
+	set net:persist-retries 2
+
 ftp_upload: clean publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "set ssl:verify-certificate false; mirror -v -p --recursion=always -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "$(LFTP_SETTINGS); mirror -v -p --parallel=2 --recursion=always -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
 
 .PHONY: html help serve publish clean ftp_upload
