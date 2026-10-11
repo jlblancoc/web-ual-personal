@@ -23,24 +23,18 @@
 
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
-from pelican import signals
-import urllib.request, urllib.error, urllib.parse
+import logging
+import urllib.error
+import urllib.request
+
+logger = logging.getLogger(__name__)
 
 
 class EmbedHttp(Directive):
-    """ Embed YouTube video in posts.
-
-    Based on the YouTube directive by Brian Hsu:
-    https://gist.github.com/1422773
-
-    VIDEO_ID is required, with / height are optional integer,
-    and align could be left / center / right.
+    """ Embed the HTML returned by a URL, fetched at build time.
 
     Usage:
-    .. embed_http:: URL
-        :width: 640
-        :height: 480
-        :align: center
+    .. embedhttp:: URL
     """
 
     def align(argument):
@@ -60,17 +54,21 @@ class EmbedHttp(Directive):
 
     def run(self):
         url = self.arguments[0].strip()
-#        width = 420
-#        if 'width' in self.options:
-#            width = self.options['width']
-        print(("========= URL: %s" % url))
+        logger.info("embedhttp: fetching %s", url)
 
-        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
-        output_html = opener.open(url).read()
-        output_html = str(output_html,'utf-8')
+        try:
+            opener = urllib.request.build_opener(
+                urllib.request.HTTPCookieProcessor())
+            output_html = opener.open(url, timeout=30).read()
+            output_html = str(output_html, 'utf-8')
+        except (urllib.error.URLError, OSError) as e:
+            # Keep the build going: show a link instead of the embedded content
+            logger.warning("embedhttp: could not fetch %s: %s", url, e)
+            output_html = ('<p>Could not load this content. '
+                           '<a href="%s">Open it directly</a>.</p>' % url)
 
-        return [
-            nodes.raw('', output_html, format='html')]
+        return [nodes.raw('', '<div class="embedhttp">%s</div>' % output_html,
+                          format='html')]
 
 
 def register():

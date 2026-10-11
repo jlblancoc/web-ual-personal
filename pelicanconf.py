@@ -1,67 +1,75 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-import os
+# Settings for local preview. See publishconf.py for production settings.
 from datetime import datetime
 
 AUTHOR = 'Jose Luis Blanco'
 
-# if os.getenv('PELICAN_BUILD_FOR_WEB','0')!='0':
-SITEURL = 'https://w3.ual.es/~jlblanco'
-# else:
-# SITEURL = 'http://localhost/~jlblanco/pelican'
-
-print(('SITEURL: ' + SITEURL))
+SITEURL = ''
+RELATIVE_URLS = False
 
 SITENAME = "Jose Luis Blanco Claraco"
 SITETITLE = AUTHOR
-SITESUBTITLE = 'Professor at <a href="//w3.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
-SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = '%s/imgs/jlblanco.jpg' % SITEURL
-# FAVICON = '/images/favicon.ico'
+SITESUBTITLE = 'Professor at <a href="https://www.ual.es/">UAL</a> - Mechanical Engineering & Robotics'
+SITEDESCRIPTION = ('Full Professor at the University of Almería: mobile robotics, '
+                   'SLAM, multibody dynamics. Lead developer of MRPT and MOLA.')
+SITELOGO_PATH = 'imgs/jlblanco.jpg'
+FAVICON_PATH = 'imgs/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'manni'
+THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+THEME_COLOR_ENABLE_USER_OVERRIDE = True
 
 ROBOTS = 'index, follow'
 
 THEME = 'themes/Flex'
+THEME_TEMPLATES_OVERRIDES = ['templates']
 PATH = 'content'
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'en'
-OG_LOCALE = 'en_US.UTF-8'
+OG_LOCALE = 'en_US'
 LOCALE = 'en_US.UTF-8'
 
-DATE_FORMATS = {
-    'en': '%d %B %Y',
-}
+# Researcher identifiers, also used in the schema.org metadata
+ORCID = '0000-0002-9745-285X'
+GOOGLE_SCHOLAR = 'https://scholar.google.com/citations?user=bhDtzKgAAAAJ'
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+# This is a static site made of pages only: no blog, feeds, or archives
+ARTICLE_PATHS = ['posts']
+DIRECT_TEMPLATES = []
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+ARCHIVES_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+TAG_SAVE_AS = ''
+TAGS_SAVE_AS = ''
 
-USE_FOLDER_AS_CATEGORY = False
-MAIN_MENU = True
+MAIN_MENU = False
+DISPLAY_PAGES_ON_MENU = True
+DISABLE_URL_HASH = True
+PAGES_SORT_ATTRIBUTE = 'myorder'
+LINKS_IN_NEW_TAB = 'external'
 
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (
-        ('Engineering Dept.', 'https://ingmec.ual.es/area/'),
-        ('ARM group', 'https://arm.ual.es/')
+    ('Engineering Dept.', 'https://ingmec.ual.es/area/'),
+    ('ARM group', 'https://arm.ual.es/'),
 )
 
-
-SOCIAL = (('linkedin', 'https://es.linkedin.com/in/jose-luis-blanco-claraco-7511b712/en'),
-          ('github', 'https://github.com/jlblancoc'),
-          ('youtube', 'https://www.youtube.com/user/jlblanco2006'),
-          ('rss', '%s/feeds/all.atom.xml' % SITEURL))
-
-# ('News/Noticias', '%s/archives.html' % SITEURL),
-
-MENUITEMS = (
+SOCIAL = (
+    ('orcid', 'https://orcid.org/' + ORCID),
+    ('google-scholar', GOOGLE_SCHOLAR),
+    ('github', 'https://github.com/jlblancoc'),
+    ('linkedin', 'https://www.linkedin.com/in/jose-luis-blanco-claraco-7511b712/'),
+    ('youtube', 'https://www.youtube.com/user/jlblanco2006'),
 )
 
 CC_LICENSE = {
@@ -70,12 +78,11 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 
+COPYRIGHT_NAME = SITENAME
 COPYRIGHT_YEAR = datetime.now().year
 
-DEFAULT_PAGINATION = 10
-
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['embed_http']  # ,'pin_to_top']
+PLUGINS = ['embed_http', 'pelican.plugins.sitemap']
 
 SITEMAP = {
     'format': 'xml',
@@ -86,19 +93,25 @@ SITEMAP = {
     },
     'changefreqs': {
         'articles': 'monthly',
-        'indexes': 'daily',
+        'indexes': 'monthly',
         'pages': 'monthly',
     }
 }
 
-DISQUS_SITENAME = "jlblanco-personal-web"
+STATIC_PATHS = ['imgs', 'docs', 'css', 'extra']
 
-STATIC_PATHS = ['imgs', 'docs']
+# Legacy URLs and site verification files, served from the site root
+EXTRA_PATH_METADATA = {
+    'extra/divulgacion.html': {'path': 'divulgacion.html'},
+    'extra/docencia.html': {'path': 'docencia.html'},
+    'extra/publications.html': {'path': 'publications.html'},
+    'extra/software.html': {'path': 'software.html'},
+    'extra/videos.html': {'path': 'videos.html'},
+    'extra/google9dffe6009a8d8a62.html': {'path': 'google9dffe6009a8d8a62.html'},
+}
 
-# EXTRA_PATH_METADATA = {
-#    'imgs/jlblanco.jpg': {'path': 'imgs/jlblanco.jpg'},
-# }
+CUSTOM_CSS = 'css/custom.css'
 
-# CUSTOM_CSS = 'static/custom.css'
-
-# USE_LESS = True
+# Derived from SITEURL; publishconf.py recomputes them after overriding it
+SITELOGO = '%s/%s' % (SITEURL, SITELOGO_PATH)
+FAVICON = '%s/%s' % (SITEURL, FAVICON_PATH)

@@ -1,0 +1,94 @@
+/* Social icons not styled by the theme */
+aside ul.social a.sc-orcid {
+  background-color: #a6ce39;
+}
+aside ul.social a.sc-google-scholar {
+  background-color: #4285f4;
+}
+
+/* Researcher profile badges on the home page */
+.profile-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1em 0 1.5em;
+}
+.profile-badges a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.8em;
+  border: 1px solid currentColor;
+  border-radius: 1em;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+.profile-badges a:hover {
+  opacity: 0.8;
+}
+
+/* Contact block: two columns on wide screens, stacked on phones */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2em;
+}
+.contact > div {
+  flex: 1 1 18em;
+}
+
+/* Responsive 16:9 embeds (YouTube) and calendar */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5em;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.calendar-embed iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 700px;
+  border: 0;
+}
+
+/* Embedded publications list from Aigaion */
+.embedhttp {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.embedhttp img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Software logos floating next to their section */
+img.sw-logo {
+  float: right;
+  max-width: 140px;
+  max-height: 90px;
+  margin: 0 0 0.5em 1em;
+}
+h3 {
+  clear: both;
+}
+
+.statcounter-box {
+  text-align: center;
+}
+
+/* Keep the original capitalization of menu entries (e.g. "PhD", "(ES)") */
+aside nav ul li {
+  text-transform: none;
+}
+
+.contact p:first-child {
+  margin-top: 0;
+}

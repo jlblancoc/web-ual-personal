@@ -1,0 +1,37 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "{{ SITEURL }}/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Jose Luis Blanco Claraco",
+    "alternateName": "Jose Luis Blanco",
+    "jobTitle": "Full Professor",
+    "description": "{{ SITEDESCRIPTION }}",
+    "url": "{{ SITEURL }}/",
+    "image": "{{ SITELOGO }}",
+    "email": "mailto:jlblanco@ual.es",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "{{ ORCID }}"
+    },
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Almería",
+      "url": "https://www.ual.es/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Málaga"
+    },
+    "knowsAbout": ["Mobile robotics", "SLAM", "Multibody dynamics", "State estimation", "Computer vision"],
+    "sameAs": [
+      {%- for name, link in SOCIAL %}
+      "{{ link }}"{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+}
+</script>

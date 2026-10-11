@@ -1,0 +1,23 @@
+{% if page and page.url %}
+  {% set og_title = page.title|striptags ~ ' - ' ~ SITENAME %}
+  {% set og_url = SITEURL ~ '/' ~ page.url %}
+  {% set og_description = page.summary|striptags if page.metadata.summary else SITEDESCRIPTION %}
+{% else %}
+  {% set og_title = SITENAME %}
+  {% set og_url = SITEURL ~ '/' %}
+  {% set og_description = SITEDESCRIPTION %}
+{% endif %}
+<meta property="og:site_name" content="{{ SITENAME }}">
+<meta property="og:type" content="profile">
+<meta property="profile:first_name" content="Jose Luis">
+<meta property="profile:last_name" content="Blanco Claraco">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:locale" content="{{ OG_LOCALE }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:image" content="{{ SITELOGO }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ og_title }}">
+<meta name="twitter:description" content="{{ og_description }}">
+<meta name="twitter:image" content="{{ SITELOGO }}">
+<link rel="canonical" href="{{ og_url }}">
