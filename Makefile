@@ -59,7 +59,13 @@ LFTP_SETTINGS=set ssl:verify-certificate false; \
 	set net:reconnect-interval-max 30; \
 	set net:persist-retries 2
 
+# Persistent copy of the last uploaded site. rsync by checksum (without -t)
+# only touches files whose content changed, so "mirror --only-newer" skips
+# the rest even though "publish" regenerates everything.
+UPLOADDIR?=$(OUTPUTDIR)-upload
+
 ftp_upload: clean publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "$(LFTP_SETTINGS); mirror -v -p --parallel=2 --recursion=always -R $(OUTPUTDIR)/ $(FTP_TARGET_DIR) ; quit"
+	rsync -rc --delete $(OUTPUTDIR)/ $(UPLOADDIR)/
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "$(LFTP_SETTINGS); mirror -v -p --only-newer --parallel=1 -R $(UPLOADDIR)/ $(FTP_TARGET_DIR) ; quit"
 
 .PHONY: html help serve publish clean ftp_upload
