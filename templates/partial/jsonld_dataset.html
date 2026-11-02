@@ -1,0 +1,83 @@
+{# schema.org metadata of the Datasets section: Dataset (Google Dataset Search),
+   CollectionPage for the landing page and BreadcrumbList for the dataset pages #}
+{% import 'partial/dataset_macros.html' as dm with context %}
+{% set page_url = SITEURL ~ '/' ~ page.url %}
+{% set graph = [] %}
+
+{% if page.dataset == 'hub' %}
+  {% set parts = [] %}
+  {% for key in ['urban', '2009', 'greenhouse'] %}
+    {% set _ = parts.append({'@type': 'Dataset', 'name': DATASETS[key].name, 'url': SITEURL ~ '/' ~ DATASETS[key].url_path}) %}
+  {% endfor %}
+  {% set _ = graph.append({'@type': 'CollectionPage', 'name': page.h1 or page.title, 'url': page_url,
+                           'description': page.summary|striptags, 'hasPart': parts,
+                           'author': {'@type': 'Person', 'name': 'Jose Luis Blanco Claraco', 'url': SITEURL ~ '/'}}) %}
+{% else %}
+  {% set D = DATASETS[page.dataset] %}
+  {% set creators = [] %}
+  {% for a in D.creators %}
+    {% set person = {'@type': 'Person', 'name': a.name, 'affiliation': {'@type': 'Organization', 'name': a.affiliation}} %}
+    {% if a.orcid %}{% set _ = person.update({'sameAs': a.orcid}) %}{% endif %}
+    {% set _ = creators.append(person) %}
+  {% endfor %}
+
+  {% set dist = [] %}
+  {% if page.dataset == 'urban' %}
+    {% for e in D.extracts %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Extract #%02d'|format(e.num), 'contentUrl': e.zip_url,
+                              'encodingFormat': 'application/zip', 'contentSize': dm.hsize(e.size_bytes)|trim}) %}
+    {% endfor %}
+    {% for f in D.entire + D.extra_files %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,
+                              'contentSize': dm.hsize(f.size_bytes)|trim}) %}
+    {% endfor %}
+    {% for m in D.mirrors %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url}) %}
+    {% endfor %}
+  {% elif page.dataset == '2009' %}
+    {% for s in D.sequences if s.available %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
+                              'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+    {% endfor %}
+    {% for f in [D.calibration, D.extras] %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,
+                              'encodingFormat': 'application/zip', 'contentSize': dm.hsize(f.size_bytes)|trim}) %}
+    {% endfor %}
+  {% else %}
+    {% for s in D.sequences %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name,
+                              'contentUrl': 'https://drive.google.com/drive/folders/' ~ s.drive,
+                              'contentSize': s.size_gb ~ ' GB'}) %}
+    {% endfor %}
+  {% endif %}
+
+  {# The canonical page is the original one when this is a mirror #}
+  {% set main_url = D.original_url or page_url %}
+  {% set dataset = {
+    '@type': 'Dataset',
+    'name': D.name,
+    'description': D.description,
+    'url': main_url,
+    'identifier': 'https://doi.org/' ~ D.doi,
+    'keywords': D.keywords,
+    'creator': creators,
+    'datePublished': D.date_published,
+    'isAccessibleForFree': true,
+    'inLanguage': 'en',
+    'image': SITEURL ~ '/' ~ page.image,
+    'citation': {'@type': 'ScholarlyArticle', 'name': D.paper.title, 'url': D.paper.official_url,
+                 'datePublished': D.paper.year|string, 'isPartOf': {'@type': 'Periodical', 'name': D.paper.venue}},
+    'distribution': dist
+  } %}
+  {% if D.original_url %}{% set _ = dataset.update({'sameAs': page_url}) %}{% endif %}
+  {% if D.license %}{% set _ = dataset.update({'license': D.license.url}) %}{% endif %}
+  {% if D.place %}{% set _ = dataset.update({'spatialCoverage': {'@type': 'Place', 'name': D.place}}) %}{% endif %}
+  {% set _ = graph.append(dataset) %}
+  {% set _ = graph.append({'@type': 'BreadcrumbList', 'itemListElement': [
+      {'@type': 'ListItem', 'position': 1, 'name': 'Datasets', 'item': SITEURL ~ '/datasets/'},
+      {'@type': 'ListItem', 'position': 2, 'name': D.name, 'item': page_url}]}) %}
+{% endif %}
+
+<script type="application/ld+json">
+{{ {'@context': 'https://schema.org', '@graph': graph}|tojson }}
+</script>

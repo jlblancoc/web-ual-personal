@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 # Settings for local preview. See publishconf.py for production settings.
+import json
+import os
 from datetime import datetime
 
 AUTHOR = 'Jose Luis Blanco'
@@ -112,6 +114,11 @@ EXTRA_PATH_METADATA = {
 }
 
 CUSTOM_CSS = 'css/custom.css'
+
+# Structured data (sequences, downloads, citations) of the Datasets section
+_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
+with open(os.path.join(_DATA_DIR, 'datasets.json'), encoding='utf-8') as _f:
+    DATASETS = json.load(_f)
 
 # Derived from SITEURL; publishconf.py recomputes them after overriding it
 SITELOGO = '%s/%s' % (SITEURL, SITELOGO_PATH)

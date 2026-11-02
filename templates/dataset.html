@@ -1,0 +1,78 @@
+{# Template of the pages of the Datasets section.
+   The prose comes from the Markdown file. Marker comments in it, such as
+   <!-- extracts -->, are replaced by blocks generated from data/datasets.json. #}
+{% extends "page.html" %}
+{% import 'partial/dataset_macros.html' as dm with context %}
+
+{% block meta %}
+<meta name="author" content="{{ AUTHOR }}" />
+<meta name="description" content="{{ page.summary|striptags|e }}" />
+{% include "partial/og.html" %}
+{% endblock %}
+
+{% block content %}
+{% set D = DATASETS.get(page.dataset) %}
+{% set c = page.content %}
+{% if page.dataset == 'hub' %}
+  {% set c = c|replace('<!-- hub -->', dm.hub(DATASETS)) %}
+{% elif D %}
+  {% set c = c|replace('<!-- cite -->', dm.cite(D)) %}
+  {% if page.dataset == 'urban' %}
+    {% set c = c|replace('<!-- extracts -->', dm.extracts(D)) %}
+    {% set c = c|replace('<!-- entire -->', dm.file_table(D.entire)) %}
+    {% set c = c|replace('<!-- extra-files -->', dm.file_table(D.extra_files)) %}
+    {% set c = c|replace('<!-- overview-video -->', dm.yt_embed(D.links.overview_video, 'The Málaga stereo and Lidar urban dataset (37 km)')) %}
+  {% elif page.dataset == '2009' %}
+    {% set c = c|replace('<!-- sequences -->', dm.sequences2009(D)) %}
+    {% set c = c|replace('<!-- gallery -->', dm.gallery(D)) %}
+    {% set c = c|replace('<!-- calibration -->', dm.file_table([D.calibration])) %}
+    {% set c = c|replace('<!-- extras -->', dm.file_table([D.extras])) %}
+  {% elif page.dataset == 'greenhouse' %}
+    {% set c = c|replace('<!-- sequences -->', dm.greenbot_table(D)) %}
+    {% set c = c|replace('<!-- authors -->', dm.greenbot_authors(D)) %}
+    {% set videos %}
+      {% for v in D.videos %}
+      <h3>{{ v.title }}</h3>
+      {{ dm.yt_embed(v.id, v.title) }}
+      {% endfor %}
+    {% endset %}
+    {% set c = c|replace('<!-- videos -->', videos) %}
+  {% endif %}
+{% endif %}
+<article class="single dataset">
+  <header>
+    {% if page.parent %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ SITEURL }}/datasets/">Datasets</a> &rsaquo; <span>{{ page.crumb or page.title }}</span>
+    </nav>
+    {% endif %}
+    <h1 id="{{ page.slug }}">{{ page.h1 or page.title }}</h1>
+  </header>
+  <div>
+    {{ c }}
+  </div>
+</article>
+{% endblock %}
+
+{% block additional_js %}
+{{ super() }}
+<script>
+/* Load YouTube videos only when requested, so pages stay light */
+document.addEventListener('click', function (ev) {
+  var link = ev.target.closest('a[data-yt]');
+  if (!link) {
+    return;
+  }
+  ev.preventDefault();
+  var frame = document.createElement('iframe');
+  frame.src = 'https://www.youtube-nocookie.com/embed/' + link.getAttribute('data-yt') + '?autoplay=1&rel=0';
+  frame.title = link.getAttribute('data-title') || 'Video';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+  frame.allowFullscreen = true;
+  var box = document.createElement('div');
+  box.className = 'yt-embed';
+  box.appendChild(frame);
+  link.replaceWith(box);
+});
+</script>
+{% endblock %}

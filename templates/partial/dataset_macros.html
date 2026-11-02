@@ -1,0 +1,220 @@
+{# Reusable blocks of the Datasets section. All data comes from data/datasets.json #}
+
+{% macro hsize(b) -%}
+{%- if b >= 1000000000 -%}{{ '%.1f'|format(b / 1000000000) }} GB
+{%- elif b >= 1000000 -%}{{ '%d'|format(b / 1000000) }} MB
+{%- else -%}{{ '%d'|format(b / 1000) }} kB{%- endif -%}
+{%- endmacro %}
+
+{% macro hdur(s) -%}
+{{ s // 60 }}:{{ '%02d'|format(s % 60) }}
+{%- endmacro %}
+
+{% macro yt_facade(id, title) %}
+<a class="yt-facade" href="https://www.youtube.com/watch?v={{ id }}" data-yt="{{ id }}" data-title="{{ title }}">
+  <i class="fa-brands fa-youtube"></i> Watch video
+</a>
+{% endmacro %}
+
+{% macro yt_embed(id, title) %}
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ id }}?rel=0" title="{{ title }}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+</div>
+{% endmacro %}
+
+{# Paper reference, DOI link and BibTeX #}
+{% macro cite(D) %}
+<p class="cite">
+  {{ D.paper.authors|join(', ') }}.
+  &ldquo;{{ D.paper.title }}&rdquo;.
+  <em>{{ D.paper.venue }}</em>, {{ D.paper.year }},
+  vol. {{ D.paper.volume }}, no. {{ D.paper.number }},
+  {% if '-' in D.paper.pages %}pp. {{ D.paper.pages }}{% else %}article {{ D.paper.pages }}{% endif %}.
+  DOI: <a href="{{ D.paper.official_url }}">{{ D.doi }}</a>
+  {% if D.paper.draft_url %}(<a href="{{ D.paper.draft_url }}">draft PDF</a>){% endif %}
+</p>
+<details class="bibtex">
+  <summary>BibTeX</summary>
+  <pre><code>{{ D.bibtex }}</code></pre>
+</details>
+{% endmacro %}
+
+{# The 15 extracts of the urban dataset #}
+{% macro extracts(D) %}
+<div class="seq-grid">
+{% for e in D.extracts %}
+{% set nn = '%02d'|format(e.num) %}
+<article class="seq-card" id="extract-{{ nn }}">
+  <img class="seq-thumb" src="{{ SITEURL }}/{{ e.path_svg }}" alt="GPS path of extract #{{ nn }}, about {{ e.length_m }} m long" width="400" height="260" loading="lazy">
+  <div class="seq-body">
+    <h3>Extract #{{ nn }}</h3>
+    <p>{{ e.description }}</p>
+    <ul class="seq-facts">
+      <li><i class="fa-solid fa-clock"></i> {{ hdur(e.duration_s) }} min</li>
+      <li><i class="fa-solid fa-route"></i> about {{ e.length_m }} m</li>
+      <li><i class="fa-solid fa-camera"></i> {{ e.stereo_frames }} stereo frames</li>
+    </ul>
+    <p class="seq-actions">
+      <a class="btn-dl" href="{{ e.zip_url }}"><i class="fa-solid fa-download"></i> ZIP ({{ hsize(e.size_bytes) }})</a>
+      <a href="{{ e.md5_url }}">MD5</a>
+      <a href="{{ e.info_url }}">Log info</a>
+      <a href="{{ e.kml_url }}">KML</a>
+    </p>
+    <p class="seq-md5">MD5: <code>{{ e.md5 }}</code></p>
+    {{ yt_facade(e.youtube_id, 'The Málaga stereo and Lidar urban dataset: extract #' ~ nn) }}
+  </div>
+</article>
+{% endfor %}
+</div>
+{% endmacro %}
+
+{# Packages with the entire urban dataset #}
+{% macro file_table(files) %}
+<div class="table-wrap">
+<table class="dl-table">
+  <thead>
+    <tr><th>Package</th><th>Contents</th><th>Size</th><th>MD5</th></tr>
+  </thead>
+  <tbody>
+  {% for f in files %}
+    <tr>
+      <td><a class="btn-dl" href="{{ f.url }}"><i class="fa-solid fa-download"></i> {{ f.name }}</a></td>
+      <td>{{ f.description }}</td>
+      <td class="nowrap">{{ hsize(f.size_bytes) }}</td>
+      <td>{% if f.md5 %}<a href="{{ f.md5_url }}"><code class="md5">{{ f.md5 }}</code></a>{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endmacro %}
+
+{% macro flag(ok, label) -%}
+<li class="{% if ok %}yes{% else %}no{% endif %}"><i class="fa-solid {% if ok %}fa-check{% else %}fa-minus{% endif %}"></i> {{ label }}</li>
+{%- endmacro %}
+
+{# The six sequences of the 2009 collection #}
+{% macro sequences2009(D) %}
+<div class="seq-grid seq-grid-wide">
+{% for s in D.sequences %}
+<article class="seq-card" id="{{ s.slug }}">
+  <a href="{{ SITEURL }}/{{ s.overview }}" title="Full overview figure of {{ s.name }}">
+    <img class="seq-thumb seq-thumb-dark" src="{{ SITEURL }}/{{ s.preview }}" alt="{{ s.name }}: 3D point cloud from the laser scanners with the ground-truth vehicle path" width="900" loading="lazy">
+  </a>
+  <div class="seq-body">
+    <h3>{{ s.name }}</h3>
+    <p>{{ s.description }}</p>
+    <p class="seq-facts-line">
+      <i class="fa-solid fa-route"></i> {{ s.length_m }} m
+      {% if s.available %}
+      &middot; <i class="fa-solid fa-clock"></i> {{ hdur(s.duration_s) }} min
+      &middot; <i class="fa-solid fa-camera"></i> {{ s.stereo_pairs }} stereo pairs
+      {% endif %}
+    </p>
+    <ul class="flags">
+      {{ flag(s.loop_closure, 'Loop closure') }}
+      {{ flag(s.visual_slam, 'Visual SLAM') }}
+      {{ flag(s.slam_2d, '2D SLAM') }}
+      {{ flag(s.visual_odometry, 'Visual odometry') }}
+      {{ flag(s.dynamic_objects, 'Dynamic objects') }}
+    </ul>
+    {% if s.available %}
+    <p class="seq-actions">
+      <a class="btn-dl" href="{{ s.zip_url }}"><i class="fa-solid fa-download"></i> malaga2009_{{ s.slug }}.zip ({{ hsize(s.size_bytes) }})</a>
+      <a href="{{ s.md5_url }}">MD5</a>
+      <a href="{{ s.readme_url }}">README</a>
+    </p>
+    <p class="seq-md5">MD5: <code>{{ s.md5 }}</code></p>
+    {% else %}
+    <p class="seq-unavailable"><i class="fa-solid fa-triangle-exclamation"></i> Download currently unavailable. <a href="{{ s.readme_url }}">README</a></p>
+    <details class="seq-orig">
+      <summary>Original package data</summary>
+      <p>Original file <code>malaga2009_{{ s.slug }}.zip</code>, {{ s.original_size }}.<br>
+      MD5: <code>{{ s.original_md5 }}</code><br>
+      Useful to verify a copy downloaded in the past.</p>
+    </details>
+    {% endif %}
+  </div>
+</article>
+{% endfor %}
+</div>
+{% endmacro %}
+
+{# Photo gallery #}
+{% macro gallery(D) %}
+<ul class="gallery">
+{% for p in D.photos %}
+  <li><a href="{{ SITEURL }}/{{ p.src }}.jpg"><img src="{{ SITEURL }}/{{ p.src }}-thumb.jpg" alt="{{ p.alt }}" width="360" height="270" loading="lazy"></a><span>{{ p.alt }}</span></li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{# GREENBOT sequences #}
+{% macro greenbot_table(D) %}
+<div class="table-wrap">
+<table class="dl-table">
+  <thead>
+    <tr><th>Sequence</th><th>Length</th><th>Duration</th><th>Size</th></tr>
+  </thead>
+  <tbody>
+  {% for s in D.sequences %}
+    <tr>
+      <td><a class="btn-dl" href="https://drive.google.com/drive/folders/{{ s.drive }}?usp=sharing"><i class="fa-solid fa-download"></i> {{ s.name }}</a></td>
+      <td class="nowrap">{{ s.length_m }} m</td>
+      <td class="nowrap">{{ hdur(s.duration_s) }} min</td>
+      <td class="nowrap">{{ s.size_gb }} GB</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p>
+  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.calibration_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Calibration files</a>
+  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.tools_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Tools for MOLA SLAM</a>
+</p>
+{% endmacro %}
+
+{% macro greenbot_authors(D) %}
+<ul class="authors">
+{% for a in D.authors %}
+  <li>
+    {% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}
+    <a href="{{ a.orcid }}" aria-label="ORCID of {{ a.name }}"><i class="fa-brands fa-orcid"></i></a>
+    &middot; <a href="mailto:{{ a.email }}">{{ a.email }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{# Cards of the Datasets landing page #}
+{% macro hub(D) %}
+<div class="seq-grid seq-grid-wide">
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D.urban.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/urban/cover.jpg" alt="Málaga Urban Dataset: stereo image, GPS path and laser point cloud" width="960" height="540" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D.urban.url_path }}">Málaga Urban Dataset</a></h3>
+      <p><strong>Stereo + 5 LiDARs + GPS + IMU</strong> in real urban traffic: 36.8 km, 20 fps stereo at 1024x768, 15 ready-to-use extracts. For SLAM, visual odometry and loop closure.</p>
+      <p class="seq-facts-line">IJRR 2014 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.urban.url_path }}">Downloads and previews</a></p>
+    </div>
+  </article>
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D['2009'].url_path }}"><img class="seq-thumb seq-thumb-dark" src="{{ SITEURL }}/imgs/datasets/2009/seq-parking-6l.jpg" alt="Málaga 2009 dataset: 3D point cloud with the RTK ground-truth path" width="900" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D['2009'].url_path }}">Málaga 2009 Dataset</a></h3>
+      <p><strong>Six outdoor sequences with centimeter-accuracy 6D ground truth</strong> from three RTK GPS receivers, plus lasers, cameras and IMU. For visual SLAM, 2D SLAM and localization.</p>
+      <p class="seq-facts-line">Autonomous Robots 2009 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D['2009'].url_path }}">Downloads and previews</a></p>
+    </div>
+  </article>
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D.greenhouse.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/greenhouse/header.jpg" alt="GREENBOT dataset: LiDAR point cloud of a greenhouse" width="882" height="385" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">GREENBOT Greenhouse Dataset</a></h3>
+      <p><strong>Multimodal mobile robot dataset in a Mediterranean greenhouse</strong>: Velodyne VLP-16 and Ouster OS0 LiDARs, stereo camera and GNSS/IMU. Nine sequences as ROS bags and MRPT rawlogs.</p>
+      <p class="seq-facts-line">Sensors 2024 &middot; CC BY-NC-SA 3.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">Downloads and previews</a></p>
+    </div>
+  </article>
+</div>
+{% endmacro %}

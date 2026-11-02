@@ -1,3 +1,6 @@
+{% if page and page.dataset %}
+{% include "partial/jsonld_dataset.html" %}
+{% else %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,3 +38,4 @@
   }
 }
 </script>
+{% endif %}

@@ -7,17 +7,25 @@
   {% set og_url = SITEURL ~ '/' %}
   {% set og_description = SITEDESCRIPTION %}
 {% endif %}
+{# Dataset pages: article-like, with their own image and, if they mirror another site, its canonical URL #}
+{% set is_dataset = page and page.dataset %}
+{% set og_image = SITEURL ~ '/' ~ page.image if is_dataset and page.image else SITELOGO %}
+{% set og_canonical = page.canonical if is_dataset and page.canonical else og_url %}
 <meta property="og:site_name" content="{{ SITENAME }}">
+{% if is_dataset %}
+<meta property="og:type" content="article">
+{% else %}
 <meta property="og:type" content="profile">
 <meta property="profile:first_name" content="Jose Luis">
 <meta property="profile:last_name" content="Blanco Claraco">
+{% endif %}
 <meta property="og:title" content="{{ og_title }}">
 <meta property="og:description" content="{{ og_description }}">
 <meta property="og:locale" content="{{ OG_LOCALE }}">
-<meta property="og:url" content="{{ og_url }}">
-<meta property="og:image" content="{{ SITELOGO }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="{{ og_canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta name="twitter:card" content="{% if is_dataset %}summary_large_image{% else %}summary{% endif %}">
 <meta name="twitter:title" content="{{ og_title }}">
 <meta name="twitter:description" content="{{ og_description }}">
-<meta name="twitter:image" content="{{ SITELOGO }}">
-<link rel="canonical" href="{{ og_url }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<link rel="canonical" href="{{ og_canonical }}">

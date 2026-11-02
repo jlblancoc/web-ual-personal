@@ -1,0 +1,831 @@
+{
+ "authors_jl": {
+  "name": "José-Luis Blanco-Claraco",
+  "orcid": "https://orcid.org/0000-0002-9745-285X"
+ },
+ "urban": {
+  "id": "urban",
+  "name": "The Málaga Stereo and Laser Urban Data Set",
+  "url_path": "datasets/malaga-urban-dataset/",
+  "doi": "10.1177/0278364913507326",
+  "paper": {
+   "title": "The Málaga Urban Dataset: High-rate Stereo and Lidars in a realistic urban scenario",
+   "authors": [
+    "J.L. Blanco-Claraco",
+    "F.A. Moreno-Dueñas",
+    "J. Gonzalez-Jimenez"
+   ],
+   "venue": "The International Journal of Robotics Research (IJRR)",
+   "year": 2014,
+   "volume": "33",
+   "number": "2",
+   "pages": "207-214",
+   "official_url": "https://doi.org/10.1177/0278364913507326",
+   "draft_url": "https://ingmec.ual.es/~jlblanco/papers/blanco2013malaga_urban_dataset_IJRR_draft.pdf",
+   "bibtex_url": "https://mapir.isa.uma.es/mapirpubsite/index.php/export/publication/251/bibtex"
+  },
+  "license": {
+   "name": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "bibtex": "@article{blanco2014malaga,\n  author    = {Blanco-Claraco, Jos{\\'e}-Luis and Moreno-Due{\\~n}as, Francisco-{\\'A}ngel and Gonz{\\'a}lez-Jim{\\'e}nez, Javier},\n  title     = {The M{\\'a}laga Urban Dataset: High-rate Stereo and Lidars in a realistic urban scenario},\n  journal   = {The International Journal of Robotics Research},\n  volume    = {33},\n  number    = {2},\n  pages     = {207--214},\n  year      = {2014},\n  doi       = {10.1177/0278364913507326}\n}",
+  "mirrors": [
+   {
+    "name": "Google Drive mirror (entire dataset)",
+    "url": "https://drive.google.com/open?id=0B5HPWlmxIrvFOGFfUkIxVkhyWEE"
+   }
+  ],
+  "links": {
+   "imu_datasheet": "https://drive.google.com/open?id=0B5HPWlmxIrvFZ0tUZDk5ck9sMGs",
+   "extracts_readme": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/README_extracts.txt",
+   "readme": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/README.txt",
+   "overview_video": "tM5BSLKUSxU",
+   "calib": {
+    "raw": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/calibration/camera_params_raw_1024x768.txt",
+    "rect1024": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/calibration/camera_params_rectified_a=0_1024x768.txt",
+    "rect800": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/calibration/camera_params_rectified_a=0_800x600.txt"
+   },
+   "full_kml": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset_CAM%2BGPS.kml"
+  },
+  "extracts": [
+   {
+    "num": 1,
+    "description": "Straight path in the faculty parking lot.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-01.zip",
+    "size_bytes": 933492693,
+    "md5": "26e3b42112a07ac9e6f7511c850a3b96",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-01.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-01_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-01_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-01_PREVIEW.flv",
+    "duration_s": 39,
+    "stereo_frames": 789,
+    "length_m": 115,
+    "youtube_id": "GBeIfljFI1w",
+    "path_svg": "imgs/datasets/urban/paths/extract-01.svg"
+   },
+   {
+    "num": 2,
+    "description": "Through an under-construction road.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-02.zip",
+    "size_bytes": 2206698017,
+    "md5": "3f8f5dff44418258cd7715ac8097e477",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-02.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-02_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-02_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-02_PREVIEW.flv",
+    "duration_s": 93,
+    "stereo_frames": 1855,
+    "length_m": 590,
+    "youtube_id": "qZMlc5UeUpE",
+    "path_svg": "imgs/datasets/urban/paths/extract-02.svg"
+   },
+   {
+    "num": 3,
+    "description": "Roundabout, 3/4 turn.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-03.zip",
+    "size_bytes": 839469121,
+    "md5": "96ebd8230658267c16fe559a92f5a789",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-03.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-03_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-03_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-03_PREVIEW.flv",
+    "duration_s": 41,
+    "stereo_frames": 823,
+    "length_m": 270,
+    "youtube_id": "7pCUrHpM5y0",
+    "path_svg": "imgs/datasets/urban/paths/extract-03.svg"
+   },
+   {
+    "num": 4,
+    "description": "Roundabout with traffic.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-04.zip",
+    "size_bytes": 689714223,
+    "md5": "386816fa1205b52ddead7c03fd6b88a7",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-04.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-04_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-04_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-04_PREVIEW.flv",
+    "duration_s": 32,
+    "stereo_frames": 645,
+    "length_m": 134,
+    "youtube_id": "AoSLk-6NT60",
+    "path_svg": "imgs/datasets/urban/paths/extract-04.svg"
+   },
+   {
+    "num": 5,
+    "description": "Avenue loop closure (about 1.7 km).",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-05.zip",
+    "size_bytes": 4746060162,
+    "md5": "7ce7f20cbbf95a1f439213a47d7dabb3",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-05.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-05_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-05_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-05_PREVIEW.flv",
+    "duration_s": 241,
+    "stereo_frames": 4816,
+    "length_m": 2250,
+    "youtube_id": "BDR5442lycA",
+    "path_svg": "imgs/datasets/urban/paths/extract-05.svg"
+   },
+   {
+    "num": 6,
+    "description": "Block loop closure (about 1.2 km).",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-06.zip",
+    "size_bytes": 4737889194,
+    "md5": "c2d39bacaabbd358431544511780be93",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-06.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-06_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-06_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-06_PREVIEW.flv",
+    "duration_s": 231,
+    "stereo_frames": 4618,
+    "length_m": 1370,
+    "youtube_id": "HF5b12_iQdY",
+    "path_svg": "imgs/datasets/urban/paths/extract-06.svg"
+   },
+   {
+    "num": 7,
+    "description": "Short avenue loop closure (about 0.7 km).",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-07.zip",
+    "size_bytes": 2352089259,
+    "md5": "f461b39e056db34b21c4f769fc6f84ba",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-07.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-07_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-07_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-07_PREVIEW.flv",
+    "duration_s": 106,
+    "stereo_frames": 2121,
+    "length_m": 870,
+    "youtube_id": "Kg-ohbrjyck",
+    "path_svg": "imgs/datasets/urban/paths/extract-07.svg"
+   },
+   {
+    "num": 8,
+    "description": "Long loop closure (about 4.5 km).",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-08.zip",
+    "size_bytes": 10995808751,
+    "md5": "8066602a6cbcd034400c14b8b5ba35cc",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-08.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-08_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-08_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-08_PREVIEW.flv",
+    "duration_s": 501,
+    "stereo_frames": 10026,
+    "length_m": 4820,
+    "youtube_id": "h4MPZiv_vVE",
+    "path_svg": "imgs/datasets/urban/paths/extract-08.svg"
+   },
+   {
+    "num": 9,
+    "description": "Campus boulevard, with traffic.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-09.zip",
+    "size_bytes": 1015856434,
+    "md5": "3d9ece8bb843c47e0d460a4aa0741a01",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-09.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-09_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-09_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-09_PREVIEW.flv",
+    "duration_s": 51,
+    "stereo_frames": 1018,
+    "length_m": 390,
+    "youtube_id": "p_gDNLdQIcg",
+    "path_svg": "imgs/datasets/urban/paths/extract-09.svg"
+   },
+   {
+    "num": 10,
+    "description": "Multiple loop closures.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-10.zip",
+    "size_bytes": 18864349795,
+    "md5": "bddaadba0810131e276f4564d2ac7365",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-10.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-10_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-10_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-10_PREVIEW.flv",
+    "duration_s": 865,
+    "stereo_frames": 17310,
+    "length_m": 5810,
+    "youtube_id": "UMHF1LY1Q_I",
+    "path_svg": "imgs/datasets/urban/paths/extract-10.svg"
+   },
+   {
+    "num": 11,
+    "description": "Highway incorporation, with traffic.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-11.zip",
+    "size_bytes": 2520761200,
+    "md5": "fe81ff84ce6045f561a41173e73783a8",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-11.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-11_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-11_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-11_PREVIEW.flv",
+    "duration_s": 144,
+    "stereo_frames": 2883,
+    "length_m": 2150,
+    "youtube_id": "2JkP9j9yFis",
+    "path_svg": "imgs/datasets/urban/paths/extract-11.svg"
+   },
+   {
+    "num": 12,
+    "description": "Long avenue with traffic (about 3.7 km).",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-12.zip",
+    "size_bytes": 9251930571,
+    "md5": "570530062d2890cabd7bfffb91980638",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-12.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-12_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-12_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-12_PREVIEW.flv",
+    "duration_s": 443,
+    "stereo_frames": 8861,
+    "length_m": 4300,
+    "youtube_id": "eEzh5I1tKwg",
+    "path_svg": "imgs/datasets/urban/paths/extract-12.svg"
+   },
+   {
+    "num": 13,
+    "description": "Downtown: traffic and pedestrians.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-13.zip",
+    "size_bytes": 35524448685,
+    "md5": "1b78b79d84bd9cc481984e59a461c6d5",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-13.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-13_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-13_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-13_PREVIEW.flv",
+    "duration_s": 1572,
+    "stereo_frames": 31443,
+    "length_m": 8700,
+    "youtube_id": "op-2ypPcJIc",
+    "path_svg": "imgs/datasets/urban/paths/extract-13.svg"
+   },
+   {
+    "num": 14,
+    "description": "Direct sun example.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-14.zip",
+    "size_bytes": 2085560875,
+    "md5": "07cd71109380875f1aaecaf9c8c51c2b",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-14.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-14_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-14_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-14_PREVIEW.flv",
+    "duration_s": 113,
+    "stereo_frames": 2259,
+    "length_m": 132,
+    "youtube_id": "mgOmx7mYZAk",
+    "path_svg": "imgs/datasets/urban/paths/extract-14.svg"
+   },
+   {
+    "num": 15,
+    "description": "Direct sun example.",
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-15.zip",
+    "size_bytes": 1425351646,
+    "md5": "1f9faf5b77885088cac7c3fdc2286170",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/extracts/malaga-urban-dataset-extract-15.zip.md5",
+    "info_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/INFO/malaga-urban-dataset-extract-15_all-sensors_INFO.txt",
+    "kml_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/KMLs/malaga-urban-dataset-extract-15_CAM_GPS.kml",
+    "preview_flv_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset-extract-15_PREVIEW.flv",
+    "duration_s": 70,
+    "stereo_frames": 1397,
+    "length_m": 400,
+    "youtube_id": "vI_MODuUsaM",
+    "path_svg": "imgs/datasets/urban/paths/extract-15.svg"
+   }
+  ],
+  "entire": [
+   {
+    "name": "Plain text",
+    "description": "Raw laser scans, IMU and GPS data, plus a list of all image file names. See the format readme included.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset-plain-text.zip",
+    "size_bytes": 1452867822,
+    "md5": "8806e8c6b7b032310d41cd231d956dca",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset-plain-text.zip.md5"
+   },
+   {
+    "name": "Binary (.rawlog)",
+    "description": "The main binary log with all sensors (malaga-urban-dataset_all-sensors.rawlog), a filtered camera + GPS version, and a KML of the path. Open with RawLogViewer, part of MRPT. Raw images are not included in the rawlogs: download them below and place them in a directory named \"Images\".",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset-binary.zip",
+    "size_bytes": 1437114813,
+    "md5": "32cc0a4f49116ca4d585a7f4e7ddc1e7",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset-binary.zip.md5"
+   },
+   {
+    "name": "Raw images, 1024x768, 20 fps",
+    "description": "Unprocessed stereo images in JPEG format (separate left and right files) and the calibration parameters.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_raw_images.zip",
+    "size_bytes": 47713741910,
+    "md5": "5dad0ce7c77aa56d7f86ea16c200d5f4",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_raw_images.zip.md5"
+   },
+   {
+    "name": "Rectified images, 1024x768, 20 fps",
+    "description": "Rectified stereo images, calibration parameters and a camera + GPS rawlog.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_rectified_1024x768.zip",
+    "size_bytes": 41460893684,
+    "md5": "d96e84ccd5aab6a3446364b24aafa3ee",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_rectified_1024x768.zip.md5"
+   },
+   {
+    "name": "Rectified images, 800x600, 20 fps",
+    "description": "Rectified stereo images, calibration parameters and a camera + GPS rawlog.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_rectified_800x600.zip",
+    "size_bytes": 28687764786,
+    "md5": "88ba785e9d317d01127c13ffd9a0e7c7",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/entire/malaga-urban-dataset_rectified_800x600.zip.md5"
+   }
+  ],
+  "extra_files": [
+   {
+    "name": "Stereo calibration images",
+    "description": "Image pairs of a checkerboard grabbed with the Bumblebee2 camera, useful to determine the camera rectification parameters.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/calibration/malaga-urban-dataset_bumblebee2_images_for_calibration.zip",
+    "size_bytes": 10634849
+   },
+   {
+    "name": "Video: stereo left (AVI)",
+    "description": "Left camera video of the entire dataset.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_STEREO_LEFT.avi",
+    "size_bytes": 3540142924,
+    "md5": "10b71137e0a08f785c14dcd27475e096",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_STEREO_LEFT.avi.md5"
+   },
+   {
+    "name": "Video: stereo right (AVI)",
+    "description": "Right camera video of the entire dataset.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_STEREO_RIGHT.avi",
+    "size_bytes": 3535462524,
+    "md5": "40026fb261b00c64ec0fa29c726f9558",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_STEREO_RIGHT.avi.md5"
+   },
+   {
+    "name": "Video: dataset preview (FLV)",
+    "description": "Composite preview: camera, GPS position over a city map and a simple 3D reconstruction.",
+    "url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_DATASET_PREVIEW.flv",
+    "size_bytes": 5598552533,
+    "md5": "dcefbf5baf62dd6df3f9eccee9fc4f21",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga-urban-dataset/videos/malaga-urban-dataset_DATASET_PREVIEW.flv.md5"
+   }
+  ],
+  "date_published": "2013-10-09",
+  "description": "The Málaga Stereo and Laser Urban Data Set was gathered entirely in urban scenarios in Málaga (Spain) with a car equipped with a Bumblebee 2 stereo camera, five laser scanners (three Hokuyo UTM-30LX and two SICK LMS-200), an Xsens MTi inertial measurement unit and a GPS receiver. It contains high-resolution (1024x768) color stereo images grabbed at 20 fps during a 36.8 km, about 1.5 hour trajectory with real-life traffic, which makes it a suitable benchmark for SLAM, visual odometry, loop closure, place recognition and object detection. Data is provided as plain text files and as binary MRPT rawlog files, both for the entire dataset and for 15 selected extracts, together with raw and rectified images and calibration files.",
+  "keywords": [
+   "urban dataset",
+   "stereo camera",
+   "lidar",
+   "laser scanner",
+   "GPS",
+   "IMU",
+   "SLAM",
+   "visual odometry",
+   "loop closure",
+   "Málaga",
+   "Bumblebee 2",
+   "MRPT",
+   "rawlog",
+   "autonomous driving",
+   "robotics benchmark"
+  ],
+  "creators": [
+   {
+    "name": "José-Luis Blanco-Claraco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "Francisco-Ángel Moreno-Dueñas",
+    "affiliation": "University of Málaga"
+   },
+   {
+    "name": "Javier González-Jiménez",
+    "affiliation": "University of Málaga"
+   }
+  ],
+  "place": "Málaga, Spain",
+  "formats": [
+   "ZIP",
+   "rawlog",
+   "text/plain",
+   "JPEG"
+  ]
+ },
+ "2009": {
+  "id": "2009",
+  "name": "Málaga 2009 Robotic Dataset Collection",
+  "url_path": "datasets/malaga-2009-dataset/",
+  "doi": "10.1007/s10514-009-9138-7",
+  "paper": {
+   "title": "A Collection of Outdoor Robotic Datasets with centimeter-accuracy Ground Truth",
+   "authors": [
+    "J.L. Blanco",
+    "F.A. Moreno",
+    "J. Gonzalez"
+   ],
+   "venue": "Autonomous Robots",
+   "year": 2009,
+   "volume": "27",
+   "number": "4",
+   "pages": "327-351",
+   "official_url": "https://doi.org/10.1007/s10514-009-9138-7",
+   "draft_url": "https://ingmec.ual.es/~jlblanco/papers/malaga_dataset_DRAFT.pdf"
+  },
+  "bibtex": "@article{blanco2009cor,\n  author  = {Blanco, Jos{\\'e}-Luis and Moreno, Francisco-Angel and Gonz{\\'a}lez, Javier},\n  title   = {A Collection of Outdoor Robotic Datasets with centimeter-accuracy Ground Truth},\n  journal = {Autonomous Robots},\n  volume  = {27},\n  number  = {4},\n  pages   = {327--351},\n  month   = {November},\n  year    = {2009},\n  issn    = {0929-5593},\n  doi     = {10.1007/s10514-009-9138-7}\n}",
+  "sequences": [
+   {
+    "name": "PARKING-0L",
+    "slug": "parking_0L",
+    "place": "Parking",
+    "length_m": 524,
+    "description": "Almost planar path through the parking lot of the Computer Science School, among trees and cars. A single pass with no loops.",
+    "loop_closure": false,
+    "visual_slam": true,
+    "slam_2d": true,
+    "visual_odometry": true,
+    "dynamic_objects": false,
+    "preview": "imgs/datasets/2009/seq-parking-0l.jpg",
+    "overview": "imgs/datasets/2009/seq-parking-0l-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_parking_0L.html",
+    "original_size": "1.3 GB",
+    "original_md5": "4dfb84412459dc65a130dd75091f8144",
+    "available": true,
+    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_parking_0L.zip",
+    "size_bytes": 1428314424,
+    "md5": "696ddbfae90cb980b895046bd62f3d03",
+    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_parking_0L.zip.md5",
+    "duration_s": 256,
+    "stereo_pairs": 1922
+   },
+   {
+    "name": "PARKING-2L",
+    "slug": "parking_2L",
+    "place": "Parking",
+    "length_m": 543,
+    "description": "Same parking lot, with two complete loops: a good test for loop closure in SLAM.",
+    "loop_closure": true,
+    "visual_slam": true,
+    "slam_2d": true,
+    "visual_odometry": true,
+    "dynamic_objects": false,
+    "preview": "imgs/datasets/2009/seq-parking-2l.jpg",
+    "overview": "imgs/datasets/2009/seq-parking-2l-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_parking_2L.html",
+    "original_size": "2.1 GB",
+    "original_md5": "88d54558dd0f00a9df435c99711e3b5a",
+    "available": false
+   },
+   {
+    "name": "PARKING-6L",
+    "slug": "parking_6L",
+    "place": "Parking",
+    "length_m": 1222,
+    "description": "Same parking lot, with six complete loops, plus moving cars and crossing people.",
+    "loop_closure": true,
+    "visual_slam": true,
+    "slam_2d": true,
+    "visual_odometry": true,
+    "dynamic_objects": true,
+    "preview": "imgs/datasets/2009/seq-parking-6l.jpg",
+    "overview": "imgs/datasets/2009/seq-parking-6l-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_parking_6L.html",
+    "original_size": "2.3 GB",
+    "original_md5": "3273fc6b011dc6395927097ebba0a9c2",
+    "available": false
+   },
+   {
+    "name": "CAMPUS-0L",
+    "slug": "campus_0L",
+    "place": "Campus",
+    "length_m": 1143,
+    "description": "Long straight sections along the campus boulevard of the University of Málaga, ending with a 180 degree turn.",
+    "loop_closure": false,
+    "visual_slam": true,
+    "slam_2d": false,
+    "visual_odometry": true,
+    "dynamic_objects": true,
+    "preview": "imgs/datasets/2009/seq-campus-0l.jpg",
+    "overview": "imgs/datasets/2009/seq-campus-0l-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_0L.html",
+    "original_size": "1.8 GB",
+    "original_md5": "030ddf2d0ac15c836fdfb549823795c3",
+    "available": false
+   },
+   {
+    "name": "CAMPUS-2L",
+    "slug": "campus_2L",
+    "place": "Campus",
+    "length_m": 2150,
+    "description": "Large loops around the campus, driven twice: for large-scale SLAM validation.",
+    "loop_closure": true,
+    "visual_slam": true,
+    "slam_2d": false,
+    "visual_odometry": true,
+    "dynamic_objects": true,
+    "preview": "imgs/datasets/2009/seq-campus-2l.jpg",
+    "overview": "imgs/datasets/2009/seq-campus-2l-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_2L.html",
+    "original_size": "3.6 GB",
+    "original_md5": "95aa661466d30c2b845d6c5df58d2e42",
+    "available": false
+   },
+   {
+    "name": "CAMPUS-RT",
+    "slug": "campus_RT",
+    "place": "Campus",
+    "length_m": 776,
+    "description": "A round trip along the campus boulevard (RT stands for round trip).",
+    "loop_closure": false,
+    "visual_slam": true,
+    "slam_2d": false,
+    "visual_odometry": true,
+    "dynamic_objects": true,
+    "preview": "imgs/datasets/2009/seq-campus-rt.jpg",
+    "overview": "imgs/datasets/2009/seq-campus-rt-overview.jpg",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_RT.html",
+    "original_size": "1.9 GB",
+    "original_md5": "b2f812b7e722373efa3e5792bb51ab89",
+    "available": false
+   }
+  ],
+  "calibration": {
+   "name": "Stereo camera calibration images",
+   "description": "Image pairs of a 5x8 checkerboard (squares of 12x12 cm), with the calibration results, to calibrate the cameras or rectify the images.",
+   "url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_imgs_stereo_calib.zip",
+   "size_bytes": 4218775,
+   "md5": "f2426a76933deb21b3a357faf3ca89d1",
+   "md5_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_imgs_stereo_calib.zip.md5",
+   "original_url": "https://sourceforge.net/projects/mrpt/files/Datasets%20%28Rawlogs%29/Datasets/malaga2009_imgs_stereo_calib.zip/download"
+  },
+  "extras": {
+   "name": "Extra material: manuscript sources, figures and photos",
+   "description": "LaTeX sources and EPS figures of the paper, per-sequence overview figures, sensor photos taken in November 2008, calibration notes and sensor pose measurements.",
+   "url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_extras.zip",
+   "size_bytes": 149222650,
+   "md5": "9617fdbe7fda900df102db3f84d7b0ed",
+   "md5_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_extras.zip.md5"
+  },
+  "photos": [
+   {
+    "src": "imgs/datasets/2009/photo-01",
+    "alt": "GPS antennas on tripods, with the city in the background"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-02",
+    "alt": "The vehicle with the sensor roof frame"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-03",
+    "alt": "A laser scanner mounted on the roof frame"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-04",
+    "alt": "The vehicle and its roof frame, side view"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-05",
+    "alt": "A laser scanner mounted at the front of the vehicle"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-06",
+    "alt": "The on-board computers and electronics rack"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-07",
+    "alt": "The vehicle with its driver"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-08",
+    "alt": "The roof frame with GPS antennas, seen from below"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-09",
+    "alt": "One of the cameras mounted on the roof frame"
+   },
+   {
+    "src": "imgs/datasets/2009/photo-10",
+    "alt": "A GPS antenna on the roof frame"
+   }
+  ],
+  "date_published": "2009-11",
+  "description": "The Málaga 2009 Robotic Dataset Collection contains six outdoor datasets (PARKING-0L, PARKING-2L, PARKING-6L, CAMPUS-0L, CAMPUS-2L and CAMPUS-RT) recorded in November 2008 at the University of Málaga (Spain) with an electric vehicle equipped with three SICK and two Hokuyo laser scanners, two color cameras, an Xsens IMU and three RTK GPS receivers. A centimeter-level 6D ground truth of the vehicle path, with its uncertainty, is computed from the RTK GPS data, which makes the collection suitable as a test bed for visual SLAM, 2D SLAM, visual odometry and localization. Reference 3D point clouds built from the lasers are also provided.",
+  "keywords": [
+   "dataset",
+   "ground truth",
+   "RTK GPS",
+   "visual SLAM",
+   "SLAM",
+   "visual odometry",
+   "laser scanner",
+   "stereo",
+   "Málaga",
+   "MRPT",
+   "rawlog",
+   "6D path",
+   "outdoor robotics"
+  ],
+  "creators": [
+   {
+    "name": "José-Luis Blanco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "affiliation": "University of Málaga"
+   },
+   {
+    "name": "Francisco-Ángel Moreno",
+    "affiliation": "University of Málaga"
+   },
+   {
+    "name": "Javier González",
+    "affiliation": "University of Málaga"
+   }
+  ],
+  "place": "Málaga, Spain",
+  "formats": [
+   "ZIP",
+   "rawlog",
+   "text/plain",
+   "JPEG"
+  ],
+  "license": {
+   "name": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "url": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ },
+ "greenhouse": {
+  "id": "greenhouse",
+  "name": "The GREENBOT Dataset",
+  "url_path": "datasets/greenbot-greenhouse-dataset/",
+  "original_url": "https://arm.ual.es/arm-group/dataset-greenhouse-2024/",
+  "doi": "10.3390/s24061874",
+  "paper": {
+   "title": "Multimodal Mobile Robotic Dataset for a Typical Mediterranean Greenhouse: The GREENBOT Dataset",
+   "authors": [
+    "F. Cañadas-Aránega",
+    "J.L. Blanco-Claraco",
+    "J.C. Moreno",
+    "F. Rodriguez-Diaz"
+   ],
+   "venue": "Sensors",
+   "year": 2024,
+   "volume": "24",
+   "number": "6",
+   "pages": "1874",
+   "official_url": "https://www.mdpi.com/1424-8220/24/6/1874"
+  },
+  "license": {
+   "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (CC BY-NC-SA 3.0)",
+   "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+  },
+  "bibtex": "@Article{canadas2024greenbot,\n  AUTHOR = {Ca{\\~n}adas-Ar{\\'a}nega, Fernando and Blanco-Claraco, Jose Luis and Moreno, Jose Carlos and Rodriguez-Diaz, Francisco},\n  TITLE = {Multimodal Mobile Robotic Dataset for a Typical Mediterranean Greenhouse: The GREENBOT Dataset},\n  JOURNAL = {Sensors},\n  VOLUME = {24},\n  YEAR = {2024},\n  NUMBER = {6},\n  ARTICLE-NUMBER = {1874},\n  URL = {https://www.mdpi.com/1424-8220/24/6/1874},\n  ISSN = {1424-8220},\n  DOI = {10.3390/s24061874}\n}",
+  "sequences": [
+   {
+    "name": "SEQ_01_2022-10-05",
+    "date": "2022-10-05",
+    "length_m": 459.2,
+    "duration_s": 696,
+    "size_gb": 20.4,
+    "drive": "1XYzHemM0MZ_ORhyqhForVkU2N9eoaMKl"
+   },
+   {
+    "name": "SEQ_02_2022-10-14",
+    "date": "2022-10-14",
+    "length_m": 457.36,
+    "duration_s": 701,
+    "size_gb": 34.1,
+    "drive": "1s81rNiF15oZZyQoGB8jKuEDrYqMbliS6"
+   },
+   {
+    "name": "SEQ_03_2022-10-19",
+    "date": "2022-10-19",
+    "length_m": 1321.21,
+    "duration_s": 1432,
+    "size_gb": 69.5,
+    "drive": "1aX8lqpRcRM2IyyoJDCR83JBhIHyAeHJ2"
+   },
+   {
+    "name": "SEQ_04_2022-10-26",
+    "date": "2022-10-26",
+    "length_m": 1432.08,
+    "duration_s": 1463,
+    "size_gb": 27.6,
+    "drive": "1gGiZfeKLlzC7C5IzO8w03HFLWkm8XK6K"
+   },
+   {
+    "name": "SEQ_05_2022-11-02",
+    "date": "2022-11-02",
+    "length_m": 1233.87,
+    "duration_s": 1486,
+    "size_gb": 71.7,
+    "drive": "1xdG1TVpvBIrMearq9SV8nks-oRAnWYJI"
+   },
+   {
+    "name": "SEQ_06_2022-11-09",
+    "date": "2022-11-09",
+    "length_m": 1293.29,
+    "duration_s": 1532,
+    "size_gb": 73.5,
+    "drive": "1tpKRywOKFQz7QTRujXPXY7zDkhdVlcSQ"
+   },
+   {
+    "name": "SEQ_07_2022-11-17",
+    "date": "2022-11-17",
+    "length_m": 1332.58,
+    "duration_s": 1752,
+    "size_gb": 84.3,
+    "drive": "1OeKoYnjKjWwwliMtuAGKlTUJKKbMyme8"
+   },
+   {
+    "name": "SEQ_08_2022-11-23",
+    "date": "2022-11-23",
+    "length_m": 1428.45,
+    "duration_s": 1692,
+    "size_gb": 66.1,
+    "drive": "1kUeNMIyUAYNYFCwoEo8RLsHEhGJjMh1-"
+   },
+   {
+    "name": "SEQ_09_2022-11-30",
+    "date": "2022-11-30",
+    "length_m": 1440.32,
+    "duration_s": 1730,
+    "size_gb": 83.4,
+    "drive": "17fv1PqNF4LS30SNDHaWI-ZgAP0jbfS6U"
+   }
+  ],
+  "calibration_drive": "1aXwe5yClxgOVcETs7Gv1Krj0dES6Tqqu",
+  "tools_drive": "1eUU-TozCWxubNOKzI3iyK8W3M6f6s0Hz",
+  "videos": [
+   {
+    "id": "tdXzYeG51Bc",
+    "title": "GreenBot Dataset (Greenhouse LIDAR SLAM)"
+   },
+   {
+    "id": "U_ULqAqUWVg",
+    "title": "GreenBot Dataset (Greenhouse OUSTER OS0 - SLAM)"
+   },
+   {
+    "id": "Il7Mf-EpPBM",
+    "title": "GreenBot Dataset (Greenhouse Velodyne VLP16 - SLAM)"
+   }
+  ],
+  "authors": [
+   {
+    "name": "Fernando Cañadas-Aránega",
+    "orcid": "https://orcid.org/0000-0003-2866-3095",
+    "email": "fernando.ca@ual.es"
+   },
+   {
+    "name": "J. Luis Blanco-Claraco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "email": "jlblanco@ual.es",
+    "url": "https://w3.ual.es/~jlblanco/"
+   },
+   {
+    "name": "J. Carlos Moreno",
+    "orcid": "https://orcid.org/0000-0002-7505-9686",
+    "email": "jcmoreno@ual.es"
+   },
+   {
+    "name": "F. Rodriguez",
+    "orcid": "https://orcid.org/0000-0001-9536-1922",
+    "email": "frrodrig@ual.es"
+   }
+  ],
+  "date_published": "2024-01-31",
+  "description": "The GREENBOT dataset is a multimodal mobile robotics dataset recorded inside a typical Mediterranean greenhouse with tomato crops, a challenging environment where GNSS accuracy is degraded by the structure and the crop. A sensorised cart carrying a Velodyne VLP-16 LiDAR, an Ouster OS0 LiDAR with IMU, a Bumblebee BB2 stereo camera and a NovAtel GNSS/IMU was moved through all the corridors of the greenhouse in nine sequences. It is available as ROS 1 Noetic bags and MRPT rawlogs (for ROS 2 Humble), with calibration files and the tools to run MOLA SLAM. It is the first dataset suitable to test SLAM methods in a greenhouse environment.",
+  "keywords": [
+   "greenhouse",
+   "agriculture",
+   "SLAM",
+   "LiDAR",
+   "Velodyne VLP-16",
+   "Ouster OS0",
+   "stereo camera",
+   "ROS",
+   "MRPT",
+   "MOLA",
+   "mobile robot",
+   "dataset",
+   "precision agriculture"
+  ],
+  "creators": [
+   {
+    "name": "Fernando Cañadas-Aránega",
+    "orcid": "https://orcid.org/0000-0003-2866-3095",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "José-Luis Blanco-Claraco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "José Carlos Moreno",
+    "orcid": "https://orcid.org/0000-0002-7505-9686",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "Francisco Rodríguez-Díaz",
+    "orcid": "https://orcid.org/0000-0001-9536-1922",
+    "affiliation": "University of Almería"
+   }
+  ],
+  "formats": [
+   "ROS bag",
+   "rawlog"
+  ]
+ }
+}
