@@ -2,7 +2,7 @@ Title: Málaga 2009 Robotic Datasets with RTK GPS ground truth
 h1: The Málaga 2009 Robotic Dataset Collection
 crumb: Málaga 2009 Dataset
 Date: 2009-11-01
-Modified: 2026-11-06
+Modified: 2026-11-07
 URL: datasets/malaga-2009-dataset/
 save_as: datasets/malaga-2009-dataset/index.html
 nomenu: true
@@ -20,11 +20,10 @@ uncertainty, is estimated from the RTK data, so the collection is a test bed for
 and localization methods. Reference 3D point clouds built from the lasers are provided as well.
 
 <div class="status-note" markdown="1">
-**Download status (6 November 2026).** The original files are available again, byte-identical to the 2009 release, from a
+**Download status (7 November 2026).** All six sequences are available again, byte-identical to the 2009 release, from a
 [Zenodo record](https://doi.org/10.5281/zenodo.24021075) (DOI 10.5281/zenodo.24021075), with a
 [Google Drive mirror](https://drive.google.com/drive/folders/1dKNi9SVLriP3ivrS6wPplwN2YOKYotAN?usp=sharing) as backup.
 Each sequence is now also available as a **ROS 2 bag** (MCAP), see [below](#ros-2-mcap-files).
-CAMPUS-0L is not available yet. If you need it, please [contact me](mailto:jlblanco@ual.es).
 </div>
 
 <figure>
@@ -137,7 +136,7 @@ overview figures of each sequence, pictures of the vehicle and sensors taken in 
 
 ## Changelog
 
-* **2026-11-06**: All sequences except CAMPUS-0L are available again (Zenodo, with a Google Drive mirror), byte-identical to the original files, and also as ROS 2 MCAP bags.
+* **2026-11-07**: All six sequences are available again (Zenodo, with a Google Drive mirror), byte-identical to the original files, and also as ROS 2 MCAP bags.
 * **2026-11-02**: New home of the dataset page (previously at mrpt.org/malaga_dataset_2009). PARKING-0L and the calibration images are available again; the other five sequences are unavailable.
 * **2012-03**: Errata added.
 * **2009-11**: Paper published and datasets released.

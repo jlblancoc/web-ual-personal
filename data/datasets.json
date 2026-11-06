@@ -536,7 +536,18 @@
     "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_0L.html",
     "original_size": "1.8 GB",
     "original_md5": "030ddf2d0ac15c836fdfb549823795c3",
-    "available": false
+    "available": true,
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_0L.zip?download=1",
+    "size_bytes": 1951005061,
+    "md5": "030ddf2d0ac15c836fdfb549823795c3",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_campus_0L.mcap?download=1",
+     "size_bytes": 1034570000,
+     "md5": "065c36f37e093687fd29d4c79b0967fe"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_0L_gt_tum.txt?download=1",
+    "duration_s": 334,
+    "stereo_pairs": 2502
    },
    {
     "name": "CAMPUS-2L",
