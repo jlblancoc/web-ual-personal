@@ -38,6 +38,13 @@
     {% for s in D.sequences if s.available %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
                               'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+      {% if s.mcap %}
+        {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (ROS 2 MCAP)', 'contentUrl': s.mcap.url,
+                                'encodingFormat': 'application/x-mcap', 'contentSize': dm.hsize(s.mcap.size_bytes)|trim}) %}
+      {% endif %}
+    {% endfor %}
+    {% for m in D.mirrors %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url}) %}
     {% endfor %}
     {% for f in [D.calibration, D.extras] %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,

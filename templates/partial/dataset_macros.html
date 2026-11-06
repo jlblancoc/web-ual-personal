@@ -120,11 +120,18 @@
     </ul>
     {% if s.available %}
     <p class="seq-actions">
-      <a class="btn-dl" href="{{ s.zip_url }}"><i class="fa-solid fa-download"></i> malaga2009_{{ s.slug }}.zip ({{ hsize(s.size_bytes) }})</a>
-      <a href="{{ s.md5_url }}">MD5</a>
+      <a class="btn-dl" href="{{ s.zip_url }}" title="Original package: MRPT rawlog, images, ground truth (Zenodo)"><i class="fa-solid fa-download"></i> malaga2009_{{ s.slug }}.zip ({{ hsize(s.size_bytes) }})</a>
+      {% if s.zip_drive %}<a href="{{ s.zip_drive }}">Drive mirror</a>{% endif %}
       <a href="{{ s.readme_url }}">README</a>
     </p>
-    <p class="seq-md5">MD5: <code>{{ s.md5 }}</code></p>
+    {% if s.mcap %}
+    <p class="seq-actions">
+      <a class="btn-dl" href="{{ s.mcap.url }}" title="ROS 2 bag with the sensor data and the ground truth (Zenodo)"><i class="fa-solid fa-download"></i> malaga2009_{{ s.slug }}.mcap ({{ hsize(s.mcap.size_bytes) }})</a>
+      {% if s.mcap.drive %}<a href="{{ s.mcap.drive }}">Drive mirror</a>{% endif %}
+      <a href="{{ s.gt_tum_url }}">GT (TUM)</a>
+    </p>
+    {% endif %}
+    <p class="seq-md5">MD5 ZIP: <code>{{ s.md5 }}</code>{% if s.mcap %}<br>MD5 MCAP: <code>{{ s.mcap.md5 }}</code>{% endif %}</p>
     {% else %}
     <p class="seq-unavailable"><i class="fa-solid fa-triangle-exclamation"></i> Download currently unavailable. <a href="{{ s.readme_url }}">README</a></p>
     <details class="seq-orig">

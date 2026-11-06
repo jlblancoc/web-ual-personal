@@ -444,12 +444,19 @@
     "original_size": "1.3 GB",
     "original_md5": "4dfb84412459dc65a130dd75091f8144",
     "available": true,
-    "zip_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_parking_0L.zip",
-    "size_bytes": 1428314424,
-    "md5": "696ddbfae90cb980b895046bd62f3d03",
-    "md5_url": "https://ingmec.ual.es/~jlblanco/malaga2009/malaga2009_parking_0L.zip.md5",
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_0L.zip?download=1",
+    "size_bytes": 1428581487,
+    "md5": "4dfb84412459dc65a130dd75091f8144",
     "duration_s": 256,
-    "stereo_pairs": 1922
+    "stereo_pairs": 1922,
+    "zip_drive": "https://drive.google.com/file/d/16N7coenfCfrQzCeieM4-3jOmxpVlG98K/view?usp=sharing",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_parking_0L.mcap?download=1",
+     "size_bytes": 780129050,
+     "md5": "308bb33977ffb12f76303158e1072b38",
+     "drive": "https://drive.google.com/file/d/1fsw0eL_0uIWgTmrv_C2iC5aHwuFgdQQF/view?usp=sharing"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_0L_gt_tum.txt?download=1"
    },
    {
     "name": "PARKING-2L",
@@ -467,7 +474,20 @@
     "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_parking_2L.html",
     "original_size": "2.1 GB",
     "original_md5": "88d54558dd0f00a9df435c99711e3b5a",
-    "available": false
+    "available": true,
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_2L.zip?download=1",
+    "zip_drive": "https://drive.google.com/file/d/1xpuvXaxeQ8HITXrWEr1x4NMG1el1Vipy/view?usp=sharing",
+    "size_bytes": 2253440165,
+    "md5": "88d54558dd0f00a9df435c99711e3b5a",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_parking_2L.mcap?download=1",
+     "size_bytes": 1237709006,
+     "md5": "c0463b428164057052227fb98da9477e",
+     "drive": "https://drive.google.com/file/d/1R5rPhy9-29Men81N1IDBOG3Pdt_KYq9s/view?usp=sharing"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_2L_gt_tum.txt?download=1",
+    "duration_s": 414,
+    "stereo_pairs": 3106
    },
    {
     "name": "PARKING-6L",
@@ -485,7 +505,20 @@
     "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_parking_6L.html",
     "original_size": "2.3 GB",
     "original_md5": "3273fc6b011dc6395927097ebba0a9c2",
-    "available": false
+    "available": true,
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_6L.zip?download=1",
+    "zip_drive": "https://drive.google.com/file/d/1Ml2Ovu77mSSQdow08FHAZEUgBUO5p80F/view?usp=sharing",
+    "size_bytes": 2524972354,
+    "md5": "3273fc6b011dc6395927097ebba0a9c2",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_parking_6L.mcap?download=1",
+     "size_bytes": 1380524378,
+     "md5": "ef7e6def38f4d47b22940b3941eb3b16",
+     "drive": "https://drive.google.com/file/d/1ErOWmIIT2HTCd0fA2Fu5mEtremEcJ6bF/view?usp=sharing"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_parking_6L_gt_tum.txt?download=1",
+    "duration_s": 464,
+    "stereo_pairs": 3474
    },
    {
     "name": "CAMPUS-0L",
@@ -521,7 +554,19 @@
     "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_2L.html",
     "original_size": "3.6 GB",
     "original_md5": "95aa661466d30c2b845d6c5df58d2e42",
-    "available": false
+    "available": true,
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_2L.zip?download=1",
+    "zip_drive": "https://drive.google.com/file/d/18Zx9rkl0ua-XOAgopQ231S3HEV9ENz5b/view?usp=sharing",
+    "size_bytes": 3885683517,
+    "md5": "95aa661466d30c2b845d6c5df58d2e42",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_campus_2L.mcap?download=1",
+     "size_bytes": 2117114590,
+     "md5": "d9b7dcab338f8c9ce6bd5080f9bb9b27"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_2L_gt_tum.txt?download=1",
+    "duration_s": 697,
+    "stereo_pairs": 5221
    },
    {
     "name": "CAMPUS-RT",
@@ -539,7 +584,20 @@
     "readme_url": "https://ingmec.ual.es/~jlblanco/malaga2009/readmes/README_campus_RT.html",
     "original_size": "1.9 GB",
     "original_md5": "b2f812b7e722373efa3e5792bb51ab89",
-    "available": false
+    "available": true,
+    "zip_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_RT.zip?download=1",
+    "zip_drive": "https://drive.google.com/file/d/1WtZ_kXI3-y-O3yrYCm2jvlwzznJ--CIt/view?usp=sharing",
+    "size_bytes": 2016682977,
+    "md5": "b2f812b7e722373efa3e5792bb51ab89",
+    "mcap": {
+     "url": "https://zenodo.org/records/24021075/files/malaga2009_campus_RT.mcap?download=1",
+     "size_bytes": 1108001039,
+     "md5": "3034b1c51e9ffe4ad7aeb936dc601c16",
+     "drive": "https://drive.google.com/file/d/1iVVguHOOMT0NUjrK8Molq-EhJ1oVk9LN/view?usp=sharing"
+    },
+    "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_RT_gt_tum.txt?download=1",
+    "duration_s": 375,
+    "stereo_pairs": 2809
    }
   ],
   "calibration": {
@@ -638,12 +696,27 @@
    "ZIP",
    "rawlog",
    "text/plain",
-   "JPEG"
+   "JPEG",
+   "MCAP"
   ],
   "license": {
    "name": "Creative Commons Attribution 4.0 (CC BY 4.0)",
    "url": "https://creativecommons.org/licenses/by/4.0/"
-  }
+  },
+  "zenodo": {
+   "doi": "10.5281/zenodo.24021075",
+   "url": "https://doi.org/10.5281/zenodo.24021075"
+  },
+  "mirrors": [
+   {
+    "name": "Zenodo record (all sequences, ZIP and ROS 2 MCAP)",
+    "url": "https://doi.org/10.5281/zenodo.24021075"
+   },
+   {
+    "name": "Google Drive mirror",
+    "url": "https://drive.google.com/drive/folders/1dKNi9SVLriP3ivrS6wPplwN2YOKYotAN?usp=sharing"
+   }
+  ]
  },
  "greenhouse": {
   "id": "greenhouse",
