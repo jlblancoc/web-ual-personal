@@ -1,0 +1,253 @@
+{
+  "configById": {
+    "3D!malaga3d": {
+      "foxglovePanelTitle": "3D: lasers accumulated with the ground truth + projected images",
+      "cameraState": {
+        "perspective": true,
+        "distance": 26.0,
+        "phi": 60.0,
+        "thetaOffset": 90.0,
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.1,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "followTf": "base_link",
+      "scene": {
+        "backgroundColor": "#15181dff",
+        "enableStats": false,
+        "transforms": {
+          "showLabel": true,
+          "labelSize": 0.15,
+          "axisScale": 0.6
+        }
+      },
+      "transforms": {
+        "frame:map": {
+          "visible": false
+        }
+      },
+      "topics": {
+        "/lms_sick_left/scan": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "flat",
+          "flatColor": "#ff9800ff",
+          "decayTime": 60.0,
+          "pointSize": 2.0,
+          "pointShape": "circle"
+        },
+        "/lms_sick_right/scan": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "flat",
+          "flatColor": "#29b6f6ff",
+          "decayTime": 60.0,
+          "pointSize": 2.0,
+          "pointShape": "circle"
+        },
+        "/lms_sick_front_elev/scan": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "flat",
+          "flatColor": "#66bb6aff",
+          "decayTime": 3.0,
+          "pointSize": 2.5,
+          "pointShape": "circle"
+        },
+        "/laser_hokuyo_front/scan": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "flat",
+          "flatColor": "#f06292ff",
+          "decayTime": 0.0,
+          "pointSize": 3.0,
+          "pointShape": "circle"
+        },
+        "/laser_hokuyo_rear/scan": {
+          "visible": true,
+          "colorField": "range",
+          "colorMode": "flat",
+          "flatColor": "#ba68c8ff",
+          "decayTime": 0.0,
+          "pointSize": 3.0,
+          "pointShape": "circle"
+        },
+        "/camera_left/image_raw/compressed": {
+          "visible": true,
+          "cameraInfoTopic": "/camera_left/camera_info",
+          "distance": 4.0,
+          "planarProjectionFactor": 1,
+          "color": "#ffffffff"
+        },
+        "/camera_left/camera_info": {
+          "visible": true,
+          "color": "#ffffff80",
+          "distance": 4.0
+        },
+        "/camera_right/image_raw/compressed": {
+          "visible": true,
+          "cameraInfoTopic": "/camera_right/camera_info",
+          "distance": 4.0,
+          "planarProjectionFactor": 1,
+          "color": "#ffffffff"
+        },
+        "/camera_right/camera_info": {
+          "visible": true,
+          "color": "#ffffff80",
+          "distance": 4.0
+        },
+        "/ground_truth": {
+          "visible": false
+        }
+      },
+      "layers": {
+        "grid": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "grid",
+          "layerId": "foxglove.Grid",
+          "frameId": "base_link",
+          "size": 60,
+          "divisions": 30,
+          "lineWidth": 1,
+          "color": "#ffffff30",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1
+        }
+      },
+      "publish": {
+        "type": "point"
+      },
+      "imageMode": {}
+    },
+    "Image!camleft": {
+      "foxglovePanelTitle": "Left camera",
+      "imageMode": {
+        "imageTopic": "/camera_left/image_raw/compressed"
+      },
+      "cameraState": {},
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {}
+    },
+    "Image!camright": {
+      "foxglovePanelTitle": "Right camera",
+      "imageMode": {
+        "imageTopic": "/camera_right/image_raw/compressed"
+      },
+      "cameraState": {},
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {}
+    },
+    "map!gps": {
+      "foxglovePanelTitle": "GPS (front RTK + consumer-grade)",
+      "layer": "map",
+      "zoomLevel": 18,
+      "followTopic": "/gps_rtk_front_l/fix",
+      "disabledTopics": [
+        "/gps_rtk_rear/fix"
+      ],
+      "topicColors": {
+        "/gps_rtk_rear/fix": "#e53935",
+        "/gps_rtk_front_l/fix": "#43a047",
+        "/gps_rtk_front_r/fix": "#1e88e5",
+        "/gps_normal/fix": "#fdd835"
+      }
+    },
+    "Plot!imu": {
+      "foxglovePanelTitle": "Xsens IMU",
+      "paths": [
+        {
+          "value": "/xsens/imu.angular_velocity.x",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "label": "gyro x [rad/s]"
+        },
+        {
+          "value": "/xsens/imu.angular_velocity.y",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "label": "gyro y [rad/s]"
+        },
+        {
+          "value": "/xsens/imu.angular_velocity.z",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "label": "gyro z [rad/s]"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "followingViewWidth": 30,
+      "sidebarDimension": 240
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {
+    "malaga-gt-to-tf": {
+      "name": "ground_truth to TF",
+      "sourceCode": "// Republishes the ground truth (nav_msgs/Odometry) as a map -> base_link transform,\n// so the 3D panel can place all sensors in the map frame.\nimport { Input, Message } from \"./types\";\n\nexport const inputs = [\"/ground_truth\"];\nexport const output = \"/ground_truth_tf\";\n\ntype Output = Message<\"tf2_msgs/msg/TFMessage\">;\n\nexport default function script(event: Input<\"/ground_truth\">): Output {\n  const odom = event.message;\n  const p = odom.pose.pose;\n  return {\n    transforms: [\n      {\n        header: odom.header,\n        child_frame_id: odom.child_frame_id,\n        transform: {\n          translation: { x: p.position.x, y: p.position.y, z: p.position.z },\n          rotation: p.orientation,\n        },\n      },\n    ],\n  };\n}\n"
+    }
+  },
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": "3D!malaga3d",
+      "second": "Plot!imu",
+      "direction": "column",
+      "splitPercentage": 80
+    },
+    "second": {
+      "first": "Image!camleft",
+      "second": {
+        "first": "Image!camright",
+        "second": "map!gps",
+        "direction": "column",
+        "splitPercentage": 50
+      },
+      "direction": "column",
+      "splitPercentage": 33
+    },
+    "direction": "row",
+    "splitPercentage": 62
+  }
+}

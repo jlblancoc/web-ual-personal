@@ -97,6 +97,23 @@ GPS receivers (`/gps_rtk_rear/fix`, ...), `/ground_truth` (`nav_msgs/Odometry`) 
 poses. The ground truth has gaps in some sequences, where the RTK solution was not available.
 The full list of topics is in the [README of the Zenodo record](https://zenodo.org/records/24021075/files/README.md?download=1).
 
+The latitude and longitude of the rear RTK receiver (`/gps_rtk_rear/fix`) are shifted by about 150 m with respect to the
+other receivers, because it used a different reference. The ground truth corrects this with the offsets given in the
+`[OFFSET_GPS_RTK_*]` sections of `/rawlog_comment`. The front RTK receivers and the consumer-grade one are in WGS84.
+
+#### Foxglove layout
+
+The layout [`malaga2009_foxglove_layout.json`]({static}/docs/malaga2009_foxglove_layout.json) shows any of the MCAP files
+in [Foxglove](https://foxglove.dev/): the five laser scanners in 3D (the vertical SICK scans are accumulated along the
+ground-truth path), both cameras as image panels and also projected in the 3D view on their sensor frames, the GPS receivers
+on a map, and the IMU. Import it from the *Layouts* menu (*Import from file...*). It includes a small user script that
+republishes `/ground_truth` as the `map` → `base_link` transform.
+
+<figure>
+<a href="{static}/imgs/datasets/2009/foxglove-campus-0l.jpg"><img class="fig-full" src="{static}/imgs/datasets/2009/foxglove-campus-0l-thumb.jpg" alt="CAMPUS-0L in Foxglove: lasers accumulated in 3D, projected camera images, camera panels, GPS map and IMU plot" width="960" height="540" loading="lazy"></a>
+<figcaption>CAMPUS-0L in Foxglove with this layout.</figcaption>
+</figure>
+
 ## Vehicle and sensors
 
 * 3 SICK laser scanners (two LMS-221 and one LMS-200) and 2 Hokuyo UTM-30LX.
@@ -136,7 +153,7 @@ overview figures of each sequence, pictures of the vehicle and sensors taken in 
 
 ## Changelog
 
-* **2026-11-07**: All six sequences are available again (Zenodo, with a Google Drive mirror), byte-identical to the original files, and also as ROS 2 MCAP bags.
+* **2026-11-07**: All six sequences are available again (Zenodo, with a Google Drive mirror), byte-identical to the original files, and also as ROS 2 MCAP bags, with a Foxglove layout to visualize them.
 * **2026-11-02**: New home of the dataset page (previously at mrpt.org/malaga_dataset_2009). PARKING-0L and the calibration images are available again; the other five sequences are unavailable.
 * **2012-03**: Errata added.
 * **2009-11**: Paper published and datasets released.
