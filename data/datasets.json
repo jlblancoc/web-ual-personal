@@ -543,11 +543,13 @@
     "mcap": {
      "url": "https://zenodo.org/records/24021075/files/malaga2009_campus_0L.mcap?download=1",
      "size_bytes": 1034570000,
-     "md5": "065c36f37e093687fd29d4c79b0967fe"
+     "md5": "065c36f37e093687fd29d4c79b0967fe",
+     "drive": "https://drive.google.com/file/d/1qu8gWgyMrbCQ2UPZaGnCGo7sVQBYbGlZ/view?usp=sharing"
     },
     "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_0L_gt_tum.txt?download=1",
     "duration_s": 334,
-    "stereo_pairs": 2502
+    "stereo_pairs": 2502,
+    "zip_drive": "https://drive.google.com/file/d/1RDZUs2b_8_rY-Q799ULFo1kzuKdrP_2U/view?usp=sharing"
    },
    {
     "name": "CAMPUS-2L",
@@ -573,7 +575,8 @@
     "mcap": {
      "url": "https://zenodo.org/records/24021075/files/malaga2009_campus_2L.mcap?download=1",
      "size_bytes": 2117114590,
-     "md5": "d9b7dcab338f8c9ce6bd5080f9bb9b27"
+     "md5": "d9b7dcab338f8c9ce6bd5080f9bb9b27",
+     "drive": "https://drive.google.com/file/d/1l2U6umuhXIYn7nDgyFAdyhUm7xQ3cX6d/view?usp=sharing"
     },
     "gt_tum_url": "https://zenodo.org/records/24021075/files/malaga2009_campus_2L_gt_tum.txt?download=1",
     "duration_s": 697,
