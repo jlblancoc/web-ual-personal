@@ -103,7 +103,7 @@ other receivers, because it used a different reference. The ground truth correct
 
 #### Foxglove layout
 
-The layout [`malaga2009_foxglove_layout.json`]({static}/docs/malaga2009_foxglove_layout.json) shows any of the MCAP files
+The layout [`malaga2009_foxglove_layout.json`]({static}/docs/malaga2009_foxglove_layout.json) ([Google Drive mirror](https://drive.google.com/file/d/18uASwbF_mIuC8d-DLl_nWpE1-VXuiy4o/view?usp=sharing)) shows any of the MCAP files
 in [Foxglove](https://foxglove.dev/): the five laser scanners in 3D (the vertical SICK scans are accumulated along the
 ground-truth path), both cameras as image panels and also projected in the 3D view on their sensor frames, the GPS receivers
 on a map, and the IMU. Import it from the *Layouts* menu (*Import from file...*). It includes a small user script that
