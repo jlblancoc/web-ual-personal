@@ -51,7 +51,12 @@ clean:
 
 # Short timeouts and bounded retries, so a stalled transfer is retried
 # instead of hanging forever (lftp defaults: 300 s timeout, infinite retries).
+#
+# TLS 1.3 is disabled: the server requires data connections to resume the
+# TLS session of the control connection, which lftp only does reliably
+# with TLS 1.2.
 LFTP_SETTINGS=set ssl:verify-certificate false; \
+	set ssl:priority NORMAL:-VERS-TLS1.3; \
 	set ftp:passive-mode on; \
 	set net:timeout 20; \
 	set net:max-retries 5; \
