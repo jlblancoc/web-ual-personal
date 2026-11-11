@@ -61,8 +61,7 @@ LFTP_SETTINGS=set ssl:verify-certificate false; \
 	set net:timeout 20; \
 	set net:max-retries 5; \
 	set net:reconnect-interval-base 5; \
-	set net:reconnect-interval-max 30; \
-	set net:persist-retries 2
+	set net:reconnect-interval-max 30
 
 # Persistent copy of the last uploaded site. rsync by checksum (without -t)
 # only touches files whose content changed, so "mirror --only-newer" skips
