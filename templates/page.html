@@ -1,0 +1,13 @@
+{# Pages: the theme's template, but pages with a Summary use it as their meta
+   description (search engines show it), instead of the site description. #}
+{% extends "!theme/page.html" %}
+
+{% block meta %}
+{% if page.metadata.summary %}
+<meta name="author" content="{{ AUTHOR }}" />
+<meta name="description" content="{{ page.summary|striptags|e }}" />
+{% include "partial/og.html" %}
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}

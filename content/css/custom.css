@@ -308,3 +308,37 @@ a.btn-dl:hover {
   list-style: none;
   padding: 0;
 }
+
+/* Tensora.app: logo and video preview frame in the Software page */
+img.tensora-logo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0.5em 0 1em;
+}
+figure.video-preview {
+  float: right;
+  width: 260px;
+  max-width: 45%;
+  margin: 0 0 1em 1.5em;
+  text-align: center;
+}
+figure.video-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+figure.video-preview figcaption {
+  font-size: 0.85em;
+  margin-top: 0.3em;
+}
+@media (max-width: 600px) {
+  figure.video-preview {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 1em auto;
+  }
+}

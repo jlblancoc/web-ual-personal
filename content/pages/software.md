@@ -1,12 +1,63 @@
 Title: Software
 Date: 2026-01-27
-Modified: 2026-10-12
+Modified: 2026-11-11
 myorder: 4
-Summary: A collection of open-source frameworks and tools for robotics, multibody dynamics, and data acquisition.
+Summary: Tensora.app, free online structural analysis in the browser, and open-source frameworks and tools for robotics (MOLA, MRPT, MVSim), multibody dynamics, and data acquisition.
 
 ## Profiles
 * **GitHub**: [@jlblancoc](https://github.com/jlblancoc)
 * **Packages**: [Debian/Ubuntu Developer Profile](https://qa.debian.org/developer.php?login=joseluisblancoc%40gmail.com)
+
+---
+
+## Online Engineering Tools
+
+### Tensora.app: structural analysis in your browser
+<a href="https://tensora.app/" title="Tensora.app: free online structural analysis"><img class="tensora-logo" alt="Tensora.app: free online structural analysis and mechanics of materials tools" src="{static}/imgs/tensora-logo.png" width="600" height="149"></a>
+
+<figure class="video-preview">
+<a href="https://www.youtube.com/shorts/0tKTx6MyMIY" title="Tensora.app preview on YouTube"><img src="{static}/imgs/tensora-short-preview.jpg" alt="Tensora.app solving a portal frame: bending moment diagram and deflected shape" width="540" height="540" loading="lazy"></a>
+<figcaption><i class="fa-brands fa-youtube"></i> <a href="https://www.youtube.com/shorts/0tKTx6MyMIY">1-minute preview</a>: bending moments and deflected shapes</figcaption>
+</figure>
+
+**[Tensora.app](https://tensora.app/)** is a free web application for **structural analysis and mechanics of materials**, for students and engineers in civil, mechanical and industrial engineering. Define nodes, beams, loads and supports, and it solves **2D beams, trusses and frames** with the finite element method and draws the **axial force, shear force and bending moment diagrams** and the **deflected shape** as you edit the model. It runs entirely in the browser, with no installation or sign-up: its solver is my C++ structural analysis library, OpenBeam, compiled to WebAssembly.
+
+* **Structural analysis**: beams, continuous beams, trusses and frames, with a gallery of classic cases (cantilevers, fixed-fixed beams, Warren truss, portal and three-hinged frames) ready to modify and solve.
+* **Mohr's circle**: interactive 2D Mohr circle of a plane stress state, with shareable links and PNG export.
+* **3D stress tensor**: traction vectors on the sphere of normals, principal stresses and directions, and the three Mohr circles.
+* **Languages**: English, Spanish, French and Chinese.
+* **Website**: [tensora.app](https://tensora.app/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tensora.app",
+  "url": "https://tensora.app/",
+  "description": "Free online structural analysis and mechanics of materials tools: 2D beams, trusses and frames with axial, shear and bending moment diagrams and deflected shapes, Mohr circles and 3D stress tensors. Runs in the browser.",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Structural analysis",
+  "operatingSystem": "Any (web browser)",
+  "inLanguage": ["en", "es", "fr", "zh"],
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "image": "https://tensora.app/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Jose Luis Blanco Claraco",
+    "url": "https://w3.ual.es/~jlblanco/"
+  },
+  "video": {
+    "@type": "VideoObject",
+    "name": "tensora.app: online structural analysis (bending moments, deflected shapes)",
+    "description": "Tensora.app solving 2D frames in the browser: bending moment diagrams and deflected shapes.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/0tKTx6MyMIY/maxresdefault.jpg",
+    "uploadDate": "2026-11-10T17:05:47+00:00",
+    "contentUrl": "https://www.youtube.com/shorts/0tKTx6MyMIY",
+    "embedUrl": "https://www.youtube.com/embed/0tKTx6MyMIY"
+  }
+}
+</script>
 
 ---
 
@@ -70,7 +121,7 @@ A collection of projects dedicated to open-source hardware and software interfac
 ### Mechanical Design & Structural Analysis
 <a href="https://github.com/jlblancoc/mechplot"><img class="sw-logo" alt="Mechplot" src="{static}/imgs/mechplot_icon.png"></a>
 
-* **Open-Beam**: Specialized tools for structural and beam analysis. ([github.com/open-beam](https://github.com/open-beam))
+* **Open-Beam**: Specialized tools for structural and beam analysis. ([github.com/open-beam](https://github.com/open-beam)). Its C++ solver powers [Tensora.app, the online structural analysis tool](https://tensora.app/).
 * **Mechplot**: A MATLAB library for rendering structures and mechanisms. ([github.com/jlblancoc/mechplot](https://github.com/jlblancoc/mechplot))
 
 ---
