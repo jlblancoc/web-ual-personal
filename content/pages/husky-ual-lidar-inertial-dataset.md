@@ -55,7 +55,7 @@ median horizontal error against RTK is 5.5 cm, while wheel odometry alone ends h
 The tutorial is also available as a short video:
 
 <div class="video-embed">
-<iframe src="https://www.youtube-nocookie.com/embed/KBL6--moW4s" title="Wheel odometry + IMU + RTK GNSS fusion with MOLA" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/nocyFJUd1Hc" title="Wheel odometry + IMU + RTK GNSS fusion with MOLA" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 The tutorial scripts (replay, simulated GNSS outages and evaluation against RTK) are in the release folder.
