@@ -181,6 +181,29 @@
 </p>
 {% endmacro %}
 
+{# Husky UAL sequences: one card per released sequence #}
+{% macro husky_sequences(D) %}
+<div class="seq-grid seq-grid-wide">
+{% for s in D.sequences %}
+  <article class="seq-card">
+    <img class="seq-thumb" src="{{ SITEURL }}/{{ s.thumb }}" alt="Path of the {{ s.name }} sequence over an aerial image of the campus" width="960" height="540" loading="lazy">
+    <div class="seq-body">
+      <h3>{{ s.name }}</h3>
+      <p>{{ s.content }}</p>
+      <p class="seq-facts-line">{{ s.date }} &middot; {{ hdur(s.duration_s) }} min &middot; {{ '%.2f'|format(s.length_m / 1000) }} km &middot; ROS 2 bag (MCAP)</p>
+      <p class="seq-actions">
+        <a class="btn-dl" href="{{ s.zip_url }}"><i class="fa-solid fa-download"></i> Download (zip, {{ hsize(s.size_bytes) }})</a>
+        <a class="btn-dl" href="{{ s.folder_url }}"><i class="fa-solid fa-folder-open"></i> Files and scripts</a>
+        <a class="btn-dl" href="{{ s.readme_url }}"><i class="fa-solid fa-file-lines"></i> README</a>
+        {% if s.tutorial %}<a class="btn-dl" href="{{ D.tutorial_url }}"><i class="fa-solid fa-graduation-cap"></i> Tutorial</a>{% endif %}
+      </p>
+      <p class="seq-facts-line">MD5 <code class="md5">{{ s.md5 }}</code></p>
+    </div>
+  </article>
+{% endfor %}
+</div>
+{% endmacro %}
+
 {% macro greenbot_authors(D) %}
 <ul class="authors">
 {% for a in D.authors %}
@@ -212,6 +235,15 @@
       <p><strong>Six outdoor sequences with centimeter-accuracy 6D ground truth</strong> from three RTK GPS receivers, plus lasers, cameras and IMU. For visual SLAM, 2D SLAM and localization.</p>
       <p class="seq-facts-line">Autonomous Robots 2009 &middot; CC BY 4.0</p>
       <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D['2009'].url_path }}">Downloads and previews</a></p>
+    </div>
+  </article>
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D.husky.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/husky/cover.jpg" alt="Husky UAL dataset: robot path over an aerial image of the University of Almería campus" width="960" height="540" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D.husky.url_path }}">Husky UAL LiDAR-Inertial Dataset</a></h3>
+      <p><strong>Clearpath Husky on a university campus</strong>: LiDARs, IMUs, wheel odometry and RTK GNSS ground truth, as ROS 2 bags. Released progressively; the first sequence (wheels + IMUs + GNSS) comes with a MOLA sensor fusion tutorial.</p>
+      <p class="seq-facts-line">2026 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.husky.url_path }}">Downloads and tutorial</a></p>
     </div>
   </article>
   <article class="seq-card">

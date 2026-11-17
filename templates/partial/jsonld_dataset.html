@@ -6,7 +6,7 @@
 
 {% if page.dataset == 'hub' %}
   {% set parts = [] %}
-  {% for key in ['urban', '2009', 'greenhouse'] %}
+  {% for key in ['urban', '2009', 'husky', 'greenhouse'] %}
     {% set _ = parts.append({'@type': 'Dataset', 'name': DATASETS[key].name, 'url': SITEURL ~ '/' ~ DATASETS[key].url_path}) %}
   {% endfor %}
   {% set _ = graph.append({'@type': 'CollectionPage', 'name': page.h1 or page.title, 'url': page_url,
@@ -50,6 +50,11 @@
       {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,
                               'encodingFormat': 'application/zip', 'contentSize': dm.hsize(f.size_bytes)|trim}) %}
     {% endfor %}
+  {% elif page.dataset == 'husky' %}
+    {% for s in D.sequences %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
+                              'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+    {% endfor %}
   {% else %}
     {% for s in D.sequences %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name,
@@ -65,17 +70,20 @@
     'name': D.name,
     'description': D.description,
     'url': main_url,
-    'identifier': 'https://doi.org/' ~ D.doi,
+
     'keywords': D.keywords,
     'creator': creators,
     'datePublished': D.date_published,
     'isAccessibleForFree': true,
     'inLanguage': 'en',
     'image': SITEURL ~ '/' ~ page.image,
-    'citation': {'@type': 'ScholarlyArticle', 'name': D.paper.title, 'url': D.paper.official_url,
-                 'datePublished': D.paper.year|string, 'isPartOf': {'@type': 'Periodical', 'name': D.paper.venue}},
     'distribution': dist
   } %}
+  {% if 'doi' in D %}{% set _ = dataset.update({'identifier': 'https://doi.org/' ~ D.doi}) %}{% endif %}
+  {% if 'paper' in D %}
+    {% set _ = dataset.update({'citation': {'@type': 'ScholarlyArticle', 'name': D.paper.title, 'url': D.paper.official_url,
+                 'datePublished': D.paper.year|string, 'isPartOf': {'@type': 'Periodical', 'name': D.paper.venue}}}) %}
+  {% endif %}
   {% if D.original_url %}{% set _ = dataset.update({'sameAs': page_url}) %}{% endif %}
   {% if D.license %}{% set _ = dataset.update({'license': D.license.url}) %}{% endif %}
   {% if D.place %}{% set _ = dataset.update({'spatialCoverage': {'@type': 'Place', 'name': D.place}}) %}{% endif %}

@@ -16,7 +16,7 @@
 {% if page.dataset == 'hub' %}
   {% set c = c|replace('<!-- hub -->', dm.hub(DATASETS)) %}
 {% elif D %}
-  {% set c = c|replace('<!-- cite -->', dm.cite(D)) %}
+  {% if 'paper' in D %}{% set c = c|replace('<!-- cite -->', dm.cite(D)) %}{% endif %}
   {% if page.dataset == 'urban' %}
     {% set c = c|replace('<!-- extracts -->', dm.extracts(D)) %}
     {% set c = c|replace('<!-- entire -->', dm.file_table(D.entire)) %}
@@ -27,6 +27,8 @@
     {% set c = c|replace('<!-- gallery -->', dm.gallery(D)) %}
     {% set c = c|replace('<!-- calibration -->', dm.file_table([D.calibration])) %}
     {% set c = c|replace('<!-- extras -->', dm.file_table([D.extras])) %}
+  {% elif page.dataset == 'husky' %}
+    {% set c = c|replace('<!-- sequences -->', dm.husky_sequences(D)) %}
   {% elif page.dataset == 'greenhouse' %}
     {% set c = c|replace('<!-- sequences -->', dm.greenbot_table(D)) %}
     {% set c = c|replace('<!-- authors -->', dm.greenbot_authors(D)) %}

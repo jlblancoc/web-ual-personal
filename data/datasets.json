@@ -914,5 +914,58 @@
    "ROS bag",
    "rawlog"
   ]
+ },
+ "husky": {
+  "id": "husky",
+  "name": "Husky UAL LiDAR-Inertial Dataset",
+  "url_path": "datasets/husky-ual-lidar-inertial-dataset/",
+  "license": {
+   "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tutorial_url": "https://docs.mola-slam.org/latest/tutorial-wheels-imu-gnss-fusion.html",
+  "sequences": [
+   {
+    "name": "2026-11-16 campus loop",
+    "date": "2026-11-16",
+    "duration_s": 2266,
+    "length_m": 1455,
+    "content": "Wheel odometry, two IMUs, RTK GNSS (u-blox ZED-F9P) and a low-cost GNSS. No LiDAR or cameras in this release.",
+    "thumb": "imgs/datasets/husky/cover.jpg",
+    "tutorial": true,
+    "zip_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-16/husky_2026-11-16_campus_wheels_imu_gnss.zip",
+    "size_bytes": 69669514,
+    "md5": "f69647e4e99205cf72c6f89cf2d9918a",
+    "sha256": "0c36d854a5fdc26d50d29e78aaf060e60c0d82b6bf682b1253e7cc6236291ec9",
+    "folder_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-16/",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-16/README.md"
+   }
+  ],
+  "date_published": "2026-11-17",
+  "description": "Sequences of a Clearpath Husky A200 mobile robot driving around the University of Almeria campus (Spain), recorded with ROS 2 Jazzy: Ouster OS0-32 and Velodyne VLP-16 LiDARs, stereo camera, two IMUs, wheel odometry and a u-blox ZED-F9P RTK GNSS receiver as ground truth, with PTP and GNSS-disciplined clocks. Sequences are released progressively; the first one (2026-11-16, 38 min, 1.46 km) contains wheel odometry, IMUs and GNSS only, and is the dataset of the MOLA tutorial on wheels + IMU + RTK GNSS fusion.",
+  "keywords": [
+   "mobile robot",
+   "Clearpath Husky",
+   "LiDAR",
+   "IMU",
+   "wheel odometry",
+   "RTK GNSS",
+   "sensor fusion",
+   "SLAM",
+   "localization",
+   "ROS 2",
+   "MCAP",
+   "MOLA",
+   "dataset"
+  ],
+  "creators": [
+   {
+    "name": "José-Luis Blanco-Claraco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "affiliation": "University of Almería"
+   }
+  ],
+  "place": "University of Almería campus, Almería, Spain",
+  "bibtex": "@Misc{blanco2026husky,\n  AUTHOR = {Blanco-Claraco, Jose Luis},\n  TITLE = {Husky {UAL} {LiDAR}-Inertial Dataset},\n  HOWPUBLISHED = {\\url{https://w3.ual.es/~jlblanco/datasets/husky-ual-lidar-inertial-dataset/}},\n  YEAR = {2026}\n}"
  }
 }
