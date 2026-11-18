@@ -107,12 +107,14 @@ https://w3.ual.es/~jlblanco/datasets/husky-ual-lidar-inertial-dataset/</p>
 ## Changelog
 
 * **2026-11-18**: Sequences 2026-11-02 17:50 (CIDU park mapping, with its map) and 2026-11-02 18:05
-  (CIDU park TPS-A\* navigation), with all the sensors.
+  (CIDU park TPS-A\* navigation), with all the sensors and the faces blurred.
 * **2026-11-17**: First sequence (2026-11-16 campus loop): wheel odometry, IMUs and GNSS, with the MOLA fusion tutorial.
 
 ## Privacy
 
-If you find yourself or personal belongings in this dataset and feel unwell about it, please get in touch
+The faces in the camera images are blurred with [mcap_anonymizer](https://github.com/MOLAorg/mcap_anonymizer),
+an open-source tool that changes only the pixels of the faces and keeps the rest of the bags bit-exact. If you
+still find yourself or personal belongings in this dataset and feel unwell about it, please get in touch
 and we will remove the respective data.
 
 ## Related datasets
