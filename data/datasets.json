@@ -926,7 +926,36 @@
   "tutorial_url": "https://docs.mola-slam.org/latest/tutorial-wheels-imu-gnss-fusion.html",
   "sequences": [
    {
-    "name": "2026-11-16 campus loop",
+    "name": "2026-11-02 17:50 CIDU park mapping",
+    "date": "2026-11-02",
+    "duration_s": 296,
+    "length_m": 239,
+    "content": "Teleoperated drive around a park to build the map of the TPS-A* navigation sequence. All sensors: Ouster OS0-32 and Velodyne VLP-16 LiDARs, stereo camera, two IMUs, wheel odometry, RTK GNSS. With the map the robot used to localize.",
+    "thumb": "imgs/datasets/husky/2026-11-02-mapping.jpg",
+    "mcap_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/husky_2026-11-02_17-50-13_cidu_park_mapping/husky_2026-11-02_17-50-13_cidu_park_mapping_0.mcap",
+    "size_bytes": 15086696268,
+    "md5": "9b7c4932db5587c463294468cfcad42e",
+    "map_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/husky_2026-11-02_17-50-13_map_cidu_bueno.zip",
+    "map_size_bytes": 175962550,
+    "map_md5": "930885270d14cbb4677bdbb8bc4080d7",
+    "folder_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/README.md"
+   },
+   {
+    "name": "2026-11-02 18:05 CIDU park TPS-A* navigation",
+    "date": "2026-11-02",
+    "duration_s": 813,
+    "length_m": 295,
+    "content": "Autonomous navigation with the TPS-A* planner and MOLA localization on the map of the previous sequence, among people: 8 goals reached. All sensors, plus the localization, planner and follower outputs recorded on the robot.",
+    "thumb": "imgs/datasets/husky/2026-11-02-tps-astar-nav.jpg",
+    "mcap_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/husky_2026-11-02_18-05-02_cidu_park_tps_astar_nav/husky_2026-11-02_18-05-02_cidu_park_tps_astar_nav_0.mcap",
+    "size_bytes": 41751963351,
+    "md5": "337a3be5d9dcfa98f9cdd07a811d834c",
+    "folder_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/",
+    "readme_url": "https://ingmec.ual.es/~jlblanco/downloads/dataset-husky-2026-11-02/README.md"
+   },
+   {
+    "name": "2026-11-16 10:00 campus loop",
     "date": "2026-11-16",
     "duration_s": 2266,
     "length_m": 1455,
@@ -942,7 +971,7 @@
    }
   ],
   "date_published": "2026-11-17",
-  "description": "Sequences of a Clearpath Husky A200 mobile robot driving around the University of Almeria campus (Spain), recorded with ROS 2 Jazzy: Ouster OS0-32 and Velodyne VLP-16 LiDARs, stereo camera, two IMUs, wheel odometry and a u-blox ZED-F9P RTK GNSS receiver as ground truth, with PTP and GNSS-disciplined clocks. Sequences are released progressively; the first one (2026-11-16, 38 min, 1.46 km) contains wheel odometry, IMUs and GNSS only, and is the dataset of the MOLA tutorial on wheels + IMU + RTK GNSS fusion.",
+  "description": "Sequences of a Clearpath Husky A200 mobile robot driving around the University of Almeria campus (Spain), recorded with ROS 2 Jazzy: Ouster OS0-32 and Velodyne VLP-16 LiDARs, stereo camera, two IMUs, wheel odometry and a u-blox ZED-F9P RTK GNSS receiver as ground truth. Sequences are released progressively: 2026-11-02, map building and autonomous navigation with the TPS-A* planner and MOLA localization (all sensors, with the map and the navigation outputs); 2026-11-16 (38 min, 1.46 km), wheel odometry, IMUs and GNSS only, the dataset of the MOLA tutorial on wheels + IMU + RTK GNSS fusion.",
   "keywords": [
    "mobile robot",
    "Clearpath Husky",
@@ -956,6 +985,8 @@
    "ROS 2",
    "MCAP",
    "MOLA",
+   "path planning",
+   "autonomous navigation",
    "dataset"
   ],
   "creators": [

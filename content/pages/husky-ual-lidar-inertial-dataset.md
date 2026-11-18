@@ -2,6 +2,7 @@ Title: Husky UAL LiDAR-Inertial Dataset
 h1: Husky UAL LiDAR-Inertial Dataset: a mobile robot on a university campus
 crumb: Husky UAL LiDAR-Inertial Dataset
 Date: 2026-11-17
+Modified: 2026-11-18
 URL: datasets/husky-ual-lidar-inertial-dataset/
 save_as: datasets/husky-ual-lidar-inertial-dataset/index.html
 nomenu: true
@@ -10,7 +11,7 @@ parent: datasets
 template: dataset
 dataset: husky
 image: imgs/datasets/husky/cover.jpg
-Summary: Clearpath Husky robot on the University of Almería campus: LiDARs, IMUs, wheel odometry and RTK GNSS ground truth as ROS 2 bags. First sequence: wheels + IMUs + GNSS, with a MOLA sensor fusion tutorial.
+Summary: Clearpath Husky robot on the University of Almería campus: LiDARs, IMUs, wheel odometry and RTK GNSS ground truth as ROS 2 bags. Sequences for map building, TPS-A* autonomous navigation, and wheels + IMUs + GNSS fusion with a MOLA tutorial.
 
 <figure>
 <img class="fig-full" src="{static}/imgs/datasets/husky/2026-11-16-map.jpg" alt="Robot path over an aerial image of the campus: RTK reference, wheel odometry alone diverging hundreds of meters, wheels plus gyroscope, and the MOLA smoother fusion on top of the reference" width="1540" height="572">
@@ -29,8 +30,15 @@ GNSS** receiver with NTRIP corrections (centimeter-level ground truth while in R
 u-blox 7 receiver. All data is recorded with ROS 2 Jazzy as MCAP bags. The robot PC clock follows the GNSS
 time pulse and the Ouster is synchronized by PTP, so all stamps are UTC.
 
-Sequences are released progressively, each with the subset of sensors that is ready. The first one has no
-LiDAR data: it is the dataset of the MOLA tutorial on fusing wheel odometry, IMUs and RTK GNSS.
+Sequences are released progressively, each with the subset of sensors that is ready. They are named
+after their start time (local time, `YYYY-MM-DD HH:MM`) and a short description:
+
+* **2026-11-02 17:50 CIDU park mapping** and **2026-11-02 18:05 CIDU park TPS-A\* navigation**: all
+  sensors. The robot first drove around a park to build a map with MOLA, and then navigated
+  autonomously in it with the TPS-A\* planner among people walking by ([details below](#tps-astar-navigation)).
+  The map the robot used is also released.
+* **2026-11-16 10:00 campus loop**: wheel odometry, IMUs and GNSS only, the dataset of the MOLA tutorial on
+  fusing wheel odometry, IMUs and RTK GNSS.
 
 ## Sequences
 
@@ -39,9 +47,21 @@ LiDAR data: it is the dataset of the MOLA tutorial on fusing wheel odometry, IMU
 Each release folder has a README with the topics, sensor poses, timing details and known issues of the
 sequence.
 
+## TPS-A\* navigation experiment {#tps-astar-navigation}
+
+In the 2026-11-02 18:05 sequence the Husky navigates with
+[TPS-A\*](https://github.com/MRPT/mrpt_path_planning), a lattice A\* planner in the TP-Space of a set of
+parameterized trajectory generators (PTGs), run by its ROS 2 node in
+[mrpt_navigation](https://github.com/mrpt-ros-pkg/mrpt_navigation), and localizes with
+[MOLA](https://docs.mola-slam.org/) on the map built from the 17:50 sequence. An operator gave 15 goals one
+after another; the robot reached 8 of them, about 210 m of autonomous driving, replanning when people
+blocked its path. The bag contains, besides the raw sensors, everything the navigation stack published
+on the robot (localization, planned paths, follower status and logs). This is the real-robot experiment
+of the paper that presents TPS-A\* (under review): its results can be checked and reproduced from this bag.
+
 ## Tutorial: wheels + IMU + RTK GNSS fusion with MOLA
 
-The [MOLA tutorial](https://docs.mola-slam.org/latest/tutorial-wheels-imu-gnss-fusion.html) on the first sequence shows how to fuse
+The [MOLA tutorial](https://docs.mola-slam.org/latest/tutorial-wheels-imu-gnss-fusion.html) on the 2026-11-16 sequence shows how to fuse
 wheel odometry, the gyroscopes of one or two IMUs and RTK GNSS with the
 [MOLA state estimation smoother](https://docs.mola-slam.org/), keeping a centimeter-level,
 geo-referenced pose while the GNSS is lost for a while. With the GNSS removed 15 s of every 45 s, the
@@ -86,6 +106,8 @@ https://w3.ual.es/~jlblanco/datasets/husky-ual-lidar-inertial-dataset/</p>
 
 ## Changelog
 
+* **2026-11-18**: Sequences 2026-11-02 17:50 (CIDU park mapping, with its map) and 2026-11-02 18:05
+  (CIDU park TPS-A\* navigation), with all the sensors.
 * **2026-11-17**: First sequence (2026-11-16 campus loop): wheel odometry, IMUs and GNSS, with the MOLA fusion tutorial.
 
 ## Privacy

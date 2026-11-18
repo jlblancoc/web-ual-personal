@@ -52,8 +52,17 @@
     {% endfor %}
   {% elif page.dataset == 'husky' %}
     {% for s in D.sequences %}
-      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
-                              'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+      {% if s.zip_url %}
+        {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
+                                'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+      {% else %}
+        {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (ROS 2 MCAP)', 'contentUrl': s.mcap_url,
+                                'encodingFormat': 'application/x-mcap', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
+      {% endif %}
+      {% if s.map_url %}
+        {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (map)', 'contentUrl': s.map_url,
+                                'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.map_size_bytes)|trim}) %}
+      {% endif %}
     {% endfor %}
   {% else %}
     {% for s in D.sequences %}
