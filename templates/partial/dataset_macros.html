@@ -190,16 +190,17 @@
     <div class="seq-body">
       <h3>{{ s.name }}</h3>
       <p>{{ s.content }}</p>
-      <p class="seq-facts-line">{{ s.date }} &middot; {{ hdur(s.duration_s) }} min &middot; {{ '%.2f'|format(s.length_m / 1000) }} km &middot; ROS 2 bag (MCAP)</p>
+      <p class="seq-facts-line"><code>{{ s.hf_name }}</code> &middot; {{ hdur(s.duration_s) }} min &middot; {{ '%.2f'|format(s.length_m / 1000) }} km &middot; {{ s.lidars }} &middot; RTK ground truth {{ s.gt_pct_moving }} % of the time moving</p>
       <p class="seq-actions">
-        {% if s.zip_url %}<a class="btn-dl" href="{{ s.zip_url }}"><i class="fa-solid fa-download"></i> Download (zip, {{ hsize(s.size_bytes) }})</a>
-        {% else %}<a class="btn-dl" href="{{ s.mcap_url }}"><i class="fa-solid fa-download"></i> Download (MCAP, {{ hsize(s.size_bytes) }})</a>{% endif %}
+        <a class="btn-dl" href="{{ D.hf_url }}/tree/main/{{ s.hf_name }}">&#129303; Hugging Face (all sensors, {{ hsize(s.hf_size_bytes) }})</a>
+        {% if s.zip_url %}<a class="btn-dl" href="{{ s.zip_url }}"><i class="fa-solid fa-download"></i> Wheels + IMUs + GNSS (zip, {{ hsize(s.size_bytes) }})</a>
+        {% elif s.mcap_url %}<a class="btn-dl" href="{{ s.mcap_url }}"><i class="fa-solid fa-download"></i> Original bag (MCAP, {{ hsize(s.size_bytes) }})</a>{% endif %}
         {% if s.map_url %}<a class="btn-dl" href="{{ s.map_url }}"><i class="fa-solid fa-map"></i> Map (zip, {{ hsize(s.map_size_bytes) }})</a>{% endif %}
-        <a class="btn-dl" href="{{ s.folder_url }}"><i class="fa-solid fa-folder-open"></i> Files and scripts</a>
-        <a class="btn-dl" href="{{ s.readme_url }}"><i class="fa-solid fa-file-lines"></i> README</a>
+        {% if s.folder_url %}<a class="btn-dl" href="{{ s.folder_url }}"><i class="fa-solid fa-folder-open"></i> Files and scripts</a>{% endif %}
+        {% if s.readme_url %}<a class="btn-dl" href="{{ s.readme_url }}"><i class="fa-solid fa-file-lines"></i> README</a>{% endif %}
         {% if s.tutorial %}<a class="btn-dl" href="{{ D.tutorial_url }}"><i class="fa-solid fa-graduation-cap"></i> Tutorial</a>{% endif %}
       </p>
-      <p class="seq-facts-line">MD5 <code class="md5">{{ s.md5 }}</code>{% if s.map_md5 %} &middot; map MD5 <code class="md5">{{ s.map_md5 }}</code>{% endif %}</p>
+      {% if s.md5 %}<p class="seq-facts-line">MD5 (this server) <code class="md5">{{ s.md5 }}</code>{% if s.map_md5 %} &middot; map MD5 <code class="md5">{{ s.map_md5 }}</code>{% endif %}</p>{% endif %}
     </div>
   </article>
 {% endfor %}
@@ -243,9 +244,10 @@
     <a href="{{ SITEURL }}/{{ D.husky.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/husky/cover.jpg" alt="Husky UAL dataset: robot path over an aerial image of the University of Almería campus" width="960" height="540" loading="lazy"></a>
     <div class="seq-body">
       <h3><a href="{{ SITEURL }}/{{ D.husky.url_path }}">Husky UAL LiDAR-Inertial Dataset</a></h3>
-      <p><strong>Clearpath Husky on a university campus</strong>: LiDARs, IMUs, wheel odometry and RTK GNSS ground truth, as ROS 2 bags. Released progressively: map building and autonomous navigation with the TPS-A* planner, and a wheels + IMUs + GNSS sequence with a MOLA sensor fusion tutorial.</p>
+      <p><strong>Clearpath Husky on a university campus</strong>: six sequences, 5.8 km, with LiDARs, stereo, IMUs, wheel odometry and RTK GNSS ground truth, as ROS 2 bags. Includes autonomous navigation with the TPS-A* planner and a MOLA sensor fusion tutorial.</p>
       <p class="seq-facts-line">2026 &middot; CC BY 4.0</p>
-      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.husky.url_path }}">Downloads and tutorial</a></p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.husky.url_path }}">Downloads and tutorial</a>
+        <a class="btn-dl" href="{{ D.husky.hf_url }}">&#129303; Hugging Face</a></p>
     </div>
   </article>
   <article class="seq-card">

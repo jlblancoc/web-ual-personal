@@ -5,12 +5,16 @@
 {% set graph = [] %}
 
 {% if page.dataset == 'hub' %}
-  {% set parts = [] %}
+  {# Plain list items: full Dataset entries live on each dataset page, and
+     incomplete Dataset stubs here would be flagged by the validators #}
+  {% set items = [] %}
   {% for key in ['urban', '2009', 'husky', 'greenhouse'] %}
-    {% set _ = parts.append({'@type': 'Dataset', 'name': DATASETS[key].name, 'url': SITEURL ~ '/' ~ DATASETS[key].url_path}) %}
+    {% set _ = items.append({'@type': 'ListItem', 'position': loop.index, 'name': DATASETS[key].name,
+                             'url': SITEURL ~ '/' ~ DATASETS[key].url_path}) %}
   {% endfor %}
   {% set _ = graph.append({'@type': 'CollectionPage', 'name': page.h1 or page.title, 'url': page_url,
-                           'description': page.summary|striptags, 'hasPart': parts,
+                           'description': page.summary|striptags,
+                           'mainEntity': {'@type': 'ItemList', 'itemListElement': items},
                            'author': {'@type': 'Person', 'name': 'Jose Luis Blanco Claraco', 'url': SITEURL ~ '/'}}) %}
 {% else %}
   {% set D = DATASETS[page.dataset] %}
@@ -21,6 +25,8 @@
     {% set _ = creators.append(person) %}
   {% endfor %}
 
+  {% set mime = {'zip': 'application/zip', 'mcap': 'application/x-mcap', 'avi': 'video/x-msvideo', 'flv': 'video/x-flv'} %}
+  {% macro fmt(url) -%}{{ mime.get(url.split('?')[0].rsplit('.', 1)[-1]|lower, 'text/html') }}{%- endmacro %}
   {% set dist = [] %}
   {% if page.dataset == 'urban' %}
     {% for e in D.extracts %}
@@ -29,10 +35,10 @@
     {% endfor %}
     {% for f in D.entire + D.extra_files %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,
-                              'contentSize': dm.hsize(f.size_bytes)|trim}) %}
+                              'encodingFormat': fmt(f.url), 'contentSize': dm.hsize(f.size_bytes)|trim}) %}
     {% endfor %}
     {% for m in D.mirrors %}
-      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url}) %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url, 'encodingFormat': fmt(m.url)}) %}
     {% endfor %}
   {% elif page.dataset == '2009' %}
     {% for s in D.sequences if s.available %}
@@ -44,18 +50,23 @@
       {% endif %}
     {% endfor %}
     {% for m in D.mirrors %}
-      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url}) %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': m.name, 'contentUrl': m.url, 'encodingFormat': fmt(m.url)}) %}
     {% endfor %}
     {% for f in [D.calibration, D.extras] %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': f.name, 'contentUrl': f.url,
                               'encodingFormat': 'application/zip', 'contentSize': dm.hsize(f.size_bytes)|trim}) %}
     {% endfor %}
   {% elif page.dataset == 'husky' %}
+    {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Hugging Face (full release)', 'contentUrl': D.hf_url,
+                            'encodingFormat': 'text/html'}) %}
     {% for s in D.sequences %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (' ~ s.hf_name ~ ', Hugging Face)',
+                              'contentUrl': D.hf_url ~ '/tree/main/' ~ s.hf_name, 'encodingFormat': 'text/html',
+                              'contentSize': dm.hsize(s.hf_size_bytes)|trim}) %}
       {% if s.zip_url %}
         {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name, 'contentUrl': s.zip_url,
                                 'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
-      {% else %}
+      {% elif s.mcap_url %}
         {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (ROS 2 MCAP)', 'contentUrl': s.mcap_url,
                                 'encodingFormat': 'application/x-mcap', 'contentSize': dm.hsize(s.size_bytes)|trim}) %}
       {% endif %}
@@ -67,7 +78,7 @@
   {% else %}
     {% for s in D.sequences %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name,
-                              'contentUrl': 'https://drive.google.com/drive/folders/' ~ s.drive,
+                              'contentUrl': 'https://drive.google.com/drive/folders/' ~ s.drive, 'encodingFormat': 'text/html',
                               'contentSize': s.size_gb ~ ' GB'}) %}
     {% endfor %}
   {% endif %}
@@ -90,11 +101,14 @@
   } %}
   {% if 'doi' in D %}{% set _ = dataset.update({'identifier': 'https://doi.org/' ~ D.doi}) %}{% endif %}
   {% if 'paper' in D %}
-    {% set _ = dataset.update({'citation': {'@type': 'ScholarlyArticle', 'name': D.paper.title, 'url': D.paper.official_url,
-                 'datePublished': D.paper.year|string, 'isPartOf': {'@type': 'Periodical', 'name': D.paper.venue}}}) %}
+    {# Plain-text reference: the format best supported by Dataset validators #}
+    {% set p = D.paper %}
+    {% set _ = dataset.update({'citation': '%s. %s. %s, %s(%s), %s, %d. %s'|format(p.authors|join(', '), p.title,
+                 p.venue, p.volume, p.number, p.pages, p.year, p.official_url)}) %}
   {% endif %}
   {% if D.original_url %}{% set _ = dataset.update({'sameAs': page_url}) %}{% endif %}
   {% if D.license %}{% set _ = dataset.update({'license': D.license.url}) %}{% endif %}
+  {% if D.date_modified %}{% set _ = dataset.update({'dateModified': D.date_modified}) %}{% endif %}
   {% if D.place %}{% set _ = dataset.update({'spatialCoverage': {'@type': 'Place', 'name': D.place}}) %}{% endif %}
   {% set _ = graph.append(dataset) %}
   {% set _ = graph.append({'@type': 'BreadcrumbList', 'itemListElement': [

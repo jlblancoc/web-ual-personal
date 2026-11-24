@@ -241,6 +241,17 @@ a.btn-dl:hover {
   opacity: 0.8;
 }
 
+.dataset-callout {
+  margin: 1.2em 0;
+  padding: 0.8em 1em;
+  border-left: 4px solid #ff9d00;
+  border-radius: 0.4em;
+  background: rgba(255, 157, 0, 0.1);
+}
+.dataset-callout p {
+  margin: 0.3em 0;
+}
+
 .table-wrap {
   overflow-x: auto;
   margin: 1em 0;
