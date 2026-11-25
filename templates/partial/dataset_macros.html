@@ -161,23 +161,30 @@
 <div class="table-wrap">
 <table class="dl-table">
   <thead>
-    <tr><th>Sequence</th><th>Length</th><th>Duration</th><th>Size</th></tr>
+    <tr><th>Sequence</th><th>Length</th><th>Duration</th><th>Sensors</th><th>v2: ROS 2 MCAP (Hugging Face)</th><th>v1: ROS 1 bag + rawlog</th></tr>
   </thead>
   <tbody>
   {% for s in D.sequences %}
     <tr>
-      <td><a class="btn-dl" href="https://drive.google.com/drive/folders/{{ s.drive }}?usp=sharing"><i class="fa-solid fa-download"></i> {{ s.name }}</a></td>
+      <td class="nowrap">{{ s.date }}</td>
       <td class="nowrap">{{ s.length_m }} m</td>
       <td class="nowrap">{{ hdur(s.duration_s) }} min</td>
-      <td class="nowrap">{{ s.size_gb }} GB</td>
+      <td class="nowrap">{{ s.sensors }}</td>
+      <td>{% for h in s.hf %}{% if h.size_bytes %}<a class="btn-dl" href="{{ D.hf_url }}/tree/main/sequences/{{ h.name }}">&#129303; {{ h.name }} ({{ hsize(h.size_bytes) }})</a> {% else %}<span class="seq-pending">{{ h.name }}: coming soon</span> {% endif %}{% endfor %}</td>
+      <td><a class="btn-dl" href="https://drive.google.com/drive/folders/{{ s.drive }}?usp=sharing"><i class="fa-solid fa-download"></i> {{ s.name }} ({{ s.size_gb }} GB)</a></td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
 </div>
 <p>
-  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.calibration_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Calibration files</a>
-  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.tools_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Tools for MOLA SLAM</a>
+  <a class="btn-dl" href="{{ D.hf_url }}">&#129303; Hugging Face (v2, all sequences)</a>
+  <a class="btn-dl" href="{{ D.calibration_v2_url }}"><i class="fa-solid fa-download"></i> Calibration v2</a>
+  <a class="btn-dl" href="{{ D.calibration_report_url }}"><i class="fa-solid fa-file-lines"></i> Calibration report</a>
+</p>
+<p>
+  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.calibration_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Calibration v1 (superseded)</a>
+  <a class="btn-dl" href="https://drive.google.com/drive/folders/{{ D.tools_drive }}?usp=sharing"><i class="fa-solid fa-download"></i> Tools for MOLA SLAM (v1 rawlogs)</a>
 </p>
 {% endmacro %}
 
@@ -254,9 +261,10 @@
     <a href="{{ SITEURL }}/{{ D.greenhouse.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/greenhouse/header.jpg" alt="GREENBOT dataset: LiDAR point cloud of a greenhouse" width="882" height="385" loading="lazy"></a>
     <div class="seq-body">
       <h3><a href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">GREENBOT Greenhouse Dataset</a></h3>
-      <p><strong>Multimodal mobile robot dataset in a Mediterranean greenhouse</strong>: Velodyne VLP-16 and Ouster OS0 LiDARs, stereo camera and GNSS/IMU. Nine sequences as ROS bags and MRPT rawlogs.</p>
+      <p><strong>Multimodal mobile robot dataset in a Mediterranean greenhouse</strong>: Velodyne VLP-16 and Ouster OS0 LiDARs, IMU and stereo camera. Nine sequences as ROS 2 bags with a revised calibration (v2, 2026), plus the original ROS 1 bags and MRPT rawlogs.</p>
       <p class="seq-facts-line">Sensors 2024 &middot; CC BY-NC-SA 3.0</p>
-      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">Downloads and previews</a></p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">Downloads and previews</a>
+        <a class="btn-dl" href="{{ D.greenhouse.hf_url }}">&#129303; Hugging Face</a></p>
     </div>
   </article>
 </div>

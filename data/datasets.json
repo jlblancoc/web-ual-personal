@@ -765,7 +765,14 @@
     "length_m": 459.2,
     "duration_s": 696,
     "size_gb": 20.4,
-    "drive": "1XYzHemM0MZ_ORhyqhForVkU2N9eoaMKl"
+    "drive": "1XYzHemM0MZ_ORhyqhForVkU2N9eoaMKl",
+    "hf": [
+     {
+      "name": "2022-10-05",
+      "size_bytes": 19562552717
+     }
+    ],
+    "sensors": "Stereo only"
    },
    {
     "name": "SEQ_02_2022-10-14",
@@ -773,7 +780,14 @@
     "length_m": 457.36,
     "duration_s": 701,
     "size_gb": 34.1,
-    "drive": "1s81rNiF15oZZyQoGB8jKuEDrYqMbliS6"
+    "drive": "1s81rNiF15oZZyQoGB8jKuEDrYqMbliS6",
+    "hf": [
+     {
+      "name": "2022-10-14",
+      "size_bytes": 20388619262
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_03_2022-10-19",
@@ -781,7 +795,18 @@
     "length_m": 1321.21,
     "duration_s": 1432,
     "size_gb": 69.5,
-    "drive": "1aX8lqpRcRM2IyyoJDCR83JBhIHyAeHJ2"
+    "drive": "1aX8lqpRcRM2IyyoJDCR83JBhIHyAeHJ2",
+    "hf": [
+     {
+      "name": "2022-10-19_A",
+      "size_bytes": 24684261230
+     },
+     {
+      "name": "2022-10-19_B",
+      "size_bytes": 19743196999
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_04_2022-10-26",
@@ -789,7 +814,14 @@
     "length_m": 1432.08,
     "duration_s": 1463,
     "size_gb": 27.6,
-    "drive": "1gGiZfeKLlzC7C5IzO8w03HFLWkm8XK6K"
+    "drive": "1gGiZfeKLlzC7C5IzO8w03HFLWkm8XK6K",
+    "hf": [
+     {
+      "name": "2022-10-26",
+      "size_bytes": 9720770539
+     }
+    ],
+    "sensors": "LiDARs + IMU"
    },
    {
     "name": "SEQ_05_2022-11-02",
@@ -797,7 +829,14 @@
     "length_m": 1233.87,
     "duration_s": 1486,
     "size_gb": 71.7,
-    "drive": "1xdG1TVpvBIrMearq9SV8nks-oRAnWYJI"
+    "drive": "1xdG1TVpvBIrMearq9SV8nks-oRAnWYJI",
+    "hf": [
+     {
+      "name": "2022-11-02",
+      "size_bytes": 45346026022
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_06_2022-11-09",
@@ -805,7 +844,13 @@
     "length_m": 1293.29,
     "duration_s": 1532,
     "size_gb": 73.5,
-    "drive": "1tpKRywOKFQz7QTRujXPXY7zDkhdVlcSQ"
+    "drive": "1tpKRywOKFQz7QTRujXPXY7zDkhdVlcSQ",
+    "hf": [
+     {
+      "name": "2022-11-09"
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_07_2022-11-17",
@@ -813,7 +858,13 @@
     "length_m": 1332.58,
     "duration_s": 1752,
     "size_gb": 84.3,
-    "drive": "1OeKoYnjKjWwwliMtuAGKlTUJKKbMyme8"
+    "drive": "1OeKoYnjKjWwwliMtuAGKlTUJKKbMyme8",
+    "hf": [
+     {
+      "name": "2022-11-17"
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_08_2022-11-23",
@@ -821,7 +872,13 @@
     "length_m": 1428.45,
     "duration_s": 1692,
     "size_gb": 66.1,
-    "drive": "1kUeNMIyUAYNYFCwoEo8RLsHEhGJjMh1-"
+    "drive": "1kUeNMIyUAYNYFCwoEo8RLsHEhGJjMh1-",
+    "hf": [
+     {
+      "name": "2022-11-23"
+     }
+    ],
+    "sensors": "All"
    },
    {
     "name": "SEQ_09_2022-11-30",
@@ -829,7 +886,14 @@
     "length_m": 1440.32,
     "duration_s": 1730,
     "size_gb": 83.4,
-    "drive": "17fv1PqNF4LS30SNDHaWI-ZgAP0jbfS6U"
+    "drive": "17fv1PqNF4LS30SNDHaWI-ZgAP0jbfS6U",
+    "hf": [
+     {
+      "name": "2022-11-30",
+      "size_bytes": 51631791890
+     }
+    ],
+    "sensors": "All"
    }
   ],
   "calibration_drive": "1aXwe5yClxgOVcETs7Gv1Krj0dES6Tqqu",
@@ -872,7 +936,7 @@
    }
   ],
   "date_published": "2024-01-31",
-  "description": "The GREENBOT dataset is a multimodal mobile robotics dataset recorded inside a typical Mediterranean greenhouse with tomato crops, a challenging environment where GNSS accuracy is degraded by the structure and the crop. A sensorised cart carrying a Velodyne VLP-16 LiDAR, an Ouster OS0 LiDAR with IMU, a Bumblebee BB2 stereo camera and a NovAtel GNSS/IMU was moved through all the corridors of the greenhouse in nine sequences. It is available as ROS 1 Noetic bags and MRPT rawlogs (for ROS 2 Humble), with calibration files and the tools to run MOLA SLAM. It is the first dataset suitable to test SLAM methods in a greenhouse environment.",
+  "description": "The GREENBOT dataset is a multimodal mobile robotics dataset recorded inside a typical Mediterranean greenhouse with tomato crops, a challenging environment where GNSS accuracy is degraded by the structure and the crop. A sensorised cart carrying a Velodyne VLP-16 LiDAR, an Ouster OS0 LiDAR with IMU and a Bumblebee BB2 stereo camera was moved through all the corridors of the greenhouse in nine sequences. Version 2 (2026) provides all sequences as ROS 2 bags (MCAP) on Hugging Face with a corrected extrinsic calibration, static transforms and camera calibration; the original ROS 1 bags and MRPT rawlogs remain available. It is the first dataset suitable to test SLAM methods in a greenhouse environment.",
   "keywords": [
    "greenhouse",
    "agriculture",
@@ -886,7 +950,10 @@
    "MOLA",
    "mobile robot",
    "dataset",
-   "precision agriculture"
+   "precision agriculture",
+   "ROS 2",
+   "MCAP",
+   "Hugging Face"
   ],
   "creators": [
    {
@@ -911,9 +978,13 @@
    }
   ],
   "formats": [
+   "MCAP",
    "ROS bag",
    "rawlog"
-  ]
+  ],
+  "hf_url": "https://huggingface.co/datasets/MOLAorg/greenbot-dataset",
+  "calibration_v2_url": "https://huggingface.co/datasets/MOLAorg/greenbot-dataset/tree/main/calibration/v2",
+  "calibration_report_url": "https://huggingface.co/datasets/MOLAorg/greenbot-dataset/blob/main/calibration/v2/CALIBRATION_v2.md"
  },
  "husky": {
   "id": "husky",

@@ -75,6 +75,19 @@
                                 'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.map_size_bytes)|trim}) %}
       {% endif %}
     {% endfor %}
+  {% elif page.dataset == 'greenhouse' %}
+    {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Hugging Face (v2, ROS 2 MCAP)', 'contentUrl': D.hf_url,
+                            'encodingFormat': 'text/html'}) %}
+    {% for s in D.sequences %}
+      {% for h in s.hf if h.size_bytes %}
+        {% set _ = dist.append({'@type': 'DataDownload', 'name': h.name ~ ' (v2, ROS 2 MCAP, Hugging Face)',
+                                'contentUrl': D.hf_url ~ '/tree/main/sequences/' ~ h.name, 'encodingFormat': 'text/html',
+                                'contentSize': dm.hsize(h.size_bytes)|trim}) %}
+      {% endfor %}
+      {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name ~ ' (v1, ROS 1 bag)',
+                              'contentUrl': 'https://drive.google.com/drive/folders/' ~ s.drive, 'encodingFormat': 'text/html',
+                              'contentSize': s.size_gb ~ ' GB'}) %}
+    {% endfor %}
   {% else %}
     {% for s in D.sequences %}
       {% set _ = dist.append({'@type': 'DataDownload', 'name': s.name,
