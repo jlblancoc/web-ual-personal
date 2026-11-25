@@ -76,6 +76,23 @@ Other issues of the original bags, fixed in v2:
 The [calibration report](https://huggingface.co/datasets/MOLAorg/greenbot-dataset/blob/main/calibration/v2/CALIBRATION_v2.md)
 gives the method, the per-day results and the timing analysis.
 
+## MOLA maps (v2)
+
+The v2 bags work directly with [MOLA](https://docs.mola-slam.org/) LiDAR-inertial odometry, with either LiDAR and the
+Ouster IMU (see the command under *Download links*). These are the maps of the longest sequence, 2022-11-30 (29 minutes,
+1.4 km through both greenhouse sections), without loop closure. The two maps, built independently, agree to 10 cm RMS
+and the floor stays level within 1º.
+
+<figure>
+<img class="fig-full" src="{static}/imgs/datasets/greenhouse/greenbot-v2-mola_3d_2022-11-30.jpg" alt="Oblique 3D view of the MOLA point cloud map of the greenhouse built from the Ouster LiDAR, with the roof removed and the trajectory in red" width="1079" height="857" loading="lazy">
+<figcaption>Ouster map of 2022-11-30 (roof removed), colored by height, with the trajectory in red.</figcaption>
+</figure>
+
+<figure>
+<img class="fig-full" src="{static}/imgs/datasets/greenhouse/greenbot-v2-mola_maps_2022-11-30.jpg" alt="Top views of the MOLA maps of sequence 2022-11-30 built with the Ouster and with the Velodyne LiDAR" width="1685" height="765" loading="lazy">
+<figcaption>Top views of the 2022-11-30 maps built with each LiDAR, colored by height above the floor.</figcaption>
+</figure>
+
 ## Videos
 
 The first video shows a complete process simulation of a robot, followed by the result of the post-processing with the MOLA SLAM algorithm.
