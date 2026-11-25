@@ -230,21 +230,14 @@
 {% macro hub(D) %}
 <div class="seq-grid seq-grid-wide">
   <article class="seq-card">
-    <a href="{{ SITEURL }}/{{ D.urban.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/urban/cover.jpg" alt="Málaga Urban Dataset: stereo image, GPS path and laser point cloud" width="960" height="540" loading="lazy"></a>
+    <a href="{{ SITEURL }}/{{ D.mvsim_lio.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/mvsim-lio/cover.jpg" alt="MVSim-LIO benchmark: exact point cloud map and ground-truth trajectory of a simulated parking garage" width="960" height="400" loading="lazy"></a>
     <div class="seq-body">
-      <h3><a href="{{ SITEURL }}/{{ D.urban.url_path }}">Málaga Urban Dataset</a></h3>
-      <p><strong>Stereo + 5 LiDARs + GPS + IMU</strong> in real urban traffic: 36.8 km, 20 fps stereo at 1024x768, 15 ready-to-use extracts. For SLAM, visual odometry and loop closure.</p>
-      <p class="seq-facts-line">IJRR 2014 &middot; CC BY 4.0</p>
-      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.urban.url_path }}">Downloads and previews</a></p>
-    </div>
-  </article>
-  <article class="seq-card">
-    <a href="{{ SITEURL }}/{{ D['2009'].url_path }}"><img class="seq-thumb seq-thumb-dark" src="{{ SITEURL }}/imgs/datasets/2009/seq-parking-6l.jpg" alt="Málaga 2009 dataset: 3D point cloud with the RTK ground-truth path" width="900" loading="lazy"></a>
-    <div class="seq-body">
-      <h3><a href="{{ SITEURL }}/{{ D['2009'].url_path }}">Málaga 2009 Dataset</a></h3>
-      <p><strong>Six outdoor sequences with centimeter-accuracy 6D ground truth</strong> from three RTK GPS receivers, plus lasers, cameras and IMU. For visual SLAM, 2D SLAM and localization.</p>
-      <p class="seq-facts-line">Autonomous Robots 2009 &middot; CC BY 4.0</p>
-      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D['2009'].url_path }}">Downloads and previews</a></p>
+      <h3><a href="{{ SITEURL }}/{{ D.mvsim_lio.url_path }}">MVSim-LIO Benchmark</a></h3>
+      <p><strong>Simulated LiDAR-inertial odometry benchmark with exact trajectory and map ground truth</strong>: 15 worlds, 30 trajectories (20.1 km) of five carriers, LiDAR with per-point time and labels, 200 Hz IMU, in 9 paired variants up to a realistic LiDAR error model.</p>
+      <p class="seq-facts-line">2026 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.mvsim_lio.url_path }}">Details</a>
+        <a class="btn-dl" href="{{ D.mvsim_lio.hf_url }}">&#129303; Hugging Face</a>
+        <a class="btn-dl" href="{{ D.mvsim_lio.github_url }}"><i class="fa-brands fa-github"></i> GitHub</a></p>
     </div>
   </article>
   <article class="seq-card">
@@ -265,6 +258,24 @@
       <p class="seq-facts-line">Sensors 2024 &middot; CC BY-NC-SA 3.0</p>
       <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.greenhouse.url_path }}">Downloads and previews</a>
         <a class="btn-dl" href="{{ D.greenhouse.hf_url }}">&#129303; Hugging Face</a></p>
+    </div>
+  </article>
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D.urban.url_path }}"><img class="seq-thumb" src="{{ SITEURL }}/imgs/datasets/urban/cover.jpg" alt="Málaga Urban Dataset: stereo image, GPS path and laser point cloud" width="960" height="540" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D.urban.url_path }}">Málaga Urban Dataset</a></h3>
+      <p><strong>Stereo + 5 LiDARs + GPS + IMU</strong> in real urban traffic: 36.8 km, 20 fps stereo at 1024x768, 15 ready-to-use extracts. For SLAM, visual odometry and loop closure.</p>
+      <p class="seq-facts-line">IJRR 2014 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D.urban.url_path }}">Downloads and previews</a></p>
+    </div>
+  </article>
+  <article class="seq-card">
+    <a href="{{ SITEURL }}/{{ D['2009'].url_path }}"><img class="seq-thumb seq-thumb-dark" src="{{ SITEURL }}/imgs/datasets/2009/seq-parking-6l.jpg" alt="Málaga 2009 dataset: 3D point cloud with the RTK ground-truth path" width="900" loading="lazy"></a>
+    <div class="seq-body">
+      <h3><a href="{{ SITEURL }}/{{ D['2009'].url_path }}">Málaga 2009 Dataset</a></h3>
+      <p><strong>Six outdoor sequences with centimeter-accuracy 6D ground truth</strong> from three RTK GPS receivers, plus lasers, cameras and IMU. For visual SLAM, 2D SLAM and localization.</p>
+      <p class="seq-facts-line">Autonomous Robots 2009 &middot; CC BY 4.0</p>
+      <p class="seq-actions"><a class="btn-dl" href="{{ SITEURL }}/{{ D['2009'].url_path }}">Downloads and previews</a></p>
     </div>
   </article>
 </div>

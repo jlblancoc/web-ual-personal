@@ -1122,5 +1122,53 @@
   "place": "University of Almería campus, Almería, Spain",
   "bibtex": "@Misc{blanco2026husky,\n  AUTHOR = {Blanco-Claraco, Jose Luis},\n  TITLE = {Husky {UAL} {LiDAR}-Inertial Dataset},\n  HOWPUBLISHED = {\\url{https://w3.ual.es/~jlblanco/datasets/husky-ual-lidar-inertial-dataset/}},\n  YEAR = {2026}\n}",
   "date_modified": "2026-11-24"
+ },
+ "mvsim_lio": {
+  "id": "mvsim_lio",
+  "name": "MVSim-LIO Benchmark",
+  "url_path": "datasets/mvsim-lio-benchmark/",
+  "license": {
+   "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "hf_url": "https://huggingface.co/datasets/MOLAorg/MVSim-LIO",
+  "github_url": "https://github.com/MOLAorg/mvsim_lio_benchmark",
+  "hf_revision": "v2.1",
+  "date_published": "2026-11-23",
+  "description": "Simulated LiDAR-inertial odometry benchmark with exact ground truth: the trajectory is the simulator's input and the map is the geometry the sensors observe. 15 MVSim worlds (streets, campus, tunnel, open field, forest, orchard, greenhouse, warehouse, office, multi-level buildings with stairs and ramps) traversed by 30 six-degrees-of-freedom trajectories (20.1 km, 148 minutes) of five carriers (car, ground robot, legged robot, quadruped, hand-held rig). Ray-traced spinning LiDAR with per-point timestamps and semantic labels, 200 Hz IMU and wheel odometry, rendered in 9 paired variants: global or rolling shutter, OS1-32, OS1-64 and VLP-16 style LiDARs, and noise-free, Gaussian and realistic LiDAR error models (range noise, beam footprint, mixed returns, dropouts, per-ring calibration errors). 270 sequences, 25.2 billion points, as MRPT rawlogs and a plain-text copy, on Hugging Face.",
+  "keywords": [
+   "LiDAR",
+   "IMU",
+   "LiDAR-inertial odometry",
+   "LiDAR odometry",
+   "SLAM",
+   "simulation",
+   "synthetic data",
+   "benchmark",
+   "ground truth",
+   "MVSim",
+   "MRPT",
+   "MOLA",
+   "rolling shutter",
+   "LiDAR error model",
+   "semantic labels",
+   "dataset"
+  ],
+  "creators": [
+   {
+    "name": "Ana Gómez-Espinosa",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "José Luis Torres-Moreno",
+    "affiliation": "University of Almería"
+   },
+   {
+    "name": "José-Luis Blanco-Claraco",
+    "orcid": "https://orcid.org/0000-0002-9745-285X",
+    "affiliation": "University of Almería"
+   }
+  ],
+  "bibtex": "@Misc{gomez2026mvsimlio,\n  AUTHOR = {G\\'omez-Espinosa, Ana and Torres-Moreno, Jos\\'e Luis and Blanco-Claraco, Jos\\'e Luis},\n  TITLE = {{MVSim-LIO}: A Simulated {LiDAR}-Inertial Odometry Benchmark with Exact Trajectory and Map Ground Truth},\n  HOWPUBLISHED = {\\url{https://huggingface.co/datasets/MOLAorg/MVSim-LIO}},\n  YEAR = {2026}\n}"
  }
 }

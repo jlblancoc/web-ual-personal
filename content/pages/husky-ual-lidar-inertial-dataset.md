@@ -2,7 +2,7 @@ Title: Husky UAL LiDAR-Inertial Dataset
 h1: Husky UAL LiDAR-Inertial Dataset: a mobile robot on a university campus
 crumb: Husky UAL LiDAR-Inertial Dataset
 Date: 2026-11-17
-Modified: 2026-11-24
+Modified: 2026-11-26
 URL: datasets/husky-ual-lidar-inertial-dataset/
 save_as: datasets/husky-ual-lidar-inertial-dataset/index.html
 nomenu: true
@@ -159,5 +159,6 @@ get in touch and we will remove the respective data.
 
 ## Related datasets
 
+* [MVSim-LIO Benchmark]({filename}mvsim-lio-benchmark.md): simulated LiDAR-inertial benchmark with exact trajectory and map ground truth.
 * [Málaga 2009 Dataset]({filename}malaga-2009-dataset.md): outdoor sequences with centimeter-accuracy 6D ground truth.
 * [GREENBOT Dataset]({filename}greenbot-greenhouse-dataset.md): LiDAR SLAM in a Mediterranean greenhouse.

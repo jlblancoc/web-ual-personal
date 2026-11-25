@@ -8,7 +8,7 @@
   {# Plain list items: full Dataset entries live on each dataset page, and
      incomplete Dataset stubs here would be flagged by the validators #}
   {% set items = [] %}
-  {% for key in ['urban', '2009', 'husky', 'greenhouse'] %}
+  {% for key in ['mvsim_lio', 'husky', 'greenhouse', 'urban', '2009'] %}
     {% set _ = items.append({'@type': 'ListItem', 'position': loop.index, 'name': DATASETS[key].name,
                              'url': SITEURL ~ '/' ~ DATASETS[key].url_path}) %}
   {% endfor %}
@@ -75,6 +75,11 @@
                                 'encodingFormat': 'application/zip', 'contentSize': dm.hsize(s.map_size_bytes)|trim}) %}
       {% endif %}
     {% endfor %}
+  {% elif page.dataset == 'mvsim_lio' %}
+    {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Hugging Face (release ' ~ D.hf_revision ~ ')',
+                            'contentUrl': D.hf_url ~ '/tree/' ~ D.hf_revision, 'encodingFormat': 'text/html'}) %}
+    {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Worlds, trajectories and generator (GitHub)',
+                            'contentUrl': D.github_url, 'encodingFormat': 'text/html'}) %}
   {% elif page.dataset == 'greenhouse' %}
     {% set _ = dist.append({'@type': 'DataDownload', 'name': 'Hugging Face (v2, ROS 2 MCAP)', 'contentUrl': D.hf_url,
                             'encodingFormat': 'text/html'}) %}

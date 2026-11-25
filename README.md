@@ -13,8 +13,10 @@ pip install -r requirements.txt
 
 ## Layout
 
+Rules for edits (sitemap and search metadata): `AGENTS.md`.
+
 - `content/pages/`: one file per page. The `myorder` metadata sets the menu order.
-- `content/pages/datasets.md` and the three `*-dataset.md` pages: the Datasets section. Their prose is Markdown; marker comments such as `<!-- extracts -->` are replaced by blocks rendered from `data/datasets.json` (sequences, sizes, MD5s, citations) by `templates/dataset.html`.
+- `content/pages/datasets.md` and the dataset pages (`*-dataset.md`, `mvsim-lio-benchmark.md`): the Datasets section, with its cards newest first. Their prose is Markdown; marker comments such as `<!-- extracts -->` are replaced by blocks rendered from `data/datasets.json` (sequences, sizes, MD5s, citations) by `templates/dataset.html`.
 - `data/datasets.json`: structured data of the datasets (also used for the schema.org `Dataset` metadata).
 - `tools/make_path_svgs.py`: renders the GPS path thumbnails of the Málaga Urban Dataset from KML files.
 - `content/imgs/`, `content/docs/`, `content/css/`: static files.
