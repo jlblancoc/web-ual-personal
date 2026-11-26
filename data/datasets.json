@@ -847,7 +847,8 @@
     "drive": "1tpKRywOKFQz7QTRujXPXY7zDkhdVlcSQ",
     "hf": [
      {
-      "name": "2022-11-09"
+      "name": "2022-11-09",
+      "size_bytes": 43571667183
      }
     ],
     "sensors": "All"
@@ -861,7 +862,8 @@
     "drive": "1OeKoYnjKjWwwliMtuAGKlTUJKKbMyme8",
     "hf": [
      {
-      "name": "2022-11-17"
+      "name": "2022-11-17",
+      "size_bytes": 51386718505
      }
     ],
     "sensors": "All"
@@ -875,7 +877,8 @@
     "drive": "1kUeNMIyUAYNYFCwoEo8RLsHEhGJjMh1-",
     "hf": [
      {
-      "name": "2022-11-23"
+      "name": "2022-11-23",
+      "size_bytes": 40772606004
      }
     ],
     "sensors": "All"
